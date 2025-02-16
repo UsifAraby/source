@@ -1,583 +1,1537 @@
+//     Underscore.js 1.8.2
+//     http://underscorejs.org
+//     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+//     Underscore may be freely distributed under the MIT license.
 
- <!doctype html><html lang="en"><head ><script> var BASE_URL = 'https\u003A\u002F\u002Fedumalls.com\u002Fsa_en\u002F'; var require = { 'baseUrl': 'https\u003A\u002F\u002Fedumalls.com\u002Fstatic\u002Ffrontend\u002FEdumalls\u002Ftheme\u002Fen_US' };</script><script type="text&#x2F;javascript">var OX_MOBILE = 0, OX_PHOTOSWIPE = 1, OX_CATALOG_AJAX = 1, OX_WAYPOINTS = 0, OX_OWL_DISABLE = 0, OX_OWL_OBS_DISABLE = false;</script> <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"1120285175",accountID:"2936276",trustKey:"2936276",xpid:"Vg8EV1RUDhABVFhXBgYCUVYA",licenseKey:"NRJS-0f449824576a6bb0745",applicationID:"1095175721"};;/*! For license information please see nr-loader-spa-1.281.0.min.js.LICENSE.txt */
-(()=>{var e,t,r={8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555:(e,t,r)=>{"use strict";r.d(t,{Vp:()=>c,fn:()=>s,x1:()=>u});var n=r(384),i=r(8122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},9417:(e,t,r)=>{"use strict";r.d(t,{D0:()=>p,gD:()=>m,xN:()=>g});var n=r(3333),i=r(993);const o=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var a=r(2614),s=r(944),c=r(384),u=r(8122);const d="[data-nr-mask]",l=()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0,level:i.p_.INFO},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(n.$v.MARKS)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(n.$v.MEASURES)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(n.$v.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:a.wk,inactiveMs:a.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){o(t)?e.mask_selector="".concat(t,",").concat(d):""===t||null===t?e.mask_selector=d:(0,s.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){o(t)?e.block_selector+=",".concat(t):""!==t&&(0,s.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,s.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}},f={},h="All configuration objects require an agent identifier!";function p(e){if(!e)throw new Error(h);if(!f[e])throw new Error("Configuration for ".concat(e," was never set"));return f[e]}function g(e,t){if(!e)throw new Error(h);f[e]=(0,u.a)(t,l());const r=(0,c.nY)(e);r&&(r.init=f[e])}function m(e,t){if(!e)throw new Error(h);var r=p(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},5603:(e,t,r)=>{"use strict";r.d(t,{a:()=>c,o:()=>s});var n=r(384),i=r(8122);const o={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},a={};function s(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!a[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.loader_config=a[e])}},3371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>l});var n=r(8122),i=r(384),o=r(6154),a=r(9324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,timeKeeper:void 0,obfuscator:void 0,harvester:void 0},d={};function l(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!d[e])throw new Error("Runtime for ".concat(e," was never set"));return d[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");d[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(d[e],"harvestCount")||Object.defineProperty(d[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=d[e])}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,Yq:()=>a,xv:()=>n});const n="1.281.0",i="PROD",o="CDN",a="^2.0.0-alpha.17"},6154:(e,t,r)=>{"use strict";r.d(t,{A4:()=>s,OF:()=>d,RI:()=>i,WN:()=>h,bv:()=>o,gm:()=>a,lR:()=>f,m:()=>u,mw:()=>c,sb:()=>l});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s="complete"===a?.document?.readyState,c=Boolean("hidden"===a?.document?.visibilityState),u=""+a?.location,d=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),l=d&&"undefined"==typeof SharedWorker,f=(()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),h=Date.now()-(0,n.t)()},7295:(e,t,r)=>{"use strict";r.d(t,{Xv:()=>a,gX:()=>i,iW:()=>o});var n=[];function i(e){if(!e||o(e))return!1;if(0===n.length)return!0;for(var t=0;t<n.length;t++){var r=n[t];if("*"===r.hostname)return!1;if(s(r.hostname,e.hostname)&&c(r.pathname,e.pathname))return!1}return!0}function o(e){return void 0===e.hostname}function a(e){if(n=[],e&&e.length)for(var t=0;t<e.length;t++){let r=e[t];if(!r)continue;0===r.indexOf("http://")?r=r.substring(7):0===r.indexOf("https://")&&(r=r.substring(8));const i=r.indexOf("/");let o,a;i>0?(o=r.substring(0,i),a=r.substring(i)):(o=r,a="");let[s]=o.split(":");n.push({hostname:s,pathname:a})}}function s(e,t){return!(e.length>t.length)&&t.indexOf(e)===t.length-e.length}function c(e,t){return 0===e.indexOf("/")&&(e=e.substring(1)),0===t.indexOf("/")&&(t=t.substring(1)),""===e||e===t}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(7836),i=r(3606),o=r(860),a=r(2646);const s={};function c(e,t){const r={staged:!1,priority:o.P3[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),h(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return h(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),h(e,t)})))}function h(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(8990),o=r(3371),a=r(2646),s=r(5607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=h(n),c=g(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=v()[s[e]];p&&p.push([f,e,r,a]);return a},get:m,listeners:g,context:h,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function h(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function p(e,t){n[e]=g(e).concat(t)}function g(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=u)},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(9908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,ZF:()=>c,bz:()=>a,el:()=>u});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}function c(){return s(16)}function u(){return s(32)}},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},7485:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(6154);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n.gm?.location?.protocol&&t.host===n.gm?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},5284:(e,t,r)=>{"use strict";r.d(t,{t:()=>c,B:()=>s});var n=r(7836),i=r(6154);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(e={}){try{i.gm.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},3304:(e,t,r)=>{"use strict";r.d(t,{A:()=>o});var n=r(7836);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())??""}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}return""}}},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(3878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>d,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>l});var n=r(6154),i=r(1863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},2843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},8139:(e,t,r)=>{"use strict";r.d(t,{u:()=>f});var n=r(7836),i=r(3434),o=r(8990),a=r(6154);const s={},c=a.gm.XMLHttpRequest,u="addEventListener",d="removeEventListener",l="nr@wrapped:".concat(n.P);function f(e){var t=function(e){return(e||n.ee).get("events")}(e);if(s[t.debugId]++)return t;s[t.debugId]=1;var r=(0,i.YM)(t,!0);function f(e){r.inPlace(e,[u,d],"-",p)}function p(e,t){return e[1]}return"getPrototypeOf"in Object&&(a.RI&&h(document,f),c&&h(c.prototype,f),h(a.gm,f)),t.on(u+"-start",(function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var i=(0,o.I)(n,l,(function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n}));this.wrapped=e[1]=i}})),t.on(d+"-start",(function(e){e[1]=this.wrapped||e[1]})),t}function h(e,t,...r){let n=e;for(;"object"==typeof n&&!Object.prototype.hasOwnProperty.call(n,u);)n=Object.getPrototypeOf(n);n&&t(n,...r)}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>c});var n=r(7836),i=r(5607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,d,l;try{a=this,o=[...arguments],d="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],d],e)}i(r+"start",[o,a,s],d,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],d,c),e}finally{i(r+"end",[o,a,l],d,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},9300:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.ajax},3333:(e,t,r)=>{"use strict";r.d(t,{$v:()=>u,TZ:()=>n,Zp:()=>i,kd:()=>c,mq:()=>s,nf:()=>a,qN:()=>o});const n=r(860).K7.genericEvents,i=["auxclick","click","copy","keydown","paste","scrollend"],o=["focus","blur"],a=4,s=1e3,c=["PageAction","UserAction","BrowserPerformance"],u={MARKS:"experimental.marks",MEASURES:"experimental.measures",RESOURCES:"experimental.resources"}},6774:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.jserrors},993:(e,t,r)=>{"use strict";r.d(t,{ET:()=>o,TZ:()=>a,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o="log",a=n.K7.logging},3785:(e,t,r)=>{"use strict";r.d(t,{R:()=>c,b:()=>u});var n=r(9908),i=r(1863),o=r(860),a=r(3969),s=r(993);function c(e,t,r={},c=s.p_.INFO){(0,n.p)(a.xV,["API/logging/".concat(c.toLowerCase(),"/called")],void 0,o.K7.metrics,e),(0,n.p)(s.ET,[(0,i.t)(),t,r,c],void 0,o.K7.logging,e)}function u(e){return"string"==typeof e&&Object.values(s.p_).some((t=>t===e.toUpperCase().trim()))}},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>s,rs:()=>i,xV:()=>a,z_:()=>o});const n=r(860).K7.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},6344:(e,t,r)=>{"use strict";r.d(t,{BB:()=>d,G4:()=>o,Qb:()=>l,TZ:()=>i,Ug:()=>a,_s:()=>s,bc:()=>u,yP:()=>c});var n=r(2614);const i=r(860).K7.sessionReplay,o={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"},a=.12,s={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},c={[n.g.ERROR]:15e3,[n.g.FULL]:3e5,[n.g.OFF]:0},u={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},d=5e3,l={API:"api"}},5270:(e,t,r)=>{"use strict";r.d(t,{Aw:()=>c,CT:()=>u,SR:()=>s});var n=r(384),i=r(9417),o=r(7767),a=r(6154);function s(e){return!!(0,n.dV)().o.MO&&(0,o.V)(e)&&!0===(0,i.gD)(e,"session_trace.enabled")}function c(e){return!0===(0,i.gD)(e,"session_replay.preload")&&s(e)}function u(e,t){const r=t.correctAbsoluteTimestamp(e);return{originalTimestamp:e,correctedTimestamp:r,timestampDiff:e-r,originTime:a.WN,correctedOriginTime:t.correctedOriginTime,originTimeDiff:Math.floor(a.WN-t.correctedOriginTime)}}},3738:(e,t,r)=>{"use strict";r.d(t,{He:()=>i,Kp:()=>s,Lc:()=>u,Rz:()=>d,TZ:()=>n,bD:()=>o,d3:()=>a,jx:()=>l,uP:()=>c});const n=r(860).K7.sessionTrace,i="bstResource",o="resource",a="-start",s="-end",c="fn"+a,u="fn"+s,d="pushState",l=1e3},3962:(e,t,r)=>{"use strict";r.d(t,{AM:()=>o,O2:()=>c,Qu:()=>u,TZ:()=>s,ih:()=>d,pP:()=>a,tC:()=>i});var n=r(860);const i=["click","keydown","submit","popstate"],o="api",a="initialPageLoad",s=n.K7.softNav,c={INITIAL_PAGE_LOAD:"",ROUTE_CHANGE:1,UNSPECIFIED:2},u={INTERACTION:1,AJAX:2,CUSTOM_END:3,CUSTOM_TRACER:4},d={IP:"in progress",FIN:"finished",CAN:"cancelled"}},7378:(e,t,r)=>{"use strict";r.d(t,{$p:()=>x,BR:()=>b,Kp:()=>R,L3:()=>y,Lc:()=>c,NC:()=>o,SG:()=>d,TZ:()=>i,U6:()=>p,UT:()=>m,d3:()=>w,dT:()=>f,e5:()=>T,gx:()=>v,l9:()=>l,oW:()=>h,op:()=>g,rw:()=>u,tH:()=>A,uP:()=>s,wW:()=>E,xq:()=>a});var n=r(384);const i=r(860).K7.spa,o=["click","submit","keypress","keydown","keyup","change"],a=999,s="fn-start",c="fn-end",u="cb-start",d="api-ixn-",l="remaining",f="interaction",h="spaNode",p="jsonpNode",g="fetch-start",m="fetch-done",v="fetch-body-",b="jsonp-end",y=(0,n.dV)().o.ST,w="-start",R="-end",x="-body",E="cb"+R,T="jsTime",A="fetch"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(7836),i=r(1687);class o{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},7767:(e,t,r)=>{"use strict";r.d(t,{V:()=>o});var n=r(9417),i=r(6154);const o=e=>i.RI&&!0===(0,n.gD)(e,"privacy.cookies_enabled")},425:(e,t,r)=>{"use strict";r.d(t,{j:()=>j});var n=r(860),i=r(2555),o=r(3371),a=r(9908),s=r(7836),c=r(1687),u=r(5289),d=r(6154),l=r(944),f=r(3969),h=r(384),p=r(6344);const g=["setErrorHandler","finished","addToTrace","addRelease","recordCustomEvent","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",p.G4.RECORD,p.G4.PAUSE,"log","wrapLogger"],m=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(1863),b=r(2614),y=r(993),w=r(3785),R=r(2646),x=r(3434);const E=new Map;function T(e,t,r,n){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,l.R)(29);const i=function(e){return(e||s.ee).get("logger")}(e),o=(0,x.YM)(i),a=new R.y(s.P);a.level=n.level,a.customAttributes=n.customAttributes;const c=t[r]?.[x.Jt]||t[r];return E.set(c,a),o.inPlace(t,[r],"wrap-logger-",(()=>E.get(c))),i}function A(){const e=(0,h.pV)();g.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.api?e.exposed&&e.api[t]&&n.push(e.api[t](...r)):(0,l.R)(38,t)})),n.length>1?n:n[0]}(t,...r)}))}const S={};var N=r(9417),_=r(5603),O=r(5284);const I=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let P=!1;function j(e,t={},g,R){let{init:x,info:E,loader_config:j,runtime:C={},exposed:k=!0}=t;C.loaderType=g;const L=(0,h.pV)();E||(x=L.init,E=L.info,j=L.loader_config),(0,N.xN)(e.agentIdentifier,x||{}),(0,_.a)(e.agentIdentifier,j||{}),E.jsAttributes??={},d.bv&&(E.jsAttributes.isWorker=!0),(0,i.x1)(e.agentIdentifier,E);const H=(0,N.D0)(e.agentIdentifier),M=[E.beacon,E.errorBeacon];P||(H.proxy.assets&&(I(H.proxy.assets),M.push(H.proxy.assets)),H.proxy.beacon&&M.push(H.proxy.beacon),A(),(0,h.US)("activatedFeatures",O.B),e.runSoftNavOverSpa&&=!0===H.soft_navigations.enabled&&H.feature_flags.includes("soft_nav")),C.denyList=[...H.ajax.deny_list||[],...H.ajax.block_internal?M:[]],C.ptid=e.agentIdentifier,(0,o.V)(e.agentIdentifier,C),e.ee=s.ee.get(e.agentIdentifier),void 0===e.api&&(e.api=function(e,t,h=!1){t||(0,c.Ak)(e,"api");const g={};var R=s.ee.get(e),x=R.get("tracer");S[e]=b.g.OFF,R.on(p.G4.REPLAY_RUNNING,(t=>{S[e]=t}));var E="api-",A=E+"ixn-";function N(t,r,n,o){const a=(0,i.Vp)(e);return null===r?delete a.jsAttributes[t]:(0,i.x1)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),I(E,n,!0,o||null===r?"session":void 0)(t,r)}function _(){}g.log=function(e,{customAttributes:t={},level:r=y.p_.INFO}={}){(0,a.p)(f.xV,["API/log/called"],void 0,n.K7.metrics,R),(0,w.R)(R,e,t,r)},g.wrapLogger=(e,t,{customAttributes:r={},level:i=y.p_.INFO}={})=>{(0,a.p)(f.xV,["API/wrapLogger/called"],void 0,n.K7.metrics,R),T(R,e,t,{customAttributes:r,level:i})},m.forEach((e=>{g[e]=I(E,e,!0,"api")})),g.addPageAction=I(E,"addPageAction",!0,n.K7.genericEvents),g.recordCustomEvent=I(E,"recordCustomEvent",!0,n.K7.genericEvents),g.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,o.f)(e).customTransaction=(r||"http://custom.transaction")+t,I(E,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return N(e,t,"setCustomAttribute",r);(0,l.R)(40,typeof t)}else(0,l.R)(39,typeof e)},g.setUserId=function(e){if("string"==typeof e||null===e)return N("enduser.id",e,"setUserId",!0);(0,l.R)(41,typeof e)},g.setApplicationVersion=function(e){if("string"==typeof e||null===e)return N("application.version",e,"setApplicationVersion",!1);(0,l.R)(42,typeof e)},g.start=()=>{try{(0,a.p)(f.xV,["API/start/called"],void 0,n.K7.metrics,R),R.emit("manual-start-all")}catch(e){(0,l.R)(23,e)}},g[p.G4.RECORD]=function(){(0,a.p)(f.xV,["API/recordReplay/called"],void 0,n.K7.metrics,R),(0,a.p)(p.G4.RECORD,[],void 0,n.K7.sessionReplay,R)},g[p.G4.PAUSE]=function(){(0,a.p)(f.xV,["API/pauseReplay/called"],void 0,n.K7.metrics,R),(0,a.p)(p.G4.PAUSE,[],void 0,n.K7.sessionReplay,R)},g.interaction=function(e){return(new _).get("object"==typeof e?e:{})};const O=_.prototype={createTracer:function(e,t){var r={},i=this,o="function"==typeof t;return(0,a.p)(f.xV,["API/createTracer/called"],void 0,n.K7.metrics,R),h||(0,a.p)(A+"tracer",[(0,v.t)(),e,r],i,n.K7.spa,R),function(){if(x.emit((o?"":"no-")+"fn-start",[(0,v.t)(),i,o],r),o)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw x.emit("fn-err",[arguments,this,t],r),t}finally{x.emit("fn-end",[(0,v.t)()],r)}}}};function I(e,t,r,i){return function(){return(0,a.p)(f.xV,["API/"+t+"/called"],void 0,n.K7.metrics,R),i&&(0,a.p)(e+t,[r?(0,v.t)():performance.now(),...arguments],r?null:this,i,R),r?void 0:this}}function P(){r.e(478).then(r.bind(r,8778)).then((({setAPI:t})=>{t(e),(0,c.Ze)(e,"api")})).catch((e=>{(0,l.R)(27,e),R.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{O[e]=I(A,e,void 0,h?n.K7.softNav:n.K7.spa)})),g.setCurrentRouteName=h?I(A,"routeName",void 0,n.K7.softNav):I(E,"routeName",!0,n.K7.spa),g.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,a.p)(f.xV,["API/noticeError/called"],void 0,n.K7.metrics,R),(0,a.p)("err",[t,(0,v.t)(),!1,r,!!S[e]],void 0,n.K7.jserrors,R)},d.RI?(0,u.GG)((()=>P()),!0):P(),g}(e.agentIdentifier,R,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),P=!0}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>s,P3:()=>c,XX:()=>i,qY:()=>n,v4:()=>a});const n="events",i="jserrors",o="browser/blobs",a="rum",s={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},c={[s.pageViewEvent]:1,[s.pageViewTiming]:2,[s.metrics]:3,[s.jserrors]:4,[s.spa]:5,[s.ajax]:6,[s.sessionTrace]:7,[s.softNav]:8,[s.sessionReplay]:9,[s.logging]:10,[s.genericEvents]:11},u={[s.pageViewEvent]:a,[s.pageViewTiming]:n,[s.ajax]:n,[s.spa]:n,[s.softNav]:n,[s.metrics]:i,[s.jserrors]:i,[s.sessionTrace]:o,[s.sessionReplay]:o,[s.logging]:"browser/logs",[s.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>({212:"nr-spa-compressor",249:"nr-spa-recorder",478:"nr-spa"}[e]+"-1.281.0.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.281.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={478:"sha512-jmvAlmjCn64ans8tLueqHRlBI/iWekylsDWb94A77CG0ukSriVDvgD3dThx+XjUSBBBMYhFn8B1a18fViyBPEQ==",249:"sha512-ICY/ZrcytM/86t5KFy+9OAWVYmNNJy10EBtxoSUGjQWuZx53p/eLo+L8HfrGjvHuRHRnutqLTGSnvNttffJkaA==",212:"sha512-pQSn+X/RfBOvx/49HvlghaiXMLhhDQXTi13n1N2XMpDquWJgs9U0pbqE3RbAnYC9nsdaTu/RVGvneEPv1fpCxA=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var h=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(h.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=h.bind(null,s.onerror),s.onload=h.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={38:0,788:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.281.0.PROD"]=self["webpackChunk:NRBA-1.281.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(944),t=i(6344),r=i(9566);class n{agentIdentifier;constructor(){this.agentIdentifier=(0,r.LA)(16)}#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}recordCustomEvent(e,t){return this.#e("recordCustomEvent",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}addRelease(e,t){return this.#e("addRelease",e,t)}log(e,t){return this.#e("log",e,t)}}class o extends n{#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}start(){return this.#e("start")}finished(e){return this.#e("finished",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var a=i(860),s=i(9417);const c=Object.values(a.K7);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(425);var l=i(1687),f=i(4234),h=i(5289),p=i(6154),g=i(5270),m=i(7767),v=i(6389);class b extends f.W{constructor(e,t,r=!0){super(e.agentIdentifier,t),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===e.init[this.featureName].autoStart&&(this.auto=!1),this.auto?(0,l.Ak)(e.agentIdentifier,t):this.ee.on("manual-start-all",(0,v.J)((()=>{(0,l.Ak)(e.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator(e)})))}importAggregator(t,r={}){if(this.featAggregate||!this.auto)return;let n;this.onAggregateImported=new Promise((e=>{n=e}));const o=async()=>{let o;try{if((0,m.V)(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(478).then(i.bind(i,6526));o=e(t)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===a.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,o))return(0,l.Ze)(this.agentIdentifier,this.featureName),void n(!1);const{lazyFeatureLoader:e}=await i.e(478).then(i.bind(i,6103)),{Aggregate:a}=await e(this.featureName,"aggregate");this.featAggregate=new a(t,r),t.runtime.harvester.initializedAggregates.push(this.featAggregate),n(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,l.Ze)(this.agentIdentifier,this.featureName,!0),n(!1),this.ee&&this.ee.abort()}};p.RI?(0,h.GG)((()=>o()),!0):o()}#t(e,t){switch(e){case a.K7.sessionReplay:return(0,g.SR)(this.agentIdentifier)&&!!t;case a.K7.sessionTrace:return!!t;default:return!0}}}var y=i(6630);class w extends b{static featureName=y.T;constructor(e,t=!0){super(e,y.T,t),this.importAggregator(e)}}var R=i(384);var x=i(9908),E=i(2843),T=i(3878),A=i(782),S=i(1863);class N extends b{static featureName=A.T;constructor(e,t=!0){super(e,A.T,t),p.RI&&((0,E.u)((()=>(0,x.p)("docHidden",[(0,S.t)()],void 0,A.T,this.ee)),!0),(0,T.sp)("pagehide",(()=>(0,x.p)("winPagehide",[(0,S.t)()],void 0,A.T,this.ee))),this.importAggregator(e))}}var _=i(3969);class O extends b{static featureName=_.TZ;constructor(e,t=!0){super(e,_.TZ,t),this.importAggregator(e)}}var I=i(6774),P=i(3304);class j{constructor(e,t,r,n,i){this.name="UncaughtError",this.message="string"==typeof e?e:(0,P.A)(e),this.sourceURL=t,this.line=r,this.column=n,this.__newrelic=i}}function C(e){return H(e)?e:new j(void 0!==e?.message?e.message:e,e?.filename||e?.sourceURL,e?.lineno||e?.line,e?.colno||e?.col,e?.__newrelic)}function k(e){const t="Unhandled Promise Rejection";if(!e?.reason)return;if(H(e.reason))try{return e.reason.message=t+": "+e.reason.message,C(e.reason)}catch(t){return C(e.reason)}const r=C(e.reason);return r.message=t+": "+r?.message,r}function L(e){if(e.error instanceof SyntaxError&&!/:\d+$/.test(e.error.stack?.trim())){const t=new j(e.message,e.filename,e.lineno,e.colno,e.error.__newrelic);return t.name=SyntaxError.name,t}return H(e.error)?e.error:C(e)}function H(e){return e instanceof Error&&!!e.stack}class M extends b{static featureName=I.T;#r=!1;constructor(e,r=!0){super(e,I.T,r);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("internal-error",((e,t)=>{this.abortHandler&&(0,x.p)("ierr",[C(e),(0,S.t)(),!0,{},this.#r,t],void 0,this.featureName,this.ee)})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.#r=e})),p.gm.addEventListener("unhandledrejection",(e=>{this.abortHandler&&(0,x.p)("err",[k(e),(0,S.t)(),!1,{unhandledPromiseRejection:1},this.#r],void 0,this.featureName,this.ee)}),(0,T.jT)(!1,this.removeOnAbort?.signal)),p.gm.addEventListener("error",(e=>{this.abortHandler&&(0,x.p)("err",[L(e),(0,S.t)(),!1,{},this.#r],void 0,this.featureName,this.ee)}),(0,T.jT)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var D=i(8990);let K=1;const U="nr@id";function V(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===p.gm?0:(0,D.I)(e,U,(function(){return K++}))}function G(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,P.A)(e).length}catch(e){return}}}var F=i(8139),B=i(7836),W=i(3434);const z={},q=["open","send"];function Z(t){var r=t||B.ee;const n=function(e){return(e||B.ee).get("xhr")}(r);if(void 0===p.gm.XMLHttpRequest)return n;if(z[n.debugId]++)return n;z[n.debugId]=1,(0,F.u)(r);var i=(0,W.YM)(n),o=p.gm.XMLHttpRequest,a=p.gm.MutationObserver,s=p.gm.Promise,c=p.gm.setInterval,u="readystatechange",d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],l=[],f=p.gm.XMLHttpRequest=function(t){const r=new o(t),a=n.context(r);try{n.emit("new-xhr",[r],a),r.addEventListener(u,(s=a,function(){var e=this;e.readyState>3&&!s.resolved&&(s.resolved=!0,n.emit("xhr-resolved",[],e)),i.inPlace(e,d,"fn-",y)}),(0,T.jT)(!1))}catch(t){(0,e.R)(15,t);try{n.emit("internal-error",[t])}catch(e){}}var s;return r};function h(e,t){i.inPlace(t,["onreadystatechange"],"fn-",y)}if(function(e,t){for(var r in e)t[r]=e[r]}(o,f),f.prototype=o.prototype,i.inPlace(f.prototype,q,"-xhr-",y),n.on("send-xhr-start",(function(e,t){h(e,t),function(e){l.push(e),a&&(g?g.then(b):c?c(b):(m=-m,v.data=m))}(t)})),n.on("open-xhr-start",h),a){var g=s&&s.resolve();if(!c&&!s){var m=1,v=document.createTextNode(m);new a(b).observe(v,{characterData:!0})}}else r.on("fn-end",(function(e){e[0]&&e[0].type===u||b()}));function b(){for(var e=0;e<l.length;e++)h(0,l[e]);l.length&&(l=[])}function y(e,t){return t}return n}var Y="fetch-",X=Y+"body-",J=["arrayBuffer","blob","json","text","formData"],Q=p.gm.Request,ee=p.gm.Response,te="prototype";const re={};function ne(e){const t=function(e){return(e||B.ee).get("fetch")}(e);if(!(Q&&ee&&p.gm.fetch))return t;if(re[t.debugId]++)return t;function r(e,r,n){var i=e[r];"function"==typeof i&&(e[r]=function(){var e,r=[...arguments],o={};t.emit(n+"before-start",[r],o),o[B.P]&&o[B.P].dt&&(e=o[B.P].dt);var a=i.apply(this,r);return t.emit(n+"start",[r,e],a),a.then((function(e){return t.emit(n+"end",[null,e],a),e}),(function(e){throw t.emit(n+"end",[e],a),e}))})}return re[t.debugId]=1,J.forEach((e=>{r(Q[te],e,X),r(ee[te],e,X)})),r(p.gm,"fetch",Y),t.on(Y+"end",(function(e,r){var n=this;if(r){var i=r.headers.get("content-length");null!==i&&(n.rxSize=i),t.emit(Y+"done",[null,r],n)}else t.emit(Y+"done",[e],n)})),t}var ie=i(7485),oe=i(5603);class ae{constructor(e){this.agentIdentifier=e}generateTracePayload(e){if(!this.shouldGenerateTrace(e))return null;var t=(0,oe.o)(this.agentIdentifier);if(!t)return null;var n=(t.accountID||"").toString()||null,i=(t.agentID||"").toString()||null,o=(t.trustKey||"").toString()||null;if(!n||!i)return null;var a=(0,r.ZF)(),s=(0,r.el)(),c=Date.now(),u={spanId:a,traceId:s,timestamp:c};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(u.traceContextParentHeader=this.generateTraceContextParentHeader(a,s),u.traceContextStateHeader=this.generateTraceContextStateHeader(a,c,n,i,o)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(u.newrelicHeader=this.generateTraceHeader(a,s,c,n,i,o)),u}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,o){if(!("function"==typeof p.gm?.btoa))return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return o&&n!==o&&(a.d.tk=o),btoa((0,P.A)(a))}shouldGenerateTrace(e){return this.isDtEnabled()&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1,r={};if((0,s.gD)(this.agentIdentifier,"distributed_tracing")&&(r=(0,s.D0)(this.agentIdentifier).distributed_tracing),e.sameOrigin)t=!0;else if(r.allowed_origins instanceof Array)for(var n=0;n<r.allowed_origins.length;n++){var i=(0,ie.D)(r.allowed_origins[n]);if(e.hostname===i.hostname&&e.protocol===i.protocol&&e.port===i.port){t=!0;break}}return t}isDtEnabled(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.enabled}excludeNewrelicHeader(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.cors_use_tracecontext_headers}}var se=i(9300),ce=i(7295),ue=["load","error","abort","timeout"],de=ue.length,le=(0,R.dV)().o.REQ,fe=(0,R.dV)().o.XHR;class he extends b{static featureName=se.T;constructor(e,t=!0){super(e,se.T,t),this.dt=new ae(e.agentIdentifier),this.handler=(e,t,r,n)=>(0,x.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};p.gm?.performance?.getEntriesByType("resource").forEach((t=>{if(t.initiatorType in e&&0!==t.responseStatus){const r={status:t.responseStatus},n={rxSize:t.transferSize,duration:Math.floor(t.duration),cbTime:0};pe(r,t.name),this.handler("xhr",[r,n,t.startTime,t.responseEnd,e[t.initiatorType]],void 0,a.K7.ajax)}}))}catch(e){}ne(this.ee),Z(this.ee),function(e,t,r,n){function i(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=R,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},e.addEventListener("load",(function(r){E(t,e)}),(0,T.jT)(!1)),p.lR||e.addEventListener("progress",(function(e){t.lastSize=e.loaded}),(0,T.jT)(!1))}function o(e){this.params={method:e[0]},pe(this,e[1]),this.metrics={}}function s(t,r){e.loader_config.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",e.loader_config.xpid);var i=n.generateTracePayload(this.parsedOrigin);if(i){var o=!1;i.newrelicHeader&&(r.setRequestHeader("newrelic",i.newrelicHeader),o=!0),i.traceContextParentHeader&&(r.setRequestHeader("traceparent",i.traceContextParentHeader),i.traceContextStateHeader&&r.setRequestHeader("tracestate",i.traceContextStateHeader),o=!0),o&&(this.dt=i)}}function c(e,r){var n=this.metrics,i=e[0],o=this;if(n&&i){var a=G(i);a&&(n.txSize=a)}this.startTime=(0,S.t)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==e.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof r.onload)&&"function"==typeof o.end)&&o.end(r)}catch(e){try{t.emit("internal-error",[e])}catch(e){}}};for(var s=0;s<de;s++)r.addEventListener(ue[s],this.listener,(0,T.jT)(!1))}function u(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function d(e,t){var r=""+V(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function l(e,t){var r=""+V(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function f(){this.endTime=(0,S.t)()}function h(e,r){r instanceof fe&&"load"===e[0]&&t.emit("xhr-load-added",[e[1],e[2]],r)}function g(e,r){r instanceof fe&&"load"===e[0]&&t.emit("xhr-load-removed",[e[1],e[2]],r)}function m(e,t,r){t instanceof fe&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,S.t)()))}function v(e,r){this.xhrCbStart&&t.emit("xhr-cb-time",[(0,S.t)()-this.xhrCbStart,this.onload,r],r)}function b(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&p.RI&&(t=""+p.gm.location.href):e[0]&&e[0].url?t=e[0].url:p.gm?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,ie.D)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=n.generateTracePayload(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if(e[0]&&e[0].headers)s(e[0].headers,i)&&(this.dt=i);else{var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),s(o.headers,i)&&(this.dt=i),e.length>1?e[1]=o:e.push(o)}}function s(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function y(e,t){this.params={},this.metrics={},this.startTime=(0,S.t)(),this.dt=t,e.length>=1&&(this.target=e[0]),e.length>=2&&(this.opts=e[1]);var r,n=this.opts||{},i=this.target;"string"==typeof i?r=i:"object"==typeof i&&i instanceof le?r=i.url:p.gm?.URL&&"object"==typeof i&&i instanceof URL&&(r=i.href),pe(this,r);var o=(""+(i&&i instanceof le&&i.method||n.method||"GET")).toUpperCase();this.params.method=o,this.body=n.body,this.txSize=G(n.body)||0}function w(e,t){if(this.endTime=(0,S.t)(),this.params||(this.params={}),(0,ce.iW)(this.params))return;let n;this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);const i={txSize:this.txSize,rxSize:n,duration:(0,S.t)()-this.startTime};r("xhr",[this.params,i,this.startTime,this.endTime,"fetch"],this,a.K7.ajax)}function R(e){const t=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(let t=0;t<de;t++)e.removeEventListener(ue[t],this.listener,!1);t.aborted||(0,ce.iW)(t)||(n.duration=(0,S.t)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==t.status&&(t.status=0):E(this,e),n.cbTime=this.cbTime,r("xhr",[t,n,this.startTime,this.endTime,"xhr"],this,a.K7.ajax))}}function E(e,r){e.params.status=r.status;var n=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?G(e.response):"text"===r||""===r||void 0===r?G(e.responseText):void 0}(r,e.lastSize);if(n&&(e.metrics.rxSize=n),e.sameOrigin){var i=r.getResponseHeader("X-NewRelic-App-Data");i&&((0,x.p)(_.rs,["Ajax/CrossApplicationTracing/Header/Seen"],void 0,a.K7.metrics,t),e.params.cat=i.split(", ").pop())}e.loadCaptureCalled=!0}t.on("new-xhr",i),t.on("open-xhr-start",o),t.on("open-xhr-end",s),t.on("send-xhr-start",c),t.on("xhr-cb-time",u),t.on("xhr-load-added",d),t.on("xhr-load-removed",l),t.on("xhr-resolved",f),t.on("addEventListener-end",h),t.on("removeEventListener-end",g),t.on("fn-end",v),t.on("fetch-before-start",b),t.on("fetch-start",y),t.on("fn-start",m),t.on("fetch-done",w)}(e,this.ee,this.handler,this.dt),this.importAggregator(e)}}function pe(e,t){var r=(0,ie.D)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}const ge={},me=["pushState","replaceState"];function ve(e){const t=function(e){return(e||B.ee).get("history")}(e);return!p.RI||ge[t.debugId]++||(ge[t.debugId]=1,(0,W.YM)(t).inPlace(window.history,me,"-")),t}var be=i(3738);const{He:ye,bD:we,d3:Re,Kp:xe,TZ:Ee,Lc:Te,uP:Ae,Rz:Se}=be;class Ne extends b{static featureName=Ee;constructor(e,t=!0){super(e,Ee,t);if(!(0,m.V)(this.agentIdentifier))return void this.deregisterDrain();const r=this.ee;let n;ve(r),this.eventsEE=(0,F.u)(r),this.eventsEE.on(Ae,(function(e,t){this.bstStart=(0,S.t)()})),this.eventsEE.on(Te,(function(e,t){(0,x.p)("bst",[e[0],t,this.bstStart,(0,S.t)()],void 0,a.K7.sessionTrace,r)})),r.on(Se+Re,(function(e){this.time=(0,S.t)(),this.startPath=location.pathname+location.hash})),r.on(Se+xe,(function(e){(0,x.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,a.K7.sessionTrace,r)}));try{n=new PerformanceObserver((e=>{const t=e.getEntries();(0,x.p)(ye,[t],void 0,a.K7.sessionTrace,r)})),n.observe({type:we,buffered:!0})}catch(e){}this.importAggregator(e,{resourceObserver:n})}}var _e=i(2614);class Oe extends b{static featureName=t.TZ;#i;#o;constructor(e,r=!0){let n;super(e,t.TZ,r),this.replayRunning=!1,this.#o=e;try{n=JSON.parse(localStorage.getItem("".concat(_e.H3,"_").concat(_e.uh)))}catch(e){}(0,g.SR)(e.agentIdentifier)&&this.ee.on(t.G4.RECORD,(()=>this.#a())),this.#s(n)?(this.#i=n?.sessionReplayMode,this.#c()):this.importAggregator(e),this.ee.on("err",(e=>{this.replayRunning&&(this.errorNoticed=!0,(0,x.p)(t.G4.ERROR_DURING_REPLAY,[e],void 0,this.featureName,this.ee))})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.replayRunning=e}))}#s(e){return e&&(e.sessionReplayMode===_e.g.FULL||e.sessionReplayMode===_e.g.ERROR)||(0,g.Aw)(this.agentIdentifier)}#u=!1;async#c(e){if(!this.#u){this.#u=!0;try{const{Recorder:t}=await Promise.all([i.e(478),i.e(249)]).then(i.bind(i,8589));this.recorder??=new t({mode:this.#i,agentIdentifier:this.agentIdentifier,trigger:e,ee:this.ee,agentRef:this.#o}),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording}catch(e){}this.importAggregator(this.#o,{recorder:this.recorder,errorNoticed:this.errorNoticed})}}#a(){this.featAggregate?this.featAggregate.mode!==_e.g.FULL&&this.featAggregate.initializeRecording(_e.g.FULL,!0):(this.#i=_e.g.FULL,this.#c(t.Qb.API),this.recorder&&this.recorder.parent.mode!==_e.g.FULL&&(this.recorder.parent.mode=_e.g.FULL,this.recorder.stopRecording(),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording))}}var Ie=i(3962);class Pe extends b{static featureName=Ie.TZ;constructor(e,t=!0){if(super(e,Ie.TZ,t),!p.RI||!(0,R.dV)().o.MO)return;const r=ve(this.ee);Ie.tC.forEach((e=>{(0,T.sp)(e,(e=>{a(e)}),!0)}));const n=()=>(0,x.p)("newURL",[(0,S.t)(),""+window.location],void 0,this.featureName,this.ee);r.on("pushState-end",n),r.on("replaceState-end",n);try{this.removeOnAbort=new AbortController}catch(e){}(0,T.sp)("popstate",(e=>(0,x.p)("newURL",[e.timeStamp,""+window.location],void 0,this.featureName,this.ee)),!0,this.removeOnAbort?.signal);let i=!1;const o=new((0,R.dV)().o.MO)(((e,t)=>{i||(i=!0,requestAnimationFrame((()=>{(0,x.p)("newDom",[(0,S.t)()],void 0,this.featureName,this.ee),i=!1})))})),a=(0,v.s)((e=>{(0,x.p)("newUIEvent",[e],void 0,this.featureName,this.ee),o.observe(document.body,{attributes:!0,childList:!0,subtree:!0,characterData:!0})}),100,{leading:!0});this.abortHandler=function(){this.removeOnAbort?.abort(),o.disconnect(),this.abortHandler=void 0},this.importAggregator(e,{domObserver:o})}}var je=i(7378);const Ce={},ke=["appendChild","insertBefore","replaceChild"];function Le(e){const t=function(e){return(e||B.ee).get("jsonp")}(e);if(!p.RI||Ce[t.debugId])return t;Ce[t.debugId]=!0;var r=(0,W.YM)(t),n=/[?&](?:callback|cb)=([^&#]+)/,i=/(.*)\.([^.]+)/,o=/^(\w+)(\.|$)(.*)$/;function a(e,t){if(!e)return t;const r=e.match(o),n=r[1];return a(r[3],t[n])}return r.inPlace(Node.prototype,ke,"dom-"),t.on("dom-start",(function(e){!function(e){if(!e||"string"!=typeof e.nodeName||"script"!==e.nodeName.toLowerCase())return;if("function"!=typeof e.addEventListener)return;var o=(s=e.src,c=s.match(n),c?c[1]:null);var s,c;if(!o)return;var u=function(e){var t=e.match(i);if(t&&t.length>=3)return{key:t[2],parent:a(t[1],window)};return{key:e,parent:window}}(o);if("function"!=typeof u.parent[u.key])return;var d={};function l(){t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,T.jT)(!1)),e.removeEventListener("error",f,(0,T.jT)(!1))}function f(){t.emit("jsonp-error",[],d),t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,T.jT)(!1)),e.removeEventListener("error",f,(0,T.jT)(!1))}r.inPlace(u.parent,[u.key],"cb-",d),e.addEventListener("load",l,(0,T.jT)(!1)),e.addEventListener("error",f,(0,T.jT)(!1)),t.emit("new-jsonp",[e.src],d)}(e[0])})),t}const He={};function Me(e){const t=function(e){return(e||B.ee).get("promise")}(e);if(He[t.debugId])return t;He[t.debugId]=!0;var r=t.context,n=(0,W.YM)(t),i=p.gm.Promise;return i&&function(){function e(r){var o=t.context(),a=n(r,"executor-",o,null,!1);const s=Reflect.construct(i,[a],e);return t.context(s).getCtx=function(){return o},s}p.gm.Promise=e,Object.defineProperty(e,"name",{value:"Promise"}),e.toString=function(){return i.toString()},Object.setPrototypeOf(e,i),["all","race"].forEach((function(r){const n=i[r];e[r]=function(e){let i=!1;[...e||[]].forEach((e=>{this.resolve(e).then(a("all"===r),a(!1))}));const o=n.apply(this,arguments);return o;function a(e){return function(){t.emit("propagate",[null,!i],o,!1,!1),i=i||!e}}}})),["resolve","reject"].forEach((function(r){const n=i[r];e[r]=function(e){const r=n.apply(this,arguments);return e!==r&&t.emit("propagate",[e,!0],r,!1,!1),r}})),e.prototype=i.prototype;const o=i.prototype.then;i.prototype.then=function(...e){var i=this,a=r(i);a.promise=i,e[0]=n(e[0],"cb-",a,null,!1),e[1]=n(e[1],"cb-",a,null,!1);const s=o.apply(this,e);return a.nextPromise=s,t.emit("propagate",[i,!0],s,!1,!1),s},i.prototype.then[W.Jt]=o,t.on("executor-start",(function(e){e[0]=n(e[0],"resolve-",this,null,!1),e[1]=n(e[1],"resolve-",this,null,!1)})),t.on("executor-err",(function(e,t,r){e[1](r)})),t.on("cb-end",(function(e,r,n){t.emit("propagate",[n,!0],this.nextPromise,!1,!1)})),t.on("propagate",(function(e,r,n){this.getCtx&&!r||(this.getCtx=function(){if(e instanceof Promise)var r=t.context(e);return r&&r.getCtx?r.getCtx():this})}))}(),t}const De={},Ke="setTimeout",Ue="setInterval",Ve="clearTimeout",Ge="-start",Fe=[Ke,"setImmediate",Ue,Ve,"clearImmediate"];function Be(e){const t=function(e){return(e||B.ee).get("timer")}(e);if(De[t.debugId]++)return t;De[t.debugId]=1;var r=(0,W.YM)(t);return r.inPlace(p.gm,Fe.slice(0,2),Ke+"-"),r.inPlace(p.gm,Fe.slice(2,3),Ue+"-"),r.inPlace(p.gm,Fe.slice(3),Ve+"-"),t.on(Ue+Ge,(function(e,t,n){e[0]=r(e[0],"fn-",null,n)})),t.on(Ke+Ge,(function(e,t,n){this.method=n,this.timerDuration=isNaN(e[1])?0:+e[1],e[0]=r(e[0],"fn-",this,n)})),t}const We={};function ze(e){const t=function(e){return(e||B.ee).get("mutation")}(e);if(!p.RI||We[t.debugId])return t;We[t.debugId]=!0;var r=(0,W.YM)(t),n=p.gm.MutationObserver;return n&&(window.MutationObserver=function(e){return this instanceof n?new n(r(e,"fn-")):n.apply(this,arguments)},MutationObserver.prototype=n.prototype),t}const{TZ:qe,d3:Ze,Kp:Ye,$p:Xe,wW:$e,e5:Je,tH:Qe,uP:et,rw:tt,Lc:rt}=je;class nt extends b{static featureName=qe;constructor(e,t=!0){if(super(e,qe,t),!p.RI)return;try{this.removeOnAbort=new AbortController}catch(e){}let r,n=0;const i=this.ee.get("tracer"),o=Le(this.ee),a=Me(this.ee),s=Be(this.ee),c=Z(this.ee),u=this.ee.get("events"),d=ne(this.ee),l=ve(this.ee),f=ze(this.ee);function h(e,t){l.emit("newURL",[""+window.location,t])}function g(){n++,r=window.location.hash,this[et]=(0,S.t)()}function m(){n--,window.location.hash!==r&&h(0,!0);var e=(0,S.t)();this[Je]=~~this[Je]+e-this[et],this[rt]=e}function v(e,t){e.on(t,(function(){this[t]=(0,S.t)()}))}this.ee.on(et,g),a.on(tt,g),o.on(tt,g),this.ee.on(rt,m),a.on($e,m),o.on($e,m),this.ee.on("fn-err",((...t)=>{t[2]?.__newrelic?.[e.agentIdentifier]||(0,x.p)("function-err",[...t],void 0,this.featureName,this.ee)})),this.ee.buffer([et,rt,"xhr-resolved"],this.featureName),u.buffer([et],this.featureName),s.buffer(["setTimeout"+Ye,"clearTimeout"+Ze,et],this.featureName),c.buffer([et,"new-xhr","send-xhr"+Ze],this.featureName),d.buffer([Qe+Ze,Qe+"-done",Qe+Xe+Ze,Qe+Xe+Ye],this.featureName),l.buffer(["newURL"],this.featureName),f.buffer([et],this.featureName),a.buffer(["propagate",tt,$e,"executor-err","resolve"+Ze],this.featureName),i.buffer([et,"no-"+et],this.featureName),o.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"],this.featureName),v(d,Qe+Ze),v(d,Qe+"-done"),v(o,"new-jsonp"),v(o,"jsonp-end"),v(o,"cb-start"),l.on("pushState-end",h),l.on("replaceState-end",h),window.addEventListener("hashchange",h,(0,T.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("load",h,(0,T.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("popstate",(function(){h(0,n>1)}),(0,T.jT)(!0,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var it=i(3333);class ot extends b{static featureName=it.TZ;constructor(e,t=!0){super(e,it.TZ,t);const r=[e.init.page_action.enabled,e.init.performance.capture_marks,e.init.performance.capture_measures,e.init.user_actions.enabled,e.init.performance.resources.enabled];if(p.RI&&(e.init.user_actions.enabled&&(it.Zp.forEach((e=>(0,T.sp)(e,(e=>(0,x.p)("ua",[e],void 0,this.featureName,this.ee)),!0))),it.qN.forEach((e=>{const t=(0,v.s)((e=>{(0,x.p)("ua",[e],void 0,this.featureName,this.ee)}),500,{leading:!0});(0,T.sp)(e,t)}))),e.init.performance.resources.enabled&&p.gm.PerformanceObserver?.supportedEntryTypes.includes("resource"))){new PerformanceObserver((e=>{e.getEntries().forEach((e=>{(0,x.p)("browserPerformance.resource",[e],void 0,this.featureName,this.ee)}))})).observe({type:"resource",buffered:!0})}r.some((e=>e))?this.importAggregator(e):this.deregisterDrain()}}var at=i(993),st=i(3785);class ct extends b{static featureName=at.TZ;constructor(e,t=!0){super(e,at.TZ,t);const r=this.ee;this.ee.on("wrap-logger-end",(function([e]){const{level:t,customAttributes:n}=this;(0,st.R)(r,e,n,t)})),this.importAggregator(e)}}new class extends o{constructor(t){super(),p.gm?(this.features={},(0,R.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(w),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.K7.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.P3[e.featureName]-a.P3[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.K7.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.K7.softNav)return;const n=function(e){switch(e){case a.K7.ajax:return[a.K7.jserrors];case a.K7.sessionTrace:return[a.K7.ajax,a.K7.pageViewEvent];case a.K7.sessionReplay:return[a.K7.sessionTrace];case a.K7.pageViewTiming:return[a.K7.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,R.Zm)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[he,w,N,Ne,Oe,O,M,ot,ct,Pe,nt],loaderType:"spa"})})()})();</script>
-<meta name="title" content="Submit Your Testimonial"/>
-<meta name="robots" content="INDEX,FOLLOW"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="format-detection" content="telephone=no"/>
-<title>Submit Your Testimonial</title>
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/mage/calendar.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/css/styles-m.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/bootstrap/bootstrap-grid.min.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Amasty_Base/vendor/slick/amslick.min.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Amasty_AdvancedReview/vendor/fancybox/jquery.fancybox.min.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Amasty_Customform/css/form-builder.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Amasty_Customform/css/form-render.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Amasty_HidePrice/js/fancyambox/jquery.fancyambox.min.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Amasty_HidePrice/css/amhideprice.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Webkul_Marketplace/css/wk_block.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Lof_ProductTags/css/styles.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/MageWorx_SearchSuiteAutocomplete/css/searchsuiteautocomplete.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_Core/css/styles.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_Core/css/owlcarousel/owl.carousel.min.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_Core/css/animate.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_Core/css/fontawesome5.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_Core/css/mgz_font.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_Core/css/mgz_bootstrap.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_Builder/css/openiconic.min.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_Builder/css/styles.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_Builder/css/common.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_Core/css/magnific.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Magezon_PageBuilder/css/styles.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Webkul_Mpshipping/css/mpship.css" />
-<link  rel="stylesheet" type="text/css"  media="all" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Nwdthemes_Revslider/public/assets/css/rs6.min.css" />
-<link  rel="stylesheet" type="text/css"  media="screen and (min-width: 1025px)" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/css/styles-l.css" />
-<link  rel="stylesheet" type="text/css"  media="print" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/css/print.css" />
-<script  type="text/javascript"  src="https://edumalls.com/static/frontend/Edumalls/theme/en_US/requirejs/require.js"></script>
-<script  type="text/javascript"  src="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Amasty_CheckoutCore/js/amastyCheckoutDisabled.js"></script>
-<script  type="text/javascript"  src="https://edumalls.com/static/frontend/Edumalls/theme/en_US/mage/requirejs/mixins.js"></script>
-<script  type="text/javascript"  src="https://edumalls.com/static/frontend/Edumalls/theme/en_US/requirejs-config.js"></script>
-<script  type="text/javascript"  src="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Amasty_GeoipRedirect/js/storeCookieChecker.js"></script>
-<link  rel="icon" type="image/x-icon" href="https://cdn.edumalls.com/favicon/stores/10/edumalls-favicon_1.png" />
-<link  rel="shortcut icon" type="image/x-icon" href="https://cdn.edumalls.com/favicon/stores/10/edumalls-favicon_1.png" />
-<meta name="google-site-verification" content="3yx6Z8jkNAyh1tWoG4wWYszUoPmrI8w7Y5PwzwEMDJE" />
+(function() {
 
-<script>
-document.getElementById("log-in-account-link").addEventListener("click", function() {
-            document.querySelector(".amsl-popup-overlay").style.display = "flex";
-        });
-</script>
-
-<script>
-require(['uiRegistry'], function (registry) {
-    function runWhenShippingLoaded() {
-        var shippingMethodElement = document.querySelector('.checkout-shipping-method');
-
-        if (shippingMethodElement) {
-            // Clear the interval once the shipping method is loaded
-            clearInterval(checkShippingInterval);
-
-            // Your code to run after shipping information has loaded
-            var select2Elements = document.querySelectorAll('.select2-container--default');
-
-            select2Elements.forEach(function(select2Element) {
-                // Find the corresponding select element
-                var selectElement = select2Element.previousElementSibling;
-                
-                if (selectElement && selectElement.tagName === 'SELECT') {
-                    // Unselect the value by setting the value to an empty string
-                    selectElement.value = "";
-                    
-                    // Trigger the change event to update the select2 display
-                    var event = new Event('change', { bubbles: true });
-                    selectElement.dispatchEvent(event);
-                }
-            });
-        }
-    }
-
-    // Check every 500ms if the shipping method step is loaded
-    var checkShippingInterval = setInterval(runWhenShippingLoaded, 500);
-});
-
-</script>   <link rel="preload" as="font" crossorigin="anonymous" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/fonts/athlete2/athlete2.woff" /> <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="//fonts.googleapis.com/css?family=Roboto%3A500%2C600%2C700%2C800%2C900%2Cregular%7CRoboto+Condensed%3A600%7CInter%3A500%2C600%2C700%2C800%2Cregular%7CPoppins%3A500%2C600%2C700%2C800%2C900%2Cregular%7CNothing+You+Could+Do%3Aregular&display=swap" rel="stylesheet">     <script>
-        window.getWpGA4Cookie = function(name) {
-            match = document.cookie.match(new RegExp(name + '=([^;]+)'));
-            if (match) return decodeURIComponent(match[1].replace(/\+/g, ' ')) ;
-        };
-
-        window.dataLayer = window.dataLayer || [];
-                var dl4Objects = [{"pageName":"Submit Your Testimonial","pageType":"other"}];
-        for (var i in dl4Objects) {
-            window.dataLayer.push({ecommerce: null});
-            window.dataLayer.push(dl4Objects[i]);
-        }
-         var wpGA4Cookies = ['wp_ga4_user_id','wp_ga4_customerGroup'];
-        wpGA4Cookies.map(function(cookieName) {
-            var cookieValue = window.getWpGA4Cookie(cookieName);
-            if (cookieValue) {
-                var dl4Object = {};
-                dl4Object[cookieName.replace('wp_ga4_', '')] = cookieValue;
-                window.dataLayer.push(dl4Object);
-            }
-        });</script>
-   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N5Z9WNF4');</script>
-<!-- End Google Tag Manager -->   <!-- Meta Business Extension for Magento 2 --><!-- Meta Pixel Code --><script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','//connect.facebook.net/en_US/fbevents.js');
-     fbq(
-  'init',
-  '304135905266532',
-    {
-    "external_id": "471663",
-    "em": "55a47a1894ed59119d7c28a6d0bd4e0af983f82e5a8911e95eb94e5e43c89d26",
-    "fn": "a65742a900fb13cf42bb8c18be36aa7a398aebb4ab78880e2a4622d80d513d82",
-    "ln": "d5fcf7aa366aba244b3935dec5b0cb2fd00b34fabb84c8ce406733b2df5a2501",
-    "zp": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "ct": "8b31e003daf9ab33f0678081be064ff627110d1f510701b7e09f4f0f1ade4dfd",
-    "ph": "b767e7bbc1e336c35d8adefb4a13fae3dd69f0777cb18088fda22221f2cbe50e",
-    "st": "d0793bf682ad6f4825e742e3465b6208b5a54e238d26340b0d11aa5996bec826",
-    "country": "4cf6829aa93728e8f3c97df913fb1bfa95fe5810e2933a05943f8312a98d9cf2"
-},
-  {agent: 'magento2-0.0.0-1.4.6' }
-);
-fbq('track', 'PageView', {
-  source: "magento2",
-  pluginVersion: "1.4.6"
-});</script><noscript> <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=304135905266532&ev=PageView&noscript=1&a=magento2-0.0.0-1.4.6" /></noscript><!-- End Meta Pixel Code --> <script type="text/x-magento-init">
-        {
-            "*": {
-                "Magento_PageCache/js/form-key-provider": {}
-            }
-        }</script> <link href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Olegnax_Core/owl.carousel/assets/owl.carousel.css" data-onloadcss rel="stylesheet" type="text/css" media="print" >   <link rel="stylesheet" href="https://edumalls.com/static/frontend/Edumalls/theme/en_US/Olegnax_MegaMenu/css/perfect-scrollbar.min.css" data-onloadcss type="text/css" media="print"><style type="text/css">/** * Athlete2 * Theme by Olegnax * Copyright (c) 2023 Olegnax * https://olegnax.com * * WARNING: Do not change this file. Your changes will be lost. * 2025-02-16 03:06:27 */ .page-footer .switcher .action.toggle strong{ font-family: 'Inter', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 1.4rem; text-transform:uppercase; letter-spacing: -0.03em;}.additional-products:is(.upsell, .related) .owl-carousel .owl-stage-outer{ overflow: visible; contain: none;}.catalogsearch-result-index .page-main, .catalog-category-view .page-main{ max-width: 100%!important;}.logo__container{padding-left: 5px; padding-right: 5px;}.logo__container{padding-top: 5px; padding-bottom: 5px;}@media (min-width: 641px){ .mobile-header--layout-1 .logo__container{ width: 200px;}} @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){ .logo__container .logo img{ display:none;}.logo__container .logo img.retina{ display:block;}} .header__item-search{ order: 2}.block-reorder .actions-toolbar .action.view:hover, a:hover, .alink:hover{color:rgb(0, 0, 0)}a, .alink, a:visited, .alink:visited, .filter-options-content a, .breadcrumbs a, .reviews-actions a, .post-view .post-meta a.item, .block-reorder .actions-toolbar .action.view, a.bg-hover, .std a, .links-bg-hover a{ color:rgb(51, 51, 51)}.ox-megamenu__dropdown .ox-owl-nav button.owl-next:hover span:after, .ox-megamenu__dropdown .ox-owl-nav button.owl-prev:hover span:after, .ox-megamenu__dropdown .ox-owl-nav button.owl-next:hover span:before, .ox-megamenu__dropdown .ox-owl-nav button.owl-prev:hover span:before, .ox-brand-slider__container .ox-owl-nav button.owl-prev:hover span:after, .ox-brand-slider__container .ox-owl-nav button.owl-next:hover span:after, .ox-brand-slider__container .ox-owl-nav button.owl-prev:hover span:before, .ox-brand-slider__container .ox-owl-nav button.owl-next:hover span:before{background-color: rgb(0, 0, 0)}.sidebar-additional .block.block-recent-posts .item a:hover, .sidebar-additional .block.block-archive .item a:hover, .sidebar-additional .block.block-categories li a:hover, .post-view .block.comments .c-comment .p-actions a:hover, .post-view .post-nextprev-hld .nextprev-link:hover .h3, .post-view .post-meta a.item:hover, .abs-discount-block > .title:hover:after, .cart-summary .block > .title:hover:after, .opc-block-summary .items-in-cart > .title:hover:after, .checkout-payment-method .payment-option._collapsible > .title:hover:after, .paypal-review-discount .block > .title:hover:after, .filter-options-content a:hover, .filter.block .content dl.options dd li a:hover, .breadcrumbs a:hover, .reviews-actions a:hover, a.bg-hover:hover, .std a:hover, .links-bg-hover a:hover{color:rgb(0, 0, 0)}.sidebar-additional .block.block-recent-posts .item a:hover, .sidebar-additional .block.block-archive .item a:hover, .sidebar-additional .block.block-categories li a:hover, .post-view .block.comments .c-comment .p-actions a:hover, .post-view .post-nextprev-hld .nextprev-link:hover .h3, .post-view .post-meta a.item:hover, .ox-megamenu__dropdown .ox-owl-nav button.owl-next:hover, .ox-megamenu__dropdown .ox-owl-nav button.owl-prev:hover, .ox-brand-slider__container .ox-owl-nav button.owl-next:hover, .ox-brand-slider__container .ox-owl-nav button.owl-prev:hover, .cart-summary .block > .title:hover:after, .opc-block-summary .items-in-cart > .title:hover:after, .checkout-payment-method .payment-option._collapsible > .title:hover:after, .paypal-review-discount .block > .title:hover:after, .filter-options-content a:hover, .filter.block .content dl.options dd li a:hover, .breadcrumbs a:hover, .reviews-actions a:hover, a.bg-hover:hover, .std a:hover, .links-bg-hover a:hover{background-color:rgba(0, 0, 0, 0)}.extended-review-summary .ratings-value, .review-control-vote label:before, .rating-summary .rating-result > span:before, .review-list .rating-summary .rating-result > span:before, .products-grid .product-item:hover .price-box .price-container .price, .ox-prev-next__link .label, .accent-color, .post-view .social-share__content a:hover i, .ox-prev-next__link .label{ color:rgb(44, 41, 48)}button:hover, .primary > .action.naked:after, a.action.primary.naked:after, .action.primary.naked:after, .button.primary.naked:after, a.button.primary.naked:after, a.button.naked:after, .button.naked:after, button.naked:after, .button.secondary:after, a.button.secondary:after, .action.secondary:after, .action-secondary:after, button.action-secondary:after, button.action.secondary:after, .secondary > a.action:after, .primary > .action, a.action.primary, .action.primary, .button.primary, a.button.primary, a.button, .button, button, .logo__container, .number-of-ratings .rating-result span:before, .extended-review-summary .ratings-count .rating-result span:before, .crosssell .owl-carousel .owl-nav button.owl-next:after, .related .owl-carousel .owl-nav button.owl-next:after, .upsell .owl-carousel .owl-nav button.owl-next:after, .crosssell .owl-carousel .owl-nav button.owl-prev:after, .related .owl-carousel .owl-nav button.owl-prev:after, .upsell .owl-carousel .owl-nav button.owl-prev:after, .owl-nav button.owl-next:after, .owl-nav button.owl-prev:after, .owl-carousel.widget-product-grid .owl-nav button.owl-next:after, .owl-carousel.widget-product-grid .owl-nav button.owl-prev:after, .footer.content a:hover, .ox-banner-animated-text .ox-banner-animated-container .text.accent-bg:after, .ox-banner__text-container .text:after, .athlete-slideshow .slide .controls .slide-control:after, .opc-block-shipping-information .shipping-information-title .action-edit:after, .opc-progress-bar-item._active:before, .cart-summary .actions-toolbar > .primary button.naked:after, .action.action-edit-address:after, .filter-current .action.remove:hover:before, .opc-progress-bar-item._active:before, .slider-progress:after, .animated-text--bg.accent:after, blockquote:after, blockquote:before, button:focus, button:active, .abs-action-link-button:hover, .abs-action-link-button:focus, .abs-action-link-button:active, .abs-action-addto-product:focus, .abs-action-addto-product:active, .abs-action-addto-product:hover, .block-event .slider-panel .slider .item .action.event:focus, .block-event .slider-panel .slider .item .action.event:active, .block-event .slider-panel .slider .item .action.event:hover, .sidebar .action.delete:hover:before, .block-compare .action.delete:hover:before, .abs-shopping-cart-items .action.continue:after, .block-cart-failed .action.continue:after, .cart-container .form-cart .action.continue:after, .abs-shopping-cart-items .action.clear:after, .block-cart-failed .action.clear:after, .cart-container .form-cart .action.clear:after, .abs-shopping-cart-items .action.update:after, .block-cart-failed .action.update:after, .cart-container .form-cart .action.update:after, .message.warning:before, .hightlighted-text:before, .top-bar .switcher:hover, .page-footer .switcher:hover .action.toggle, .page-footer .switcher .action.toggle.active .page-header .header.links a:not(.button):hover, .footer.content a.athlete2-social-icon, .footer.content a:not(.button).athlete2-social-icon, .content a.athlete2-social-icon, .std a.athlete2-social-icon, .athlete2-social-icons > a.athlete2-social-icon, a.athlete2-social-icon, .amshopby-button, .pages strong.page, .action-search-slideout, .page-header .navigation .level0 > .level-top:before, .fotorama__active .fotorama__dot, .owl-carousel .owl-dots button.owl-dot.active span, .owl-carousel .owl-dots button.owl-dot:hover span, .ox-css-dots > a span, #toTop, .header-top-banner, .at-close-cross:hover, .ox-banner-animated-text .ox-banner-animated-container .link, .ox-banner .link, #ox_quickview_wrapper .ox-overlay-close-btn:hover, .ui-dialog.popup .action.close:focus, .ui-dialog.popup .action.close:hover, .modal-custom .action-close:focus, .modal-popup .action-close:focus, .modal-slide .action-close:focus, .modal-custom .action-close:hover, .modal-popup .action-close:hover, .modal-slide .action-close:hover, .ox-banner__text-container .link, .athlete-slideshow .slide .controls .progress, .slide-title .link, .cart-summary .actions-toolbar > .primary button, .minicart-wrapper .action.showcart, .gift-item-block .title:focus, .gift-item-block .title:active, .js-toolbar-dropdown > div:hover, .products-grid .product-grid__image-wrapper .product-item-inner .action:is(.tocompare, .towishlist, .primary):hover, .table-comparison .cell.remove .action.delete:hover, .table-comparison .action.towishlist:hover, .table-comparison .action.tocart:hover, .sidebar-additional .block:before, .block-event .slider-panel .slider .item .action.event, .ox-product-item__amount .amount-count-line span, .ox-item-scroll__amount .amount-count-line span, .ox-product-scroll__amount .amount-count-line span, .toolbar-amount .amount-count-line span, .post-view .post-categories a, .post-list.blog-style-modern article .post-categories a, .post-list.blog-style-classic .post-date .hover, .post-view .post-tags a:hover, .sidebar-additional .block.block-tagclaud a:hover, .filter-options-content .ui-slider .ui-slider-range, .filter-options-content .ox-price-slider .ui-slider-range, .filter-options-content .noUi-connect, .filter-current-count, #toTop{background-color:rgb(44, 41, 48)}@media only screen and (min-width: 1025px){ .ox-megamenu-navigation .category-item.has-active > .ox-mm-a-wrap .level-top, .ox-megamenu-navigation .category-item.active > .ox-mm-a-wrap .level-top, .ox-megamenu-navigation .category-item.has-active > .ox-mm-a-wrap a, .ox-megamenu-navigation .category-item.active > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu-list > .category-item.active > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu__categories > .ox-megamenu-list > .category-item > .submenu > .category-item.active > .ox-mm-a-wrap a, .ox-megamenu-navigation > .level0 > .ox-mm-a-wrap a:before, .order-links .item.current strong, .product.data.items > .item.title > .switch:after, .block-search .action.search{background: rgb(44, 41, 48)}.ox-megamenu-navigation .ox-megamenu__dropdown .category-item.active > .ox-mm-a-wrap a, .ox-megamenu-navigation .ox-megamenu__dropdown .category-item.active + .category-item > .ox-mm-a-wrap a{border-color: rgb(44, 41, 48)}} .post-view .block.comments .c-comment .c-post, .post-list.blog-style-modern article .post-links > .item:hover, .filter-options, .filter.block .content, .a-underlined-links a, .underlined-links a:hover, .account-nav .content{border-color:rgb(44, 41, 48)}.slide-out-menu--mobile .icon{ color: rgb(44, 41, 48)}.accent-color svg, svg.accent-color{fill: rgb(44, 41, 48)!important}.hightlighted-text:before{background-color: rgb(202, 239, 54)} .ox-megamenu, .ox-dropdown--megamenu .ox-megamenu-block p, .ox-dropdown--megamenu .ox-megamenu-list > .category-item > .submenu > .category-item > .ox-mm-a-wrap a, body{font-family: 'Roboto', Helvetica, Arial, sans-serif}:is(.ox-slideout,.ox-overlay) .header__search-wrapper form :is( input,.label), .extended-review-summary .ratings-value, .ox-carousel .ox-slide-item .title:is(.huge,.big,.huge-6vw,.huge-7vw), .block.newsletter .title, .h1, h1, .big-font{ font-family: 'Poppins', Helvetica, Arial, sans-serif}.fancy-text{ font-family: 'Nothing You Could Do', Helvetica, Arial, sans-serif!important;}.cart-summary > .title, .abs-account-blocks .block-title > strong, .block-giftregistry-results .block-title > strong, .block-giftregistry-shared-items .block-title > strong, .block-wishlist-search-results .block-title > strong, .order-details-items .order-title > strong, .widget .block-title > strong, .multicheckout .block-title > strong, .paypal-review .block .block-title > strong, .magento-rma-guest-returns .column.main .block:not(.widget) [class^='sales-guest-'] .column.main .block:not(.widget) .block-title > strong, .sales-guest-view .column.main .block:not(.widget) .block-title > strong, .account .column.main .block:not(.widget) .block-title > strong, .cart-empty-big-text, .ox-banner-animated-text.ox-banner-medium .ox-banner__text-container .text, .ox-banner-animated-text.ox-banner-big .ox-banner__text-container .text, .ox-banner__text-container .text, .column.main .block .title strong, .block .title strong, .block-title strong, .opc-wrapper .step-title, .opc-block-shipping-information .shipping-information-title, .opc-block-summary > .title, .checkout-agreements-items .checkout-agreements-item-title, .fieldset .review-legend.legend, .review-list .block-title strong, .bundle-options-container .block-bundle-summary > .title > strong, .bundle-options-container .block-bundle-summary .bundle-summary > .subtitle, .bundle-options-container .legend.title, .post-view .block.comments .c-count, .modal-popup .modal-title, .contact-index-index .form.contact .fieldset .legend, .h2, .h3, h2, h3, .title-font{font-family: 'Roboto', Helvetica, Arial, sans-serif}.block.newsletter .title, .multicheckout .box-title > span, .paypal-review .block .box-title > span, .magento-rma-guest-returns .column.main .block:not(.widget) .box-title > span, [class^='sales-guest-'] .column.main .block:not(.widget) .box-title > span, .sales-guest-view .column.main .block:not(.widget) .box-title > span, .account .column.main .block:not(.widget) .box-title > span, .minicart-wrapper .action.showcart, .ox-banner span.text, .ox-banner-animated-text .ox-banner-animated-container span.text, .ox-banner__text-container .text, .filter-options-title, .filter .block-subtitle, .small-subtitle, .fieldset > .legend, .opc-progress-bar-item > span, .filter.block .content dl.options dt, .sidebar-additional .block .block-title > strong, .review-title, .post-list.blog-style-modern article .post-title, .post-list.blog-style-modern article .post-image-wrapper .post-posed-date, .post-list.blog-style-modern article .post-categories a, .post-list.blog-style-modern article .post-links > .item, .post-list.blog-style-classic .post-date .day, .post-list.blog-style-classic .post-date .hover, .post-view .post-categories a, .post-view .block.comments .c-comment .p-name, .h4, .h5, .h6, h4, h5, h6{font-family: 'Inter', Helvetica, Arial, sans-serif}.abs-account-blocks .block-title > strong, .block-giftregistry-results .block-title > strong, .block-giftregistry-shared-items .block-title > strong, .block-wishlist-search-results .block-title > strong, .order-details-items .order-title > strong, .widget .block-title > strong, .multicheckout .block-title > strong, .paypal-review .block .block-title > strong, .magento-rma-guest-returns .column.main .block:not(.widget) [class^='sales-guest-'] .column.main .block:not(.widget) .block-title > strong, .sales-guest-view .column.main .block:not(.widget) .block-title > strong, .account .column.main .block:not(.widget) .block-title > strong, .cart-empty-big-text, .ox-banner-animated-text.ox-banner-medium .ox-banner__text-container .text, .ox-banner-animated-text.ox-banner-big .ox-banner__text-container .text, .ox-banner__text-container .text, .column.main .block .title strong, .block .title strong, .block-title strong, .cart-summary > .title, .fieldset .review-legend.legend, .review-list .block-title strong, .bundle-options-container .block-bundle-summary > .title > strong, .bundle-options-container .block-bundle-summary .bundle-summary > .subtitle, .bundle-options-container .legend.title, .post-view .block.comments .c-count, .modal-popup .modal-title, .opc-wrapper .step-title, .opc-block-shipping-information .shipping-information-title, .opc-block-summary > .title, .checkout-agreements-items .checkout-agreements-item-title, .contact-index-index .form.contact .fieldset .legend, .h2, .h3, h2, h3{letter-spacing: 0px;} .block.newsletter .title, .multicheckout .box-title > span, .paypal-review .block .box-title > span, .magento-rma-guest-returns .column.main .block:not(.widget) .box-title > span, [class^='sales-guest-'] .column.main .block:not(.widget) .box-title > span, .sales-guest-view .column.main .block:not(.widget) .box-title > span, .account .column.main .block:not(.widget) .box-title > span, .ox-banner span.text, .ox-banner-animated-text .ox-banner-animated-container span.text, .filter-options-title, .filter .block-subtitle, .login-container .block-new-customer .block-title strong, .ox-overlay .header__search-wrapper form .input-focused .label, .fieldset > .legend, .opc-progress-bar-item > span, .filter.block .content dl.options dt, .sidebar-additional .block .block-title > strong, .review-title, .post-list.blog-style-modern article .post-image-wrapper .post-posed-date, .post-list.blog-style-modern article .post-categories a, .post-list.blog-style-modern article .post-links > .item, .post-list.blog-style-classic .post-date .day, .post-list.blog-style-classic .post-date .hover, .post-list.blog-style-modern article .post-title, .post-view .post-categories a, .post-view .block.comments .c-comment .p-name, .column.main .cart-summary .block > .title strong, .column.main .opc-block-summary .items-in-cart > .title strong, .column.main .checkout-payment-method .payment-option._collapsible > .title strong, .column.main .paypal-review-discount .block > .title strong, .h5, .h6, h5, h6{letter-spacing: 0px;} .block.newsletter .title, :is(.ox-slideout,.ox-overlay) .header__search-wrapper form :is( input,.label), .ox-carousel .ox-slide-item .title:is(.huge,.big,.huge-6vw,.huge-7vw), .h1, h1, h1.big, .h1.big{font-weight: 700; text-transform: capitalize;}.fancy-text{font-weight: 400!important; letter-spacing: 1px!important; text-transform: capitalize!important;}.cart-summary > .title, .abs-account-blocks .block-title > strong, .block-giftregistry-results .block-title > strong, .block-giftregistry-shared-items .block-title > strong, .block-wishlist-search-results .block-title > strong, .order-details-items .order-title > strong, .widget .block-title > strong, .multicheckout .block-title > strong, .paypal-review .block .block-title > strong, .magento-rma-guest-returns .column.main .block:not(.widget) [class^='sales-guest-'] .column.main .block:not(.widget) .block-title > strong, .sales-guest-view .column.main .block:not(.widget) .block-title > strong, .account .column.main .block:not(.widget) .block-title > strong, .cart-empty-big-text, .ox-banner-animated-text.ox-banner-medium .ox-banner__text-container .text, .ox-banner-animated-text.ox-banner-big .ox-banner__text-container .text, .ox-banner__text-container .text, .column.main .block .title strong, .block .title strong, .block-title strong, .opc-wrapper .step-title, .opc-block-shipping-information .shipping-information-title, .opc-block-summary > .title, .checkout-agreements-items .checkout-agreements-item-title, .fieldset .review-legend.legend, .review-list .block-title strong, .bundle-options-container .block-bundle-summary > .title > strong, .bundle-options-container .block-bundle-summary .bundle-summary > .subtitle, .bundle-options-container .legend.title, .post-view .block.comments .c-count, .modal-popup .modal-title, .contact-index-index .form.contact .fieldset .legend, .h2, .h3, h2, h3{font-weight: 700; text-transform: capitalize;}:is(.product-info-main, .product-options-bottom) .product__social-share .social-share__action .label, .block.newsletter .title, .opc-progress-bar-item > span, .column.main .block .title strong, .block .title strong, .block-title strong, .product-info-main .action.tocompare span, .product-options-bottom .action.tocompare span, .product-info-main .action.towishlist span, .product-options-bottom .action.towishlist span, .multicheckout .box-title > span, .paypal-review .block .box-title > span, .magento-rma-guest-returns .column.main .block:not(.widget) .box-title > span, [class^='sales-guest-'] .column.main .block:not(.widget) .box-title > span, .sales-guest-view .column.main .block:not(.widget) .box-title > span, .account .column.main .block:not(.widget) .box-title > span, .ox-banner span.text, .ox-banner-animated-text .ox-banner-animated-container span.text, .filter-options-title, .filter .block-subtitle, .login-container .block-new-customer .block-title strong, .filter-options-title strong, .fieldset > .legend, .filter.block .content dl.options dt, .sidebar-additional .block .block-title > strong, .review-title, .post-list.blog-style-modern article .post-image-wrapper .post-posed-date, .post-list.blog-style-modern article .post-categories a, .post-list.blog-style-modern article .post-links > .item, .post-list.blog-style-classic .post-date .day, .post-list.blog-style-classic .post-date .hover, .post-list.blog-style-modern article .post-title, .post-view .post-categories a, .post-view .block.comments .c-comment .p-name, .column.main .cart-summary .block > .title strong, .column.main .opc-block-summary .items-in-cart > .title strong, .column.main .checkout-payment-method .payment-option._collapsible > .title strong, .column.main .paypal-review-discount .block > .title strong, .h4, .h5, .h6, h4, h5, h6{font-weight: 600;}.h4, h4{ font-weight: 600; letter-spacing: 0px;}.page-header, .page-header .sticky-wrapper{background: rgb(255, 255, 255);}.sticky-wrapper{border-bottom: 1px solid rgba(0, 0, 0, 0.12);}.logo__container{background: rgb(255, 255, 255);}.top-bar, .top-bar:before{background-color: rgb(255, 255, 255);}.top-bar:before{border-bottom: 1px solid rgba(0, 0, 0, 0.12);}.top-bar, .top-bar .switcher, .top-bar .topline-block a:not(.button), .top-bar .header.links a:not(.button){color: rgb(128, 128, 128);}.top-bar .switcher:hover, .top-bar .topline-block a:not(.button):hover, .top-bar .header.links a:not(.button):hover{color: rgb(0, 0, 0);}.top-bar .switcher:hover, .top-bar .topline-block a:not(.button):hover, .top-bar .header.links a:not(.button):hover{background-color: rgba(255, 255, 255, 0);}.top-bar, .top-bar .topline-block, .top-bar .header.links .greet.welcome span, .top-bar .topline-block .greet.welcome span, .top-bar .topline-block a:not(.button), .top-bar .header.links a:not(.button){ font-size: 12px;}.minicart-wrapper .action.showcart{background: rgba(255, 255, 255, 0);}.minicart-wrapper .action.showcart, .minicart-wrapper .action.showcart span{color: rgb(48, 48, 48);}.minicart-wrapper .action.showcart svg{fill: rgb(48, 48, 48); stroke: rgb(48, 48, 48);}.minicart-wrapper .action.showcart:hover, .minicart-wrapper .action.showcart:hover span{color: rgb(0, 0, 0);}.minicart-wrapper .action.showcart:hover svg{fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0);}@media only screen and (max-width: 639px){ .minicart--show-counter-mobile .minicart-wrapper .action.showcart span.qty{background: rgba(255, 255, 255, 0);}} .header__item-badge, .minicart-btn--minimal .minicart-wrapper .action.showcart span.qty{background: rgba(255, 255, 255, 0);}.header__content .header__item .button{background: rgba(255, 255, 255, 0); color: rgb(48, 48, 48);}.header__content .header__item .button:hover{background-color: rgba(255, 255, 255, 0); color: rgb(0, 0, 0);}.page-header .block-search .action.search, .page-header .block-search .action-search-slideout{background: rgba(255, 255, 255, 0);}.page-header .block-search .action.search svg, .page-header a.button.action-search-slideout svg{fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0);}.page-header .block-search .action.search:after, .page-header .block-search .action-search-slideout:hover{background-color: rgba(255, 255, 255, 0);}.page-header .block-search .action.search:hover svg, .page-header a.button.action-search-slideout:hover svg{fill: rgb(80, 80, 80); stroke: rgb(80, 80, 80);} .page-header .header__item-search form input[type="text"]{border: 1px solid;}.page-header .header__item-search form input[type="text"]{border-color: rgba(0, 0, 0, 0.12);}.page-header .header__item-search form input[type="text"]:focus, .page-header .header__item-search form input[type="text"]:hover{border-color: rgba(0, 0, 0, 0.56);}.menu-position--below .ox-sticky.sticky.resize .sticky-wrapper, .header-nav-wide{background-color: rgb(85, 46, 206);}.header-nav-wide{border-top: 1px solid rgb(255, 255, 255);}.slide-out-menu--mobile, .page-header .ox-megamenu .level0 > .ox-mm-a-wrap .level-top{color: rgb(255, 255, 255);}.ox-megamenu .level0 > .ox-mm-a-wrap .level-top:hover, .ox-megamenu-navigation > .level0 > .ox-mm-a-wrap .level-top:hover, .page-header .ox-megamenu .level0 > .ox-mm-a-wrap .level-top:before{background-color: rgb(255, 255, 255);}.menu-style-2 .page-header .ox-megamenu > ul > .level0.active > .ox-mm-a-wrap .level-top, .menu-style-2 .page-header .ox-megamenu > ul > .level0:hover > .ox-mm-a-wrap .level-top, .ox-megamenu-navigation > .level0:not(.active):not(.has-active):hover > .ox-mm-a-wrap .level-top, .page-header .ox-megamenu > ul > .level0:hover > .ox-mm-a-wrap .level-top, .page-header .ox-megamenu .level0.active > .ox-mm-a-wrap .level-top, .page-header .ox-megamenu .level0.has-active > .ox-mm-a-wrap .level-top{ color: rgb(239, 239, 239);}.slide-out-menu--mobile, .page-header .ox-megamenu .level0 > .ox-mm-a-wrap .level-top, .ox-megamenu-navigation .category-item > .ox-mm-a-wrap a, .ox-megamenu-navigation > .level0 > .ox-mm-a-wrap .level-top, .minicart-wrapper .action.showcart, .ox-nav-sections-item-title .ox-nav-sections-item-switch{ letter-spacing:0px;} .ox-dialog .switcher .switcher-option strong span, .ox-dialog .switcher .options .action.toggle strong span, .ox-dialog .switcher .options ul a, .ox-dialog .switcher .options ul.dropdown a, .page-header .ox-megamenu .level0 > .ox-mm-a-wrap .level-top, .page-header .navigation .level0 > .level-top, .slide-out-menu--mobile, .ox-megamenu-navigation > li > .ox-mm-a-wrap a, .ox-megamenu-navigation .category-item > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu-list > .category-item > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .level1.category-item > .ox-mm-a-wrap a, .ox-megamenu-navigation .ox-dropdown--simple .category-item a, .ox-megamenu-navigation > .level0 > .ox-mm-a-wrap .level-top, .minicart-wrapper .action.showcart, .ox-dialog .header.links .logged-in, .ox-dialog .header.links a:not(.button), .ox-nav-sections-item-title .ox-nav-sections-item-switch{ font-weight: 600;}.page-header .ox-megamenu .level0 > .ox-mm-a-wrap .level-top, .page-header .navigation .level0 > .level-top, .ox-megamenu-navigation > .level0 > .ox-mm-a-wrap .level-top, .slide-out-menu--mobile, .ox-nav-sections-item-title .ox-nav-sections-item-switch{font-size:15px;} @media (min-width: 1160px){ .ox-megamenu-navigation > .level0{margin-right:15px;}}.ox-section-item-content .ox-megamenu-navigation > .level0 > .ox-mm-a-wrap .level-top{ font-size:25px;} .ox-nav-sections .ox-megamenu-navigation .category-item.has-active > .ox-mm-a-wrap .level-top, .ox-nav-sections .ox-megamenu-navigation .category-item.active > .ox-mm-a-wrap .level-top, .ox-nav-sections .ox-megamenu-navigation .category-item.has-active > .ox-mm-a-wrap a, .ox-nav-sections .ox-megamenu-navigation .category-item.active > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu-list > .category-item > .ox-mm-a-wrap a:hover, .ox-megamenu__dropdown .category-item:hover > .ox-mm-a-wrap a, .page-header .ox-megamenu .level0 .submenu a:hover, .page-header .ox-megamenu .level0 .submenu a.ui-state-focus, .page-header .navigation .level0 .submenu a:hover, .page-header .navigation .level0 .submenu a.ui-state-focus, .ox-megamenu-block .links-bg-hover a:hover, .ox-megamenu-block a.bg-hover:hover, .ox-megamenu-block .std a:hover, .ox-section-item-content .block-customer-login .secondary > a.action:hover, .ox-section-item-content .block-customer-login .secondary > a.action:after{background: rgb(245, 245, 245);color: rgb(0, 0, 0);}.ox-dialog .switcher .switcher-option strong, .ox-dialog .switcher .options .action.toggle strong span, .ox-dialog .switcher.language .options .action.toggle strong span, .ox-megamenu-navigation .ox-megamenu__dropdown .category-item.has-active > .ox-mm-a-wrap a, .ox-megamenu-navigation .ox-megamenu__dropdown .category-item.active > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu__categories > .ox-megamenu-list > .category-item > .submenu > .category-item.has-active > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu__categories > .ox-megamenu-list > .category-item > .submenu > .category-item.active > .ox-mm-a-wrap a, .page-header .ox-megamenu .level0 .ox-submenu .active > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu-list > .category-item.active > .ox-mm-a-wrap a{ color: rgb(255, 255, 255);}.ox-dialog .switcher .switcher-option strong, .ox-dialog .switcher .options .action.toggle strong span, .ox-dialog .switcher.language .options .action.toggle strong span, .ox-megamenu-navigation .ox-megamenu__dropdown .category-item.has-active > .ox-mm-a-wrap a, .ox-megamenu-navigation .ox-megamenu__dropdown .category-item.active > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu__categories > .ox-megamenu-list > .category-item > .submenu > .category-item.has-active > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu__categories > .ox-megamenu-list > .category-item > .submenu > .category-item.active > .ox-mm-a-wrap a, .page-header .ox-megamenu .level0 .ox-submenu .active > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu-list > .category-item.active > .ox-mm-a-wrap a{ background-color: rgb(29, 29, 29);}.navigation .level0 > .level-top, .page-header .navigation .level0 > .level-top, .ox-megamenu-navigation .ox-dropdown--simple, .ox-megamenu .level0 > .ox-mm-a-wrap .level-top, .page-header .ox-megamenu .level0 > .ox-mm-a-wrap .level-top, .page-header .ox-megamenu .level0 .ox-submenu, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu__categories .ox-megamenu-list > .category-item > .ox-mm-a-wrap a, .ox-dialog .header.links .logged-in, .ox-dialog .header.links a:not(.button), .ox-dialog .switcher, .slide-out-menu--mobile, .ox-nav-sections-item-title .ox-nav-sections-item-switch, .minicart-wrapper .action.showcart{font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif}.ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu-list > .category-item > .submenu > .category-item > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu__categories > .ox-megamenu-list > .category-item > .submenu > .category-item > .ox-mm-a-wrap a{ font-weight:400;}.slide-out-menu--mobile{background: #ffffff;}.slide-out-menu--mobile{color: rgb(0, 0, 0);}.slide-out-menu--mobile .icon{color: rgb(0, 0, 0);}.multishipping-checkout-login .page-main, .customer-account-login .page-main, .customer-account-forgotpassword .page-main{background-image: url(https://cdn.edumalls.com/athlete2/default/signin-bg.jpg);}.multishipping-checkout-login .page-main, .customer-account-login .page-main, .customer-account-forgotpassword .page-main{background-color: rgb(246, 246, 246);}.multishipping-checkout-register .page-main, .customer-account-create .page-main{background-image: url(https://cdn.edumalls.com/athlete2/default/signin-bg_1.jpg);}.multishipping-checkout-register .page-main, .customer-account-create .page-main{background-color: rgb(246, 246, 246);}.multishipping-checkout-register .page-title-wrapper h1.page-title, .customer-account-create .page-title-wrapper h1.page-title{color: rgb(255, 255, 255);}.contacts-layout-default .contacts-second-block{ order:1;}.contacts-layout-default .contacts-form-block{ order:2;}@media only screen and (max-width: 768px){ .contact-index-index .contacts-layout-default .contacts-second-block, .contacts-layout-default .contacts-second-block{margin-top: 0; margin-bottom: 50px;}} .contact-index-index .contacts-layout-default .form.contact{background-color: rgb(255, 255, 255);}.contact-index-index .contacts-layout-default .form.contact{padding: 30px;}@media only screen and (max-width: 768px){ .contact-index-index .contacts-layout-default .form.contact{padding: 0px;}} .above-footer-content{border-top: 1px solid rgb(238, 238, 238)}.page-footer{background-color: rgb(18, 0, 73);}.page-footer{border-top: 1px solid rgb(238, 238, 238)}.footer.content{color: rgb(253, 253, 253);}.footer.content :is(h1,h2, h3,h4, h5, h6){ color: rgb(255, 255, 255);}.footer.content a:not(.button){color: #ebebeb;}.footer.content a:not(.button):hover, .page-footer .switcher:hover .options .action.toggle strong, .page-footer .switcher .options .action.toggle.active strong{color: rgb(255, 255, 255);}.footer.content a:not(.button):hover, .page-footer .switcher:hover .options .action.toggle, .page-footer .switcher .options .action.toggle.active{background-color: rgba(0, 0, 0, 0);}.footer.content a:not(.button){font-size: 14px;}.footer-newsletter-wide .footer.content .block.newsletter{padding-top: 60px; padding-bottom: 60px;}.footer-newsletter-wide .footer.content .block.newsletter:before, .footer--layout-1 .footer .block.newsletter{background-color: rgb(36, 17, 91);}.footer-newsletter-wide .footer.content .block.newsletter:before {border-bottom: 1px solid rgb(238, 238, 238);}.footer .block.newsletter{color: rgb(255, 255, 255);}.footer .block.newsletter .title{color: rgb(255, 255, 255);}.footer .block.newsletter .action.primary{color: rgb(255, 255, 255);}.footer .block.newsletter .action.primary{background-color: rgb(44, 41, 48);}.footer .block.newsletter .action.primary:hover{color: rgb(26, 26, 26);}.footer .block.newsletter .action.primary:after{background-color: rgb(255, 255, 255);}.footer .block.newsletter:not(.inputs-style--underlined) input{background-color: rgb(255, 255, 255);}.footer .block.newsletter:not(.inputs-style--underlined) input{border:1px solid rgb(221, 221, 221);} .footer .block.newsletter:not(.inputs-style--underlined) input:focus{border-color: rgb(126, 126, 126);} .footer .block.newsletter input{color: rgb(94, 94, 94);}.block.newsletter .control:before, .block.newsletter .field .control:before, .footer .block.newsletter input::-webkit-input-placeholder{color: rgb(94, 94, 94);}.footer .block.newsletter input::placeholder{color: rgb(94, 94, 94);}.footer .block.newsletter input:-ms-input-placeholder{color: rgb(94, 94, 94);}.footer .block.newsletter input::-ms-input-placeholder{color: rgb(94, 94, 94);}.copyright-footer{background: rgb(18, 0, 73);}.copyright-footer{color: rgb(255, 255, 255);}.copyright-footer a{ color: rgb(255, 255, 255);}.copyright-footer a:focus, .copyright-footer a:hover{ color: rgb(243, 243, 243);}.copyright-footer .a-underlined-links a:hover, .copyright-footer .underlined-links a:hover{ border-color: rgba(0, 0, 0, 0);}.copyright-footer a.bg-hover:hover, .copyright-footer .std a:hover, .copyright-footer .links-bg-hover a:hover, .copyright-footer a.bg-hover:focus, .copyright-footer .std a:focus, .copyright-footer .links-bg-hover a:focus{ background-color: rgba(0, 0, 0, 0);}.copyright-footer{ border-top: 1px solid rgb(104, 104, 104)}.top-bar .switcher{background: rgba(255, 255, 255, 0);}.top-bar .switcher:hover{color: rgb(44, 44, 44);}.top-bar .switcher:hover{background: rgb(255, 255, 255);}.ox-toggle.medium-left .ox-toggle-title:hover .toggle-minus, .primary > .action, a.action.primary, .action.primary, .button.primary, a.button.primary, a.button, .button, button, .primary > .action:hover, a.action.primary:hover, .action.primary:hover, .button.primary:hover, a.button.primary:hover, a.button:hover, .button:hover, button:hover, button:active{background: rgb(68, 37, 165);}.primary > .action, a.action.primary, .action.primary, .button.primary, a.button.primary, a.button, .button, button, button:focus, .cart-summary .actions-toolbar > .primary button, .footer.content a.athlete2-social-icon, .footer.content a:not(.button).athlete2-social-icon, .content a.athlete2-social-icon, .std a.athlete2-social-icon, .athlete2-social-icons > a.athlete2-social-icon, a.athlete2-social-icon, .ox-banner-animated-text .ox-banner-animated-container .link, .ox-banner .link .cart.table-wrapper .actions-toolbar > .action, .action-gift{color: rgb(255, 255, 255);}.ox-toggle.medium-left .ox-toggle-title:hover .toggle-minus{color: rgb(255, 255, 255);} .primary > .action svg, a.action.primary svg, .action.primary svg, .button.primary svg, a.button.primary svg, a.button svg, .button svg, button svg, .cart.table-wrapper .actions-toolbar > .action svg, .action-gift svg{ fill: currentColor;}.products-grid .product-item .ox-add-to-cart-loading .action:before{ border-left: 2px solid rgb(255, 255, 255); border-right: 2px solid rgb(255, 255, 255); border-top: 2px solid rgb(255, 255, 255);}a.action.primary:hover, .action.primary:hover, .button.primary:hover, .primary > .action:hover, a.button.primary:hover, a.button:hover, .button:hover, button:hover, button:active, .cart-summary .actions-toolbar > .primary button:hover, .cart.table-wrapper .actions-toolbar > .action:hover, .action-gift:hover{ color: rgb(44, 41, 48)}a.action.primary:hover svg, .action.primary:hover svg, .button.primary:hover svg, a.button.primary:hover svg, .primary > .action:hover svg, a.button:hover svg, .button:hover svg, button:hover svg, .cart.table-wrapper .actions-toolbar > .action:hover svg, .action-gift:hover svg{ fill: rgb(44, 41, 48)}.ox-toggle.medium-left .ox-toggle-title .toggle-minus{color:rgb(44, 41, 48)}.products-grid .product-item .ox-add-to-cart-loading .action:hover:before{ border-left: 2px solid rgb(44, 41, 48); border-right: 2px solid rgb(44, 41, 48); border-top: 2px solid rgb(44, 41, 48);}.ox-toggle.medium-left .ox-toggle-title .toggle-minus, .primary > .action:after, a.action.primary:after, .action.primary:after, .button.primary:after, a.button.primary:after, a.button:after, .button:after, button:after, .cart-summary .actions-toolbar > .primary button:after, .cart.table-wrapper .actions-toolbar > .action:after, .action-gift:after{ background-color: rgb(195, 226, 53)}.primary > .action, a.action.primary, .action.primary, . action.secondary, .secondary > a.action, .button.secondary, .button.primary, a.button.secondary, a.button.primary, a.button, .button, button, .product.data.items > .item.title > .switch, .order-links .item strong, .order-links .item a, .ox-banner-medium .ox-banner__text-container .link, .ox-banner-animated-text .ox-banner-animated-container .link, .ox-banner .link, .cart-summary .actions-toolbar > .primary button, .block-cart-failed .action.continue, .cart-container .form-cart .action.continue, .cart.table-wrapper .actions-toolbar > .action, .action-gift{font-family: 'Roboto', Helvetica, Arial, sans-serif}a.action.primary, .action.primary, .action.secondary, .secondary > a.action, .button.secondary, .button.primary, a.button.secondary, a.button.primary, a.button, .primary > .action, .button, button, .account .box-actions .action, .block-reorder .actions-toolbar .action.view, .product.data.items > .item.title > .switch, .order-links .item strong, .order-links .item a, .ox-banner-medium .ox-banner__text-container .link, .ox-banner-animated-text .ox-banner-animated-container .link, .ox-banner .link, .cart-container .checkout-methods-items .action.multicheckout, .cart-summary .actions-toolbar > .primary button, .minicart-items .update-cart-item, .block-cart-failed .action.continue, .cart-container .form-cart .action.continue, .cart.table-wrapper .actions-toolbar > .action, .action-gift{letter-spacing: 0px}#ox_quickview_wrapper .ox-overlay-close-btn, .ui-dialog.popup .action.close:before, .modal-custom .action-close:before, .modal-popup .action-close:before, .modal-slide .action-close:before, .action.action-edit-address, .opc-block-shipping-information .shipping-information-title .action-edit, .abs-remove-button-for-blocks:before, .sidebar .action.delete:before, .block-compare .action.delete:before, .filter-current .action.remove:before, .account .box-actions .action, .sidebar .action.delete:hover:before, .block-compare .action.delete, .block-cart-failed .action.clear, .cart-container .form-cart .action.clear, .block-cart-failed .action.update, .cart-container .form-cart .action.update, .block-cart-failed .action.continue, .cart-container .form-cart .action.continue, .button.secondary, a.button.secondary, .action.secondary, .action-secondary, button.action-secondary, button.action.secondary, .secondary > a.action, .cart.table-wrapper .actions-toolbar > .action.action-secondary, .table-comparison .action.towishlist, .table-comparison .action.tocart, .table-comparison .action.towishlist:before, .table-comparison .action.tocart:before, .table-comparison .cell.remove .action.delete:before, .cart.table-wrapper .actions-toolbar > .action.action.secondary, .action-gift.action-secondary, .action-gift.action.secondary{color: rgb(255, 255, 255);}#ox_quickview_wrapper .ox-overlay-close-btn:hover, .ui-dialog.popup .action.close:focus:before, .ui-dialog.popup .action.close:hover:before, .modal-custom .action-close:focus:before, .modal-popup .action-close:focus:before, .modal-slide .action-close:focus:before, .modal-custom .action-close:hover:before, .modal-popup .action-close:hover:before, .modal-slide .action-close:hover:before, .action.action-edit-address:hover, .abs-remove-button-for-blocks:hover:before, .sidebar .action.delete:hover:before, .block-compare .action.delete:hover:before, .filter-current .action.remove:hover:before, .account .box-actions .action:hover, .abs-shopping-cart-items .action.clear:hover, .block-cart-failed .action.clear:hover, .cart-container .form-cart .action.clear:hover, .abs-shopping-cart-items .action.update:hover, .block-cart-failed .action.update:hover, .cart-container .form-cart .action.update:hover, .abs-shopping-cart-items .action.continue:hover, .block-cart-failed .action.continue:hover, .cart-container .form-cart .action.continue:hover, .button.secondary:hover, a.button.secondary:hover, .action.secondary:hover, .action-secondary:hover, button.action-secondary:hover, button.action.secondary:hover, .secondary > a.action:hover, .login-container .block .secondary > a.action:hover, .cart.table-wrapper .actions-toolbar > .action.action-secondary:hover, .cart.table-wrapper .actions-toolbar > .action.action.secondary:hover, .table-comparison .action.towishlist:hover:before, .table-comparison .action.tocart:hover:before, .table-comparison .action.towishlist:hover, .table-comparison .action.tocart:hover, .table-comparison .cell.remove .action.delete:hover:before, .opc-block-shipping-information .shipping-information-title .action-edit:hover, .action-gift.action-secondary:hover, .action-gift.action.secondary:hover{ color: rgb(44, 41, 48)}.action.action-edit-address, .opc-block-shipping-information .shipping-information-title .action-edit, .sidebar .action.delete:hover:before, .block-compare .action.delete:before, #ox_quickview_wrapper .ox-overlay-close-btn, .ui-dialog.popup .action.close, .modal-custom .action-close, .modal-popup .action-close, .modal-slide .action-close, .sidebar .action.delete, .block-compare .action.delete, .filter-current .action.remove:before, .account .box-actions .action, .block-cart-failed .action.clear, .cart-container .form-cart .action.clear, .block-cart-failed .action.update, .cart-container .form-cart .action.update, .block-cart-failed .action.continue, .cart-container .form-cart .action.continue, .button.secondary, a.button.secondary, .action.secondary, .action-secondary, button.action-secondary, button.action.secondary, .secondary > a.action, .cart.table-wrapper .actions-toolbar > .action.action-secondary, .table-comparison .action.towishlist, .table-comparison .action.tocart, .table-comparison .cell.remove .action.delete, .block-authentication .actions-toolbar > .primary .action, .block-authentication .actions-toolbar > .primary .action:hover, .cart.table-wrapper .actions-toolbar > .action.action.secondary, .action-gift.action-secondary, .action-gift.action.secondary{background: rgb(68, 37, 165);}#ox_quickview_wrapper .ox-overlay-close-btn:hover, .ui-dialog.popup .action.close:focus, .ui-dialog.popup .action.close:hover, .modal-custom .action-close:focus, .modal-popup .action-close:focus, .modal-slide .action-close:focus, .modal-custom .action-close:hover, .modal-popup .action-close:hover, .modal-slide .action-close:hover, .action.action-edit-address:after, .opc-block-shipping-information .shipping-information-title .action-edit:after, #ox_quickview_wrapper .ox-overlay-close-btn:hover, .sidebar .action.delete:hover:before, .block-compare .action.delete:hover:before, .filter-current .action.remove:hover:before, .account .box-actions .action:hover, .abs-shopping-cart-items .action.clear:after, .block-cart-failed .action.clear:after, .cart-container .form-cart .action.clear:after, .abs-shopping-cart-items .action.update:after, .block-cart-failed .action.update:after, .cart-container .form-cart .action.update:after, .abs-shopping-cart-items .action.continue:after, .block-cart-failed .action.continue:after, .cart-container .form-cart .action.continue:after, .button.secondary:after, a.button.secondary:after, .action.secondary:after, .action-secondary:after, button.action-secondary:after, button.action.secondary:after, .secondary > a.action:after, .cart.table-wrapper .actions-toolbar > .action.action-secondary:after, .cart.table-wrapper .actions-toolbar > .action.action.secondary:after, .table-comparison .action.towishlist:hover, .table-comparison .action.tocart:hover, .table-comparison .cell.remove .action.delete:hover, .action-gift.action-secondary:after, .action-gift.action.secondary:after{ background-color: rgb(248, 248, 248)}.opc-wrapper .form-login .actions-toolbar .secondary a.action:after, .login-container .block .secondary > a.action:after, .block-authentication .actions-toolbar > .secondary > a.action:after, a.action.primary.naked:after, .action.primary.naked:after, .button.primary.naked:after, a.button.primary.naked:after, a.button.naked:after, .button.naked:after, button.naked:after, .cart.table-wrapper .actions-toolbar > .action.naked:after, .action-gift.naked:after{ background-color: rgb(44, 41, 48)}.opc-wrapper .form-login .actions-toolbar .secondary a.action, .login-container .block .secondary > a.action, .block-authentication .actions-toolbar > .secondary > a.action, a.action.primary.naked, .action.primary.naked, .button.primary.naked, a.button.primary.naked, a.button.naked, .button.naked, button.naked, .cart.table-wrapper .actions-toolbar > .action.naked, .action-gift.naked{color: rgb(44, 41, 48)}.opc-wrapper .form-login .actions-toolbar .secondary a.action:hover, .login-container .block .secondary > a.action:hover, .block-authentication .actions-toolbar > .secondary > a.action:hover, a.action.primary.naked:hover, .action.primary.naked:hover, .button.primary.naked:hover, a.button.primary.naked:hover, a.button.naked:hover, .button.naked:hover, button.naked:hover, .cart.table-wrapper .actions-toolbar > .action.naked:hover, .action-gift.naked:hover{color: rgb(255, 255, 255)}{ border-color: var(--a2-btn-outline-border-hover);}.primary > .action.outline:after, a.action.primary.outline:after, .action.primary.outline:after, .button.primary.outline:after, a.button.primary.outline:after, a.button.outline:after, .button.outline:after, button.outline:after{ background-color: var(--a2-btn-outline-bg-hover);}.primary > .action.outline, a.action.primary.outline, .action.primary.outline, .button.primary.outline, a.button.primary.outline, a.button.outline, .button.outline, button.outline{ border-color: var(--a2-btn-outline-border);color: var(--a2-btn-outline-color);}.primary > .action.outline:focus, a.action.primary.outline:focus, .action.primary.outline:focus, .button.primary.outline:focus, a.button.primary.outline:focus, a.button.outline:focus, .button.outline:focus, button.outline:focus, .primary > .action.outline:hover, a.action.primary.outline:hover, .action.primary.outline:hover, .button.primary.outline:hover, a.button.primary.outline:hover, a.button.outline:hover, .button.outline:hover, button.outline:hover{ color: var(--a2-btn-outline-border-hover);color: var(--a2-btn-outline-color-hover);}.filter-options, .filter.block .content, .account-nav .content{border-width: 1px}.sidebar-additional .block:before{height: 1px}.filter-options, .filter.block .content, .account-nav .content, .sidebar-additional .block{ border-color: rgb(228, 228, 228)}.sidebar-additional .block:before{ background: rgb(228, 228, 228)}.sidebar-additional .block .block-title>strong, .filter.block .content dl.options dt, .filter .block-subtitle, .filter-options-title{font-family: 'Roboto', Helvetica, Arial, sans-serif; font-weight: 400; text-transform: capitalize;}.filter.block .content dl.options dt, .filter-options-title strong{ font-weight: 400;}.filter-options-content .ox-layered__items--checkbox .label, .filter.block .content dl.options dd li, .filter-options-content{font-size: 15px}.filter-options-content .item a:hover .count, .filter.block .content dl.options dd li a:hover + .count, .filter-options-content .ox-layered__items--checkbox label:hover + .count, .filter-options-content a:hover + .count{background:rgba(0, 0, 0, 0)} .filter-options-content .item a:hover, .filter.block .content dl.options dd li a:hover, .sidebar-additional .block.block-recent-posts .item a:hover, .sidebar-additional .block.block-archive .item a:hover, .sidebar-additional .block.block-categories li a:hover, .filter.block .content dl.options dd li a:hover, .account-nav .title label, .account-nav .item.current a, .account-nav .item.current strong, .account-nav .item a:hover, .filter-current-subtitle:hover .toggle-minus, .filter-options-title:hover .toggle-minus, .filter-options-content .ox-seleted-item .label, .filter-options-content .ox-seleted-item a, .filter-options-content .ox-layered__items--checkbox .label:hover, .filter-options-content a:hover{color:rgb(0, 0, 0)}.sidebar-additional .block.block-recent-posts .item a:hover, .sidebar-additional .block.block-archive .item a:hover, .sidebar-additional .block.block-categories li a:hover, .filter.block .content dl.options dd li a:hover, .filter-options-title:hover .toggle-minus, .filter-current-subtitle:hover .toggle-minus, .account-nav .item.current a, .account-nav .item.current strong, .account-nav .item a:hover, .filter-options-content .ox-seleted-item .label, .filter-options-content .ox-seleted-item a, .filter-options-content .ox-layered__items--checkbox .label:hover, .filter-options-content a:hover{background-color:rgba(0, 0, 0, 0)}.filter-current-count {color:rgb(255, 255, 255)}.extended-review-summary .ratings-count .rating-result:before, .number-of-ratings .rating-result:before{background-color:rgb(224, 224, 224)}.review-control-vote:before, .review-list .rating-summary .rating-result:before, .rating-summary .rating-result:before{ color:rgb(224, 224, 224)}.product-info-main .product-reviews-summary .rating-summary{ background-color:rgb(245, 245, 245);}.extended-review-summary, .fieldset > .review-field-ratings.field:not(.choice), .review-field-ratings{ background-color:rgb(248, 248, 248)}.extended-review-summary, .fieldset > .review-field-ratings.field:not(.choice), .fieldset > .review-field-ratings.field:not(.choice) label, .review-field-ratings{ color:rgb(39, 39, 39)}.extended-review-summary .ratings-count .rating-result:before{background-color:rgb(224, 224, 224)}.review-field-ratings .review-control-vote:before{color:rgb(224, 224, 224)}.extended-review-summary .ratings-value{color:rgb(34, 34, 34)}.toolbar-products{font-size: 14px}.toolbar-products{color:rgb(48, 48, 48)}.js-toolbar-switch:after{color:rgb(162, 162, 162)}.js-toolbar-switch:hover:after{color:rgb(0, 0, 0)}.ox-item-scroll__amount .amount-count-line, .ox-product-scroll__amount .amount-count-line, .toolbar-amount .amount-count-line{background:rgb(230, 230, 230)}.js-toolbar-dropdown{background:rgb(248, 248, 248)}.js-toolbar-dropdown{color:rgb(117, 117, 117)}.js-toolbar-dropdown > div:hover{color:rgb(0, 0, 0)}.js-toolbar-dropdown > div:hover{background:rgba(0, 0, 0, 0)}.pages strong.page{color:rgb(255, 255, 255)}.product-info-main .page-title-wrapper .page-title{text-transform: capitalize;letter-spacing: 0px;font-weight: 700;font-size: 36px;}.product.media .fotorama__stage, .product-grid__image-wrapper, .product.media .gallery__image-wrapper{background-color: rgba(243, 243, 243, 0)}.fotorama--fullscreen, .pswp__bg{background-color: rgb(243, 243, 243)}.product.media .fotorama__stage{ max-height: 852px}@media (min-width: 768px){.product.media .ox-product-labels-wrapper{padding-left: 100px;}} .product-info-main .price-box .old-price .price-wrapper span, .product-info-main .price-box .old-price .price-wrapper .price, .product-options-bottom .price-box .old-price .price-wrapper .price, .product-item .product-list-view__right-wrapper .price-box .old-price .price-container .price, .products-grid .product-item .price-box .old-price .price-container .price, .old-price .price-box .price, .old-price .price-wrapper span{color: rgb(193, 193, 193)}.product-info-main .price-box .special-price .price-wrapper .price, .product-options-bottom .price-box .special-price .price-wrapper .price, .special-price .price, .product-item .special-price .price-box .price-container, .product-item .special-price .price-container .price, .product-item .product-list-view__right-wrapper .price-box .special-price .price-container .price, .products-grid .product-item .price-box .special-price .price-container .price, .special-price .price-box .price{color: rgb(232, 78, 36)}:is(.product-bar, .product-info-main, .product-options-bottom) .box-tocart .action.tocart{color: rgb(255, 255, 255)}:is(.product-bar, .product-info-main, .product-options-bottom) .box-tocart .action.tocart{background-color: rgb(68, 37, 164)}:is(.product-bar, .product-info-main, .product-options-bottom) .box-tocart .action.tocart:hover{color: rgb(255, 255, 255)}.product-bar .box-tocart .action.tocart:after, .product-info-main .box-tocart .action.tocart:after, .product-options-bottom .box-tocart .action.tocart:after{background-color: rgb(68, 37, 164)}.product.info.detailed .additional-attributes{ width:100%;}.product.info.detailed .additional-attributes .col{ padding: 14px 20px;}.product.info.detailed .additional-attributes tr + tr .col{ border-top: 1px solid rgba(0, 0, 0, 0.1);}.product.info.detailed .additional-attributes th.col{ text-transform: initial; background: #f4f4f4; width: 30%;}.product.info.detailed .additional-attributes td.col{ width: 70%;}@media only screen and (max-width: 639px){ .product.info.detailed .additional-attributes.table > tbody > tr .col:is(th,td){ width: 100%; display: block!important; padding: 7px!important; border:none!important;}.product.info.detailed .additional-attributes.table > tbody > tr [data-th]:is(th,td):before{ content:none!important;}} .ox-prev-next__link .ox-prev-next__arrow{background-color: rgb(68, 37, 164)}.ox-prev-next__link .ox-prev-next__arrow svg{fill: rgb(255, 255, 255)}.ox-prev-next__link .inner{background-color: rgb(245, 245, 245)}.ox-prev-next__link .inner{color: rgb(44, 41, 48)}.ox-prev-next__link .label{color: rgb(167, 167, 167)}.pswp .pswp__button:after, .pswp .pswp__button:before, #ox-zoom-cursor span:after, #ox-zoom-cursor span:before, .fotorama__arr .fotorama__arr__arr:before, .fotorama__arr .fotorama__arr__arr:after, .fotorama__thumb--icon:before, .fotorama__thumb--icon:after, .fotorama__fullscreen .fotorama__zoom-in:before, .fotorama__fullscreen .fotorama__zoom-in:after, .fotorama__fullscreen .fotorama__zoom-out:before, .fotorama--fullscreen .fotorama__fullscreen-icon:after, .fotorama--fullscreen .fotorama__fullscreen-icon:before{background-color: rgb(0, 0, 0)}.pswp .pswp__button:hover:after, .pswp .pswp__button:hover:before, .fotorama__zoom-out:hover:before, .fotorama__zoom-out:hover:after, .fotorama__zoom-in:hover:before, .fotorama__zoom-in:hover:after, .fotorama__thumb--icon:hover:before, .fotorama__thumb--icon:hover:after, .fotorama__arr .fotorama__arr__arr:hover:before, .fotorama__arr .fotorama__arr__arr:hover:after , .fotorama__fullscreen .fotorama__zoom-in:hover:before, .fotorama__fullscreen .fotorama__zoom-in:hover:after, .fotorama--fullscreen .fotorama__fullscreen-icon:hover:after, .fotorama--fullscreen .fotorama__fullscreen-icon:hover:before{background-color: rgb(255, 255, 255)}.pswp .pswp__button, #ox-zoom-cursor span, .fotorama__fullscreen-icon, .fotorama__fullscreen .fotorama__zoom-in, .fotorama__fullscreen .fotorama__zoom-out, .fotorama__thumb--icon, .fotorama__arr .fotorama__arr__arr{background-color: rgba(245, 245, 245, 0)}.pswp .pswp__button:hover, .fotorama--fullscreen .fotorama__fullscreen-icon:hover, .fotorama__zoom-out:hover, .fotorama__zoom-in:hover, .fotorama__thumb--icon:hover, .fotorama__arr .fotorama__arr__arr:hover{ background-color: rgb(0, 0, 0)}.owl-nav button.owl-next span:before, .owl-nav button.owl-prev span:before, .owl-nav button.owl-next span:after, .owl-nav button.owl-prev span:after{background-color: rgb(0, 0, 0)}.crosssell .owl-carousel .owl-nav button.owl-next, .related .owl-carousel .owl-nav button.owl-next, .upsell .owl-carousel .owl-nav button.owl-next, .crosssell .owl-carousel .owl-nav button.owl-prev, .related .owl-carousel .owl-nav button.owl-prev, .upsell .owl-carousel .owl-nav button.owl-prev, .owl-carousel.widget-product-grid .owl-nav button.owl-next, .owl-carousel.widget-product-grid .owl-nav button.owl-prev, .owl-nav button.owl-next, .owl-nav button.owl-prev{background-color: rgb(255, 255, 255)}.owl-nav button.owl-next:hover span:before, .owl-nav button.owl-prev:hover span:before, .owl-nav button.owl-next:hover span:after, .owl-nav button.owl-prev:hover span:after{ background-color: rgb(255, 255, 255)}.crosssell .owl-carousel .owl-nav button.owl-next:after, .related .owl-carousel .owl-nav button.owl-next:after, .upsell .owl-carousel .owl-nav button.owl-next:after, .crosssell .owl-carousel .owl-nav button.owl-prev:after, .related .owl-carousel .owl-nav button.owl-prev:after, .upsell .owl-carousel .owl-nav button.owl-prev:after, .owl-carousel.widget-product-grid .owl-nav button.owl-next:after, .owl-carousel.widget-product-grid .owl-nav button.owl-prev:after, .owl-nav button.owl-next:after, .owl-nav button.owl-prev:after{ background-color: rgb(44, 41, 48)}.fotorama__dot, .owl-carousel .owl-dots button.owl-dot span{background-color: rgb(195, 195, 195)}.fotorama__active .fotorama__dot, .ox-css-dots > a span, .owl-carousel .owl-dots button.owl-dot:hover span, .owl-carousel .owl-dots button.owl-dot.active span{background-color: rgb(42, 42, 42)}#toTop{background: rgb(255, 255, 255)}#toTop:hover{background: rgb(44, 41, 48)}#toTop svg{fill: rgb(44, 41, 48)}#toTop:hover svg{fill: rgb(255, 255, 255)}.minicart--style-modern .header__item-dropdown-content .block-compare .dropdown-bottom-actions .action.secondary, .minicart--style-modern .header__item-dropdown-content .block-wishlist .dropdown-bottom-actions .action.secondary, .minicart--style-modern .block-minicart .block-content .dropdown-bottom-wrapper .actions > .secondary > a.action{box-shadow: inset 0 0 0 2px rgb(44, 41, 48)}.minicart--style-modern .header__item-dropdown-content .block-compare .dropdown-bottom-actions .action.secondary:after, .minicart--style-modern .header__item-dropdown-content .block-wishlist .dropdown-bottom-actions .action.secondary:after, .minicart--style-modern .block-minicart .block-content .dropdown-bottom-wrapper .actions > .secondary > a.action:after{background-color: rgb(44, 41, 48)}.cart-container .checkout-methods-items{ background: rgb(248, 248, 248)} .cart-container .checkout-methods-items .action.multicheckout{color: rgb(29, 29, 29)} .product-item .product-item-name, .product-item .product-item-name a, .multicheckout.address.form .table-wrapper .table .product-item-name, .cart.table-wrapper .product-item-name, .order-details-items .product-item-name, .products-grid .product-item .product-item-name a{font-weight: 400; text-transform: capitalize; letter-spacing: 0px;}.products-grid .product-item .product-item-name a{font-size: 18px}.product-item-description .action.more, .abs-product-link > a:visited, .product-item-name > a:visited, .product.name a > a:visited, .product-item-name > a, .product.name a > a, .product-item .product-item-name a{color: rgb(51, 51, 51)} .products-grid .product-item:hover .price-box .price-container .price-wrapper, .products-grid .product-item:hover .price-box .price-container .price-label, .product-item:hover .product-item-name a{color: rgb(51, 51, 51)} .product-item .minimal-price > .price-label:after, .product-item .price-box .price-container:after, .product-item .product-item-name a:after{background-color: rgba(0, 0, 0, 0)} .products-grid .product-item .price-box .minimal-price > .price-label, .products-grid .product-item .price-box .price-container .price{color: #000} .products-grid .product-item .price-box .minimal-price > .price-label, .products-grid .product-item .price-box .price-container .price{font-size: 16px} .products-grid .product-item:hover .price-box .minimal-price > .price-label, .products-grid .product-item:hover .price-box .price-container .price{color: rgb(51, 51, 51)} .product-item .product-list-view__right-wrapper .price-box .special-price .price-container .price, .products-grid .product-item .price-box .special-price .price-container .price{color: rgb(232, 78, 36)} .product-item .product-list-view__right-wrapper .price-box .old-price .price-container .price, .products-grid .product-item .price-box .old-price .price-container .price{color: rgb(193, 193, 193)} .products-list .price, .product-item .product-list-view__right-wrapper .price-box .price-container .price{color: rgb(51, 51, 51)} .products-list .product-item .ox-product-grid__categories > a, .products-list .product-item .ox-product-grid__categories > a:hover, .products-list .product-item .ox-product-grid__categories > a:visited, .ox-product-grid__categories > a:hover, .ox-product-grid__categories > a:visited, .ox-product-grid__categories > a{color: rgb(187, 187, 187)} .product-item .product-grid-overlay{background-color: rgba(0, 0, 0, 0)} .product-item .ox-add-to-cart-loading .action:before{ border-left: 2px solid rgb(143, 143, 143); border-right: 2px solid rgb(143, 143, 143); border-top: 2px solid rgb(143, 143, 143);}.product-grid__image-wrapper .product-item-inner .action:is(.tocompare, .towishlist, .primary){color: rgb(143, 143, 143)} .products-grid .product-grid__image-wrapper .product-item-inner .action:is(.tocompare, .towishlist, .primary){background-color: rgba(44, 41, 48, 0)} .products-grid .product-item .ox-add-to-cart-loading .action:hover:before{ border-left: 2px solid rgb(44, 41, 48); border-right: 2px solid rgb(44, 41, 48); border-top: 2px solid rgb(44, 41, 48);}.product-grid__image-wrapper .product-item-inner .action:is(.tocompare, .towishlist, .primary):hover{color: rgb(44, 41, 48)} .products-grid .product-grid__image-wrapper .product-item-inner .action:is(.tocompare, .towishlist, .primary):hover{background-color: rgba(246, 246, 246, 0)} .ox-banner .link, .ox-banner-animated-text .ox-banner-animated-container .link{color: rgb(255, 255, 255)} .ox-banner .link, .ox-banner-animated-text .ox-banner-animated-container .link{background-color: rgb(61, 61, 61)} @media (min-width: 1160px){ .post-list.blog-style-modern article .post-title{ font-size: 50px;}} .post-list.blog-style-modern article.post-style--overlay, .post-list.blog-style-modern.blog-list--image-top article.post-style--overlay, .post-list.blog-style-modern.blog-list--overlay article{min-height: 600px;}@media (max-width: 639px){ .post-list.blog-style-modern article.post-style--overlay, .post-list.blog-style-modern.blog-list--image-top article.post-style--overlay, .post-list.blog-style-modern.blog-list--overlay article{min-height: 400px;}} .blog-widget-recent .blog-list--overlay.post-list article{min-height: 600px;}@media (max-width: 639px){ .blog-widget-recent .blog-list--overlay.post-list article{min-height: 400px;}} .post-list.blog-style-modern article .post-title, .post-list.blog-style-classic .post-title{text-transform: capitalize;} .post-list.blog-style-modern article.post-style--above-image .post-title, .post-list.blog-style-modern.blog-list--image-top article.post-style--above-image .post-title, .post-list.blog-style-modern.blog-list--first-above-image article:first-child .post-title, .post-list.blog-style-modern.blog-list--above-image article .post-title{text-transform: capitalize;}.post-list.blog-style-modern article .post-categories a{color: rgb(255, 255, 255)} .post-list.blog-style-classic .post-date .inner, .post-list.blog-style-modern article .post-image-wrapper .post-posed-date{background: rgb(0, 0, 0)} .post-list article .gradient-overlay{background: -moz-linear-gradient(top, rgba(0,0,0,0) 40%, rgba(0, 0, 0, 0.12) 60%, rgba(0, 0, 0, 0.6) 100%); background: -webkit-linear-gradient(top, rgba(0,0,0,0) 40%, rgba(0, 0, 0, 0.12) 60%, rgba(0, 0, 0, 0.6) 100%); background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0, 0, 0, 0.12) 60%, rgba(0, 0, 0, 0.6) 100%);}@media (min-width: 640px){ .post-view .post-text-hld p, .post-view .post-text-hld{font-size: 18px;}}.post-view .related .post-list article .post-title{font-size: 28px;} .post-view .post-meta .item{color: rgb(169, 169, 169)} .post-view .social-share__content a:hover i{color: rgb(0, 0, 0)} .post-view .blog-post-sticky-info .progress-bar{background: rgb(0, 0, 0)} .post-view .post-categories a{color: rgb(255, 255, 255)} .post-view .post-tags a:hover{background: rgb(241, 241, 241)} .post-view .post-tags a:hover{color: rgb(0, 0, 0)} .post-view .nextprev-link span{color: rgb(48, 48, 48)} .post-view .post-nextprev-hld .nextprev-link:hover .h3{color: rgb(0, 0, 0)} .post-view .post-nextprev-hld .nextprev-link:hover .h3{background: rgba(0, 0, 0, 0);} .post-view .block.comments .c-comment .c-post{border-color: rgb(235, 235, 235)} .sidebar-additional .block.block-tagclaud a{ background: rgb(0, 0, 0)} .sidebar-additional .block.block-tagclaud a:hover{background: rgb(245, 245, 245)} .sidebar-additional .block.block-tagclaud a{color: rgb(255, 255, 255)} .sidebar-additional .block.block-tagclaud a:hover{color: rgb(0, 0, 0)} .blog-widget-recent.ox-blog-widget__titles-only .post-list article .post-title a, .blog-widget-recent.ox-blog-widget__titles-only .post-list article .post-title{color: rgb(0, 0, 0)} .blog-widget-recent.ox-blog-widget__titles-only .post-list article:hover .post-title a, .blog-widget-recent.ox-blog-widget__titles-only .post-list article:hover .post-title{color: rgb(0, 0, 0)} .blog-widget-recent.ox-blog-widget__titles-only .post-list article:hover .post-title{background: rgba(255, 255, 255, 0);} .a2-icon-cart{ width: 20px; height: 17px; }.a2-icon-account{ width: 18px; height: 18px; }.a2-icon-search{ width: 16px; height: 16px; }.a2-icon-compare{ width: 15px; height: 16px; }.a2-icon-wishlist{ width: 18px; height: 16px;}.table-comparison .action.tocart:before{ content:''; margin: auto; background: center / contain no-repeat var(--a2-icons-cart); width: 20px; height: 17px; display: block;}.table-comparison .action.tocart:hover:before{ --a2-icons-cart: var(--a2-icons-cart-hover);}.empty-cart-icon:before{ content:''; margin: auto; margin-bottom: 20px; width: 106px; height: 106px; display: block; color:rgb(236, 236, 236); background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(236, 236, 236)' stroke='rgb(236, 236, 236)' width='106' viewBox='0 0 20 17'%3E%3Crect%20stroke%3D%22none%22%20y%3D%223%22%20width%3D%2216%22%20height%3D%222%22%2F%3E%3Crect%20stroke%3D%22none%22%20x%3D%223%22%20y%3D%2210%22%20width%3D%2212%22%20height%3D%222%22%2F%3E%3Cpolygon%20stroke%3D%22none%22%20points%3D%223%2012%201%205%203%204.6%205%2011.6%203%2012%22%2F%3E%3Cpolygon%20stroke%3D%22none%22%20points%3D%2215%2012%2018.1%200.5%2016.1%200%2013%2011.6%2015%2012%22%2F%3E%3Crect%20stroke%3D%22none%22%20x%3D%2216.1%22%20width%3D%223.8%22%20height%3D%222%22%2F%3E%3Ccircle%20stroke%3D%22none%22%20cx%3D%2213%22%20cy%3D%2215%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%2215%22%20r%3D%222%22%2F%3E%3C/svg%3E");}.product-items .action.towishlist:before, .products.list.items .action.towishlist:before{ content:none;}.table-comparison .action.towishlist:before{ content:''; margin: auto; display:block; background: center / contain no-repeat var(--a2-icons-wishlist); width: 18px; height: 16px;}.table-comparison .action.towishlist:hover:before{ background: center / contain no-repeat var(--a2-icons-wishlist-hover);}.empty-wishlist-icon:before{ content:''; margin: auto; margin-bottom: 20px; width: 106px; height: 106px; display: block; color:rgb(236, 236, 236); background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(236, 236, 236)' stroke='rgb(236, 236, 236)' width='106' viewBox='0 0 18 16'%3E%3Cpath%20stroke%3D%22none%22%20d%3D%22M17.3%2C2.4a5.3%2C5.3%2C0%2C0%2C0-4-1.5A5.2%2C5.2%2C0%2C0%2C0%2C10%2C2.7%2C5.2%2C5.2%2C0%2C0%2C0%2C6.7.9a5.3%2C5.3%2C0%2C0%2C0-4%2C1.5A5.1%2C5.1%2C0%2C0%2C0%2C1%2C6.5%2C6.3%2C6.3%2C0%2C0%2C0%2C2.2%2C9.7L8.3%2C16c.6.5%2C1%2C.9%2C1.7.9s1.1-.4%2C1.7-.9l6.1-6.3A6.3%2C6.3%2C0%2C0%2C0%2C19%2C6.5%2C5.1%2C5.1%2C0%2C0%2C0%2C17.3%2C2.4ZM16.1%2C8.7%2C10%2C14.9%2C3.9%2C8.7a3.7%2C3.7%2C0%2C0%2C1-1-2.2A3.9%2C3.9%2C0%2C0%2C1%2C4%2C3.7a3.3%2C3.3%2C0%2C0%2C1%2C2.7-.9C7.9%2C2.8%2C10%2C5.1%2C10%2C5.1s2.1-2.3%2C3.3-2.3a3.3%2C3.3%2C0%2C0%2C1%2C2.7.9%2C3.9%2C3.9%2C0%2C0%2C1%2C1.1%2C2.8A3.7%2C3.7%2C0%2C0%2C1%2C16.1%2C8.7Z%22%20transform%3D%22translate%28-1%20-0.9%29%22%2F%3E%3C/svg%3E");}.empty-compare-icon:before{ content:''; margin: auto; margin-bottom: 20px; width: 106px; height: 106px; display: block; color: rgb(236, 236, 236); background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='106' fill='rgb(236, 236, 236)' stroke='rgb(236, 236, 236)' viewBox='0 0 15 16'%3E%3Cpolygon%20stroke%3D%22none%22%20points%3D%222%202%208%202%208%200%200%200%200%2012%203%2012%203%2010%202%2010%202%202%22%3E%3C%2Fpolygon%3E%3Crect%20stroke%3D%22none%22%20x%3D%228%22%20y%3D%222%22%20width%3D%222%22%20height%3D%221%22%3E%3C%2Frect%3E%3Cpolygon%20stroke%3D%22none%22%20points%3D%2213%206%2013%2014%206%2014%206%206%2013%206%2013%204%204%204%204%2016%2015%2016%2015%206%2013%206%22%3E%3C%2Fpolygon%3E%3C/svg%3E");}.ox-bnav__item .icon{ color:}.ox-bnav__item .action{ font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;}.ox-bnav__item .header__item-badge {background:rgba(255, 255, 255, 0);} .ox_bnav{ background-color:rgb(255, 255, 255);} .header__content .header__item .button .label{ font-weight: 600;font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;}.products{ margin-top:0;}.a2-search-suggestions{ padding: 10px;}.toolbar-products + .block{ margin: 0; padding: 10px; border: 1px solid var(--a2-toolbar-border-color); border-top: 0;}.toolbar-products{ margin-bottom:0;}.products-list{ --a2-grid-item-padding:20px;}.products-list .product-item:last-child, :where(.products-grid, .products-list) .product-items > .product-item{ border:none; margin: 0; padding: 0; position:relative;}:where(.products-grid, .products-list) .product-items .product-item:before{ content: ''; display: block; position: absolute; left: 0; right: -1px; top: -1px; bottom: 0; border: 1px solid rgb(228, 228, 228); z-index:-1; pointer-events:none;}.products-grid .product-item-info{ height:100%;}.product-items.owl-carousel .product-item:before{ top:0;}@media only screen and (min-width: 640px){ .products-list .product-item-details, .product-list-view__right-wrapper{ padding-top:15px;}.products-list .product-grid__image-wrapper{margin-right: 15px;}} .js-toolbar-switch:after{ content:''; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(143, 143, 143)' viewBox='0 0 15 15 '%3E%3Cpolygon%20points%3D%227.5%2C12.3%200%2C4.8%201.5%2C3.4%207.5%2C9.5%2013.5%2C3.4%2015%2C4.8%20%22%2F%3E%3C/svg%3E"); width:15px; height:15px;}.js-toolbar-switch:hover:after{ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(44, 41, 48)' viewBox='0 0 15 15 '%3E%3Cpolygon%20points%3D%227.5%2C12.3%200%2C4.8%201.5%2C3.4%207.5%2C9.5%2013.5%2C3.4%2015%2C4.8%20%22%2F%3E%3C/svg%3E");}.price-dif__container{ white-space: nowrap; vertical-align: top; display: inline-block; position: relative; line-height: 1; font-size:14px; font-weight: 600; color: white; background-color: rgb(65, 196, 225); padding: 3px 6px;}.product-item .ox-sale-price-dif +.price-box .price-container{ top: 0; padding-top:4px;}.product-item-unavailable :is(.product-item-name,.product-item-description,.product-item-photo, .ox-product-labels-wrapper,.price-box){ opacity:0.5;}:root{--a2-main-color:rgb(44, 41, 48);--a2-toolbar-i-bg-hover:rgb(44, 41, 48);--a2-highlight:rgb(202, 239, 54);--a2-logo-bg:rgb(255, 255, 255);--oxmm-l0-color:rgb(255, 255, 255);--oxmm-style5-bg:rgb(255, 255, 255);--oxmm-l0-bg-h:rgb(255, 255, 255);--oxmm-style2-color:rgb(239, 239, 239);--oxmm-l0-ls:0px;--oxmm-item-ls:0px;--a2-switcher-dd-fw:600;--oxmm-l0-fw:600;--oxmm-item-fw:600;--oxmm-item-bg-a:rgb(29, 29, 29);--a2-switcher-dd-a-bg:rgb(29, 29, 29);--oxmm-l0-color:rgb(0, 0, 0);--oxmm-ff:'Roboto Condensed', Helvetica, Arial, sans-serif;--oxmm-l1s-fw:;--a2-footer-link:#ebebeb;--a2-footer-link-hover:rgb(255, 255, 255);--a2-footer-link-bg-hover:rgba(0, 0, 0, 0);--a2-btn-bg:rgb(68, 37, 165);--a2-btn-color:rgb(255, 255, 255);--a2-btn-color-hover:rgb(44, 41, 48);--a2-btn-bg-hover:rgb(195, 226, 53);--a2-btn-ff:'Roboto', Helvetica, Arial, sans-serif;--a2-btn-ls:0;--a2-btn-outline-border:rgb(44, 41, 48);--a2-btn-outline-color:rgb(44, 41, 48);--a2-btn-outline-border-hover:rgb(44, 41, 48);--a2-btn-outline-color-hover:rgb(255, 255, 255);--a2-btn-outline-bg-hover:rgb(44, 41, 48);--a2-rating:rgb(224, 224, 224);--a2-toolbar-i-color:rgb(162, 162, 162);--a2-toolbar-i-color-hover:rgb(0, 0, 0);--a2-toolbar-i-bg:rgb(248, 248, 248);--a2-toolbar-i-bg-hover:rgb(248, 248, 248);--a2-owl-nav-arrow:rgb(0, 0, 0);--a2-owl-nav-bg:rgb(255, 255, 255);--a2-owl-nav-arrow-hover:rgb(255, 255, 255);--a2-owl-nav-bg-hover:rgb(44, 41, 48);--a2-grid-action-icon-color:rgb(143, 143, 143);--a2-grid-action-icon-color-hover:rgb(44, 41, 48);--a2-anim-banner-color:rgb(61, 61, 61);--a2-anim-banner-hover:rgb(61, 61, 61);--a2-anim-banner-bg:rgba(0, 0, 0, 0);--a2-anim-banner-bg-hover:rgb(246, 243, 239);--a2-icons-cart: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(143, 143, 143)' stroke='rgb(143, 143, 143)' viewBox='0 0 20 17 '%3E%3Crect%20stroke%3D%22none%22%20y%3D%223%22%20width%3D%2216%22%20height%3D%222%22%2F%3E%3Crect%20stroke%3D%22none%22%20x%3D%223%22%20y%3D%2210%22%20width%3D%2212%22%20height%3D%222%22%2F%3E%3Cpolygon%20stroke%3D%22none%22%20points%3D%223%2012%201%205%203%204.6%205%2011.6%203%2012%22%2F%3E%3Cpolygon%20stroke%3D%22none%22%20points%3D%2215%2012%2018.1%200.5%2016.1%200%2013%2011.6%2015%2012%22%2F%3E%3Crect%20stroke%3D%22none%22%20x%3D%2216.1%22%20width%3D%223.8%22%20height%3D%222%22%2F%3E%3Ccircle%20stroke%3D%22none%22%20cx%3D%2213%22%20cy%3D%2215%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%2215%22%20r%3D%222%22%2F%3E%3C/svg%3E");--a2-icons-cart-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(44, 41, 48)' stroke='rgb(44, 41, 48)' viewBox='0 0 20 17 '%3E%3Crect%20stroke%3D%22none%22%20y%3D%223%22%20width%3D%2216%22%20height%3D%222%22%2F%3E%3Crect%20stroke%3D%22none%22%20x%3D%223%22%20y%3D%2210%22%20width%3D%2212%22%20height%3D%222%22%2F%3E%3Cpolygon%20stroke%3D%22none%22%20points%3D%223%2012%201%205%203%204.6%205%2011.6%203%2012%22%2F%3E%3Cpolygon%20stroke%3D%22none%22%20points%3D%2215%2012%2018.1%200.5%2016.1%200%2013%2011.6%2015%2012%22%2F%3E%3Crect%20stroke%3D%22none%22%20x%3D%2216.1%22%20width%3D%223.8%22%20height%3D%222%22%2F%3E%3Ccircle%20stroke%3D%22none%22%20cx%3D%2213%22%20cy%3D%2215%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%2215%22%20r%3D%222%22%2F%3E%3C/svg%3E");--a2-icons-wishlist: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(143, 143, 143)' stroke='rgb(143, 143, 143)' viewBox='0 0 18 16 '%3E%3Cpath%20stroke%3D%22none%22%20d%3D%22M17.3%2C2.4a5.3%2C5.3%2C0%2C0%2C0-4-1.5A5.2%2C5.2%2C0%2C0%2C0%2C10%2C2.7%2C5.2%2C5.2%2C0%2C0%2C0%2C6.7.9a5.3%2C5.3%2C0%2C0%2C0-4%2C1.5A5.1%2C5.1%2C0%2C0%2C0%2C1%2C6.5%2C6.3%2C6.3%2C0%2C0%2C0%2C2.2%2C9.7L8.3%2C16c.6.5%2C1%2C.9%2C1.7.9s1.1-.4%2C1.7-.9l6.1-6.3A6.3%2C6.3%2C0%2C0%2C0%2C19%2C6.5%2C5.1%2C5.1%2C0%2C0%2C0%2C17.3%2C2.4ZM16.1%2C8.7%2C10%2C14.9%2C3.9%2C8.7a3.7%2C3.7%2C0%2C0%2C1-1-2.2A3.9%2C3.9%2C0%2C0%2C1%2C4%2C3.7a3.3%2C3.3%2C0%2C0%2C1%2C2.7-.9C7.9%2C2.8%2C10%2C5.1%2C10%2C5.1s2.1-2.3%2C3.3-2.3a3.3%2C3.3%2C0%2C0%2C1%2C2.7.9%2C3.9%2C3.9%2C0%2C0%2C1%2C1.1%2C2.8A3.7%2C3.7%2C0%2C0%2C1%2C16.1%2C8.7Z%22%20transform%3D%22translate%28-1%20-0.9%29%22%2F%3E%3C/svg%3E");--a2-icons-wishlist-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(44, 41, 48)' stroke='rgb(44, 41, 48)' viewBox='0 0 18 16 '%3E%3Cpath%20stroke%3D%22none%22%20d%3D%22M17.3%2C2.4a5.3%2C5.3%2C0%2C0%2C0-4-1.5A5.2%2C5.2%2C0%2C0%2C0%2C10%2C2.7%2C5.2%2C5.2%2C0%2C0%2C0%2C6.7.9a5.3%2C5.3%2C0%2C0%2C0-4%2C1.5A5.1%2C5.1%2C0%2C0%2C0%2C1%2C6.5%2C6.3%2C6.3%2C0%2C0%2C0%2C2.2%2C9.7L8.3%2C16c.6.5%2C1%2C.9%2C1.7.9s1.1-.4%2C1.7-.9l6.1-6.3A6.3%2C6.3%2C0%2C0%2C0%2C19%2C6.5%2C5.1%2C5.1%2C0%2C0%2C0%2C17.3%2C2.4ZM16.1%2C8.7%2C10%2C14.9%2C3.9%2C8.7a3.7%2C3.7%2C0%2C0%2C1-1-2.2A3.9%2C3.9%2C0%2C0%2C1%2C4%2C3.7a3.3%2C3.3%2C0%2C0%2C1%2C2.7-.9C7.9%2C2.8%2C10%2C5.1%2C10%2C5.1s2.1-2.3%2C3.3-2.3a3.3%2C3.3%2C0%2C0%2C1%2C2.7.9%2C3.9%2C3.9%2C0%2C0%2C1%2C1.1%2C2.8A3.7%2C3.7%2C0%2C0%2C1%2C16.1%2C8.7Z%22%20transform%3D%22translate%28-1%20-0.9%29%22%2F%3E%3C/svg%3E");--a2-bnav-color: rgb(48, 48, 48);--a2-bnav-bg: rgba(255, 255, 255, 0);--a2-bnav-fw: 600;} @media only screen and (max-width: 1024px){.mobile-header--layout-5 .logo__container, .mobile-header--layout-4 .logo__container{ max-width: 200px; }.logo__container .logo img{ max-width: 160px; }.order-links .item.current strong, .ox-nav-sections-item-title.active:after, .product.data.items > .item.title:not(.disabled) > .switch:focus, .product.data.items > .item.title:not(.disabled) > .switch:hover, .product.data.items > .item.title:not(.disabled) > .switch:active, .product.data.items > .item.title.active > .switch, .product.data.items > .item.title.active > .switch:focus, .product.data.items > .item.title.active > .switch:hover{background:rgb(44, 41, 48) }.header__search-below, .menu-position--below .header__content{ background-color: rgb(85, 46, 206); }.ox-nav-sections-item-title .ox-nav-sections-item-switch{color: rgb(68, 36, 164); }.ox-nav-sections-item-title:after{ background: rgb(107, 77, 223); }.ox-nav-sections-item-title.active .ox-nav-sections-item-switch{color: rgb(255, 255, 255); }.ox-nav-sections-item-title.active:after{ background: rgb(68, 36, 164); }.ox-megamenu-navigation > .level0 > .ox-mm-a-wrap .level-top,.slide-out-menu--mobile{ color: rgb(0, 0, 0); }.ox-megamenu-navigation > .level0.active > .ox-mm-a-wrap .level-top, .ox-megamenu-navigation > .level0.has-active > .ox-mm-a-wrap .level-top, .ox-megamenu-navigation > .level0:not(.active):not(.has-active):hover > .ox-mm-a-wrap .level-top{color: #000000; }.page-header{--oxmm-l0-fs:25px;--oxmm-l0-color-h:#000000;}.product.data.items .item.title.active > .switch:after, .product.data.items .item.title.active > .switch:before{background: rgb(255, 255, 255)}.order-links .item.current strong,.product.data.items > .item.title:not(.disabled) > .switch:active,.product.data.items > .item.title.active > .switch, .product.data.items > .item.title.active > .switch:focus, .product.data.items > .item.title.active > .switch:hover,.product.data.items > .item.title > .switch:hover,.product.data.items .item.title.active > .switch,.product.data.items .item.title.active > .switch:visited{color: rgb(255, 255, 255) }} @media only screen and (min-width: 1025px){[data-content-type='row'][data-appearance='contained'], .container, .navigation, .ox-megamenu, .breadcrumbs, .page-header .header.panel, .header.content, .footer.content, .page-wrapper>.page-bottom, .block.category.event, .top-container, .page-main{max-width:1420px; }.athlete2_product_info__wrapper{max-width: 1460px; margin-left: auto; margin-right: auto; }.catalogsearch-result-index .page-main, .catalog-category-view .page-main{ padding-left: 30px; padding-right: 30px; }.page-layout-2columns-left .product.media, .page-layout-2columns-right .product.media, .page-layout-3columns .product.media, .page-layout-1column-fullwidth .product.media, .page-layout-1column .product.media{width: 50%;}.page-layout-2columns-left .product-info-main, .page-layout-2columns-right .product-info-main, .page-layout-3columns .product-info-main, .page-layout-1column-fullwidth .product-info-main, .page-layout-1column .product-info-main{width: 45%; }.header--layout-6 .logo__container,.logo__container{width: 200px; }.logo__container .logo img{ max-width: 190px; }.top-bar .switcher .action.toggle{border-right: 1px solid rgba(0, 0, 0, 0.12); }.menu-style-5 .page-header .ox-megamenu-navigation > .level0 > .ox-mm-a-wrap a .a2-menu-stroke span{background-color: rgb(255, 255, 255)!important;}.ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu-list > .category-item > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .level1.category-item > .ox-mm-a-wrap a, .ox-megamenu-navigation .category-item > .ox-mm-a-wrap a{letter-spacing:0px;} .ox-slideout.ox-links-drop .header.links a:not(.button):hover, .ox-dropdown.ox-links-drop .header.links a:not(.button):hover, .ox-slideout.ox-links-drop .header.links a:not(.button):focus, .ox-dropdown.ox-links-drop .header.links a:not(.button):focus, .ox-dialog .switcher-option:hover a{ background: rgb(245, 245, 245);color: rgb(0, 0, 0); }.ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu__categories > .ox-megamenu-list > .category-item > .submenu > .category-item > .ox-mm-a-wrap a:hover{ background: rgb(245, 245, 245);color: rgb(0, 0, 0); }.ox-megamenu-navigation .category-item.has-active > .ox-mm-a-wrap .level-top .ox-menu-arrow:before, .ox-megamenu-navigation .category-item.active > .ox-mm-a-wrap .level-top .ox-menu-arrow:before, .ox-megamenu-navigation .category-item.has-active > .ox-mm-a-wrap a .ox-menu-arrow:before, .ox-megamenu-navigation .category-item.active > .ox-mm-a-wrap a .ox-menu-arrow:before, .ox-megamenu-navigation .category-item.has-active > .ox-mm-a-wrap .level-top .ox-menu-arrow:after, .ox-megamenu-navigation .category-item.active > .ox-mm-a-wrap .level-top .ox-menu-arrow:after, .ox-megamenu-navigation .category-item.has-active > .ox-mm-a-wrap a .ox-menu-arrow:after, .ox-megamenu-navigation .category-item.active > .ox-mm-a-wrap a .ox-menu-arrow:after{ background-color: rgb(255, 255, 255); }.ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu-list > .category-item > .submenu > .category-item > .ox-mm-a-wrap a, .ox-dropdown--megamenu > .ox-megamenu__dropdown .ox-megamenu__categories > .ox-megamenu-list > .category-item > .submenu > .category-item > .ox-mm-a-wrap a{font-weight:400;}.page-header{--oxmm-l0-bg-h:rgb(44, 41, 48);--oxmm-item-bg-a:rgb(44, 41, 48);--oxmm-ff:'Roboto', Helvetica, Arial, sans-serif;--oxmm-l0-color:rgb(255, 255, 255);--oxmm-l0-bg-h:rgb(255, 255, 255);--oxmm-l0-color-h:rgb(239, 239, 239);--oxmm-l0-ls:0px;--oxmm-item-ls:0px;--oxmm-l0-fw:600;--oxmm-item-fw:600;--oxmm-l0-fs:15px;--oxmm-item-bg-a:rgb(29, 29, 29);--oxmm-l1s-fw:;}.product.media .gallery-placeholder._block-content-loading .gallery-placeholder__image{margin-left:90px; }.product.info.detailed .additional-attributes .col{font-size: 16px;}.order-links .item.current strong,.product.data.items > .item.title:not(.disabled) > .switch:active,.product.data.items > .item.title.active > .switch,.product.data.items > .item.title.active > .switch:focus,.product.data.items > .item.title.active > .switch:hover{ color: rgb(255, 255, 255) }.product.data.items.accordion .item.title.active > .switch:after,.product.data.items.accordion .item.title.active > .switch:before{background: rgb(255, 255, 255)}.post-list.blog-style-classic .post-title {font-size: 50px;}.post-view h1.page-title{font-size: 60px;}} .page-layout-2columns-right .extended-review-button{ display:none!important;}.product-item .price-box .price-container .price-label{display:none!important;}.page-layout-2columns-right.catalog-product-view .number-of-ratings .rating-number .label{ display:none;}@media (min-width: 769px){.footer--layout-4 .footer.content .block.newsletter .form.subscribe{margin-top: 0;}} .sticky-scroll-up .level0 a span.name{ color: #552ece !important;}.amrelated-pack-list{ pointer-events: none !important; }</style><style type="text/css"> .header-nav-wide{border-top: 1px solid rgba(0, 0, 0, 0.12);}.page-header .switcher .options .action.toggle{border-left: 1px solid rgba(0, 0, 0, 0.12);}.minicart-wrapper .amquote-showcart.action{background: rgba(255, 255, 255, 0);}.minicart-wrapper .amquote-showcart.action, .minicart-wrapper .amquote-showcart.action span{color: rgb(48, 48, 48);}.minicart-wrapper .amquote-showcart.action svg{fill: rgb(48, 48, 48);}.header--layout-4 .minicart-wrapper .amquote-showcart.action:after, .header--layout-2 .minicart-wrapper .amquote-showcart.action:hover, .header--layout-1 .minicart-wrapper .amquote-showcart.action:hover{background: rgba(255, 255, 255, 0);}.minicart-wrapper .amquote-showcart.action:hover, .minicart-wrapper .amquote-showcart.action:hover span{color: rgb(0, 0, 0);}.minicart-wrapper .amquote-showcart.action:hover svg{fill: rgb(0, 0, 0);}@media only screen and (max-width: 639px){ .minicart--show-counter-mobile .minicart-wrapper .amquote-showcart.action span.qty{background: rgba(255, 255, 255, 0);}} .header__item-badge, .minicart-btn--minimal .minicart-wrapper .amquote-showcart.action span.qty{background: rgba(255, 255, 255, 0);}a.pagebuilder-button-primary, button.pagebuilder-button-primary{color: rgb(255, 255, 255); background: rgb(68, 37, 165);}a.pagebuilder-button-primary:hover, button.pagebuilder-button-primary:hover{color: rgb(44, 41, 48); background: rgb(195, 226, 53);}a.pagebuilder-button-secondary, button.pagebuilder-button-secondary{color: rgb(255, 255, 255); background: rgb(68, 37, 165); border: 2px solid;}a.pagebuilder-button-secondary:hover, button.pagebuilder-button-secondary:hover{color: rgb(44, 41, 48); background: rgb(248, 248, 248); border: 2px solid;}a.pagebuilder-button-primary, button.pagebuilder-button-primary, a.pagebuilder-button-secondary, button.pagebuilder-button-secondary, a.pagebuilder-button-primary:hover, button.pagebuilder-button-primary:hover, a.pagebuilder-button-secondary:hover, button.pagebuilder-button-secondary:hover{display: inline-flex; justify-content: center; align-items: center; height: 54px; min-width: 200px;}</style><meta name="generator" content="Powered by Slider Revolution 6.6.7.1 - responsive, Mobile-Friendly Slider Plugin with comfortable drag and drop interface." />
-<script>function setREVStartSize(t){window.RSIW=void 0===window.RSIW?window.innerWidth:window.RSIW,window.RSIH=void 0===window.RSIH?window.innerHeight:window.RSIH;try{var h=0===(h=document.getElementById(t.c).parentNode.offsetWidth)||isNaN(h)||"fullwidth"==t.l||"fullwidth"==t.layout?window.RSIW:h;if(t.tabw=void 0===t.tabw?0:parseInt(t.tabw),t.thumbw=void 0===t.thumbw?0:parseInt(t.thumbw),t.tabh=void 0===t.tabh?0:parseInt(t.tabh),t.thumbh=void 0===t.thumbh?0:parseInt(t.thumbh),t.tabhide=void 0===t.tabhide?0:parseInt(t.tabhide),t.thumbhide=void 0===t.thumbhide?0:parseInt(t.thumbhide),t.mh=void 0===t.mh||""==t.mh||"auto"===t.mh?0:parseInt(t.mh,0),"fullscreen"===t.layout||"fullscreen"===t.l)d=Math.max(t.mh,window.RSIH);else{for(var e in t.gw=Array.isArray(t.gw)?t.gw:[t.gw],t.rl)void 0!==t.gw[e]&&0!==t.gw[e]||(t.gw[e]=t.gw[e-1]);for(var e in t.gh=void 0===t.el||""===t.el||Array.isArray(t.el)&&0==t.el.length?t.gh:t.el,t.gh=Array.isArray(t.gh)?t.gh:[t.gh],t.rl)void 0!==t.gh[e]&&0!==t.gh[e]||(t.gh[e]=t.gh[e-1]);var i,a=new Array(t.rl.length),r=0;for(e in t.tabw=t.tabhide>=h?0:t.tabw,t.thumbw=t.thumbhide>=h?0:t.thumbw,t.tabh=t.tabhide>=h?0:t.tabh,t.thumbh=t.thumbhide>=h?0:t.thumbh,t.rl)a[e]=t.rl[e]<window.RSIW?0:t.rl[e];for(e in i=a[0],a)i>a[e]&&0<a[e]&&(i=a[e],r=e);var w=h>t.gw[r]+t.tabw+t.thumbw?1:(h-(t.tabw+t.thumbw))/t.gw[r],d=t.gh[r]*w+(t.tabh+t.thumbh)}w=document.getElementById(t.c);null!==w&&w&&(w.style.height=d+"px"),null!==(w=document.getElementById(t.c+"_wrapper"))&&w&&(w.style.height=d+"px",w.style.display="block")}catch(t){console.log("Failure at Presize of Slider:"+t)}};</script>
-<style>.shudj73-s{margin-bottom:15px !important}.mgz-element.shudj73 .image-content{width:100%;text-align:center}.mgz-element.shudj73 .image-title{font-size:16px}.udirgql-s{margin-top:2% !important}.pp07seh-s{margin-top:2% !important}small.copyright{display:flex;align-items:center;height:100%}</style></head><body data-container="body" data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://edumalls.com/static/frontend/Edumalls/theme/en_US/images/loader-2.gif"}}' class="toolbar-nobg custom-gallery-cursor ox-messages-fixed menu-style-3 menu--align-center menu--align-sticky-center minicart--style-modern mobile-header--layout-5 footer--layout-4 footer-newsletter-wide footer-newsletter-center header--layout-6 contacts-fullwidth categories--fullwidth product-page--fullwidth minicart-btn--minimal minicart--show-counter-mobile sticky-smart sticky-minimized quickview-mobile--hide testimonial-index-post page-layout-1column" id="html-body">   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5Z9WNF4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->         <script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_PageBuilder/js/widget-initializer": {
-                "config": {"[data-content-type=\"slider\"][data-appearance=\"default\"]":{"Magento_PageBuilder\/js\/content-type\/slider\/appearance\/default\/widget":false},"[data-content-type=\"map\"]":{"Magento_PageBuilder\/js\/content-type\/map\/appearance\/default\/widget":false},"[data-content-type=\"row\"]":{"Magento_PageBuilder\/js\/content-type\/row\/appearance\/default\/widget":false},"[data-content-type=\"tabs\"]":{"Magento_PageBuilder\/js\/content-type\/tabs\/appearance\/default\/widget":false},"[data-content-type=\"slide\"]":{"Magento_PageBuilder\/js\/content-type\/slide\/appearance\/default\/widget":{"buttonSelector":".pagebuilder-slide-button","showOverlay":"hover","dataRole":"slide"}},"[data-content-type=\"banner\"]":{"Magento_PageBuilder\/js\/content-type\/banner\/appearance\/default\/widget":{"buttonSelector":".pagebuilder-banner-button","showOverlay":"hover","dataRole":"banner"}},"[data-content-type=\"buttons\"]":{"Magento_PageBuilder\/js\/content-type\/buttons\/appearance\/inline\/widget":false},"[data-content-type=\"products\"][data-appearance=\"carousel\"]":{"Magento_PageBuilder\/js\/content-type\/products\/appearance\/carousel\/widget":false}},
-                "breakpoints": {"desktop":{"label":"Desktop","stage":true,"default":true,"class":"desktop-switcher","icon":"Magento_PageBuilder::css\/images\/switcher\/switcher-desktop.svg","conditions":{"min-width":"1024px"},"options":{"products":{"default":{"slidesToShow":"5"}}}},"tablet":{"conditions":{"max-width":"1024px","min-width":"768px"},"options":{"products":{"default":{"slidesToShow":"4"},"continuous":{"slidesToShow":"3"}}}},"mobile":{"label":"Mobile","stage":true,"class":"mobile-switcher","icon":"Magento_PageBuilder::css\/images\/switcher\/switcher-mobile.svg","media":"only screen and (max-width: 768px)","conditions":{"max-width":"768px","min-width":"640px"},"options":{"products":{"default":{"slidesToShow":"3"}}}},"mobile-small":{"conditions":{"max-width":"640px"},"options":{"products":{"default":{"slidesToShow":"2"},"continuous":{"slidesToShow":"1"}}}}}            }
-        }
-    }</script>  <div class="cookie-status-message" id="cookie-status">The store will not work correctly in the case when cookies are disabled.</div><script type="text/x-magento-init">
-    {
-        "*": {
-            "cookieStatus": {}
-        }
-    }</script> <script type="text/x-magento-init">
-    {
-        "*": {
-            "mage/cookies": {
-                "expires": null,
-                "path": "\u002F",
-                "domain": ".edumalls.com",
-                "secure": false,
-                "lifetime": "86400"
-            }
-        }
-    }</script>  <noscript><div class="message global noscript"><div class="content"><p><strong>JavaScript seems to be disabled in your browser.</strong> <span> For the best experience on our site, be sure to turn on Javascript in your browser.</span></p></div></div></noscript>   <script> window.cookiesConfig = window.cookiesConfig || {}; window.cookiesConfig.secure = true</script> <script>    require.config({
-        map: {
-            '*': {
-                wysiwygAdapter: 'mage/adminhtml/wysiwyg/tiny_mce/tinymce4Adapter'
-            }
-        }
-    });</script>  <script>
-    require.config({
-        paths: {
-            googleMaps: 'https\u003A\u002F\u002Fmaps.googleapis.com\u002Fmaps\u002Fapi\u002Fjs\u003Fv\u003D3\u0026key\u003D'
-        },
-        config: {
-            'Magento_PageBuilder/js/utils/map': {
-                style: ''
-            },
-            'Magento_PageBuilder/js/content-type/map/preview': {
-                apiKey: '',
-                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fedumalls.com\u002Fsa_en\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
-            },
-            'Magento_PageBuilder/js/form/element/map': {
-                apiKey: '',
-                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fedumalls.com\u002Fsa_en\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
-            },
-        }
-    });</script> <script>
-    require.config({
-        shim: {
-            'Magento_PageBuilder/js/utils/map': {
-                deps: ['googleMaps']
-            }
-        }
-    });</script>  <div class="page-wrapper"> <div class="page-header header--layout-6&#x20;header__menu--position-1"  data-role="OXsticky" data-mage-init='{"js/sticky":{}}'><div class="sticky-wrapper"> <div class="container"><div class="row"><div class="col header__content-wrapper">  <div class="top-bar flex-row"><div class="flex-left modal__left">  <!---------------------------------------------- Country Switcher ----------------------------------------------><div class="switcher language switcher-language switcher-hover ox-move-item ox-move-item-store.settings" data-ui-id="language-switcher" id="switcher-language"><strong class="label switcher-label"><span> Website</span></strong> <div class="actions dropdown options switcher-options"><div class="action toggle switcher-trigger" id="switcher-language-trigger" data-mage-init='{"dropdown":{}}' data-toggle="dropdown" data-trigger-keypress-button="true"><strong class="view-saudi_arabia"><span style="background-image:url('https://edumalls.com/static/frontend/Edumalls/theme/en_US/images/flags/saudi_arabia.jpg');">Saudi Arabia</span></strong></div><ul class="dropdown switcher-dropdown" data-target="dropdown">    <li class="view-eg_en switcher-option"><a data-post='{"action":"https:\/\/edumalls.com\/sa_en\/stores\/store\/redirect\/","data":{"___store":"eg_en","___from_store":"sa_en","uenc":"aHR0cHM6Ly9lZHVtYWxscy5jb20vZWdfZW4vdGVzdGltb25pYWwvaW5kZXgvcG9zdC8,"}}' style="background-image:url('https://edumalls.com/static/frontend/Edumalls/theme/en_US/images/flags/egypt.jpg');">Egypt</a></li>  </ul></div></div><style> .switcher-options:hover .switcher-dropdown{ display:block !important; }</style><!---------------------------------------------- Language Switcher ----------------------------------------------><div class="switcher language switcher-language switcher-hover ox-move-item ox-move-item-store.settings" style="z-index: 150;" data-ui-id="language-switcher" id="switcher-language"><strong class="label switcher-label"><span> Language</span></strong> <div class="actions dropdown options switcher-options"><div class="action toggle switcher-trigger" id="switcher-language-trigger" data-mage-init='{"dropdown":{}}' data-toggle="dropdown" data-trigger-keypress-button="true"><strong class="view-sa_en"><span style="background-image:url('https://edumalls.com/static/frontend/Edumalls/theme/en_US/images/flags/sa_en.jpg');">English</span></strong></div><ul class="dropdown switcher-dropdown" data-target="dropdown">    <li class="view-sa_ar switcher-option"><a href="#" data-post='{"action":"https:\/\/edumalls.com\/sa_en\/stores\/store\/redirect\/","data":{"___store":"sa_ar","___from_store":"sa_en","uenc":"aHR0cHM6Ly9lZHVtYWxscy5jb20vc2FfYXIvdGVzdGltb25pYWwvaW5kZXgvcG9zdC8,"}}' style="background-image:url('https://edumalls.com/static/frontend/Edumalls/theme/en_US/images/flags/sa_ar.jpg');">العربية</a></li>  </ul></div></div> </div> <div class="flex-right flex-row modal__right" data-move-desktop="header.main.right" data-move-back="header.main.right"> <div class="topline-block"><a href="https://edumalls.com/sa_en/contact-support/">Need Help!, Contact Support</a></div>  </div></div>  <div class="header__content"><div class="logo__container"> <a class="logo" href="https://edumalls.com/sa_en/" title="Edu&#x20;Malls" aria-label="store logo"><img src="https://cdn.edumalls.com/athlete2/default/edumalls.png" title="Edu&#x20;Malls" alt="Edu&#x20;Malls" data-ox-image style="max-width: 200px;max-height:30px;" width="200" height="30" /> <img class="retina" src="https://cdn.edumalls.com/athlete2/default/edumalls_1.png" title="Edu&#x20;Malls" alt="Edu&#x20;Malls" style="max-width: 200px;max-height:30px;" width="200" height="30" />  <img class="print-logo" src="https://cdn.edumalls.com/athlete2/default/edumalls_2.png" data-ox-image title="Edu&#x20;Malls" alt="Edu&#x20;Malls" style="max-width: 200px;max-height:30px;" width="200" height="30" /></a></div><div class="header__left flex-row modal__left" data-move-mobile="header.main.left" data-move-sticky="header.main.left"> <div data-action="toggle-mobile-nav" class="action slide-out-menu--mobile"> <div class="icon hamburger-menu-icon-small" aria-label="Navigation"><span></span><span></span><span></span></div> <span>Navigation</span></div></div><div class="header__center header__item-search block-search">  <div class="header__search-wrapper ox-move-item ox-move-item-search.slideout ox-move-search ox-move-sticky-search.slideout"><div class="ox-overlay-close-btn" aria-label="Close Modal"><span></span></div> <form class="form minisearch" id="search_mini_form" action="https://edumalls.com/sa_en/catalogsearch/result/" method="get">  <div class="field search"><div class="control"><div class="flashing-cursor"></div><input id="search" data-mage-init='{"quickSearch":{ "formSelector":"#search_mini_form", "url":"https://edumalls.com/sa_en/search/ajax/suggest/", "destinationSelector":"#search_autocomplete"} }' type="text" name="q" value="" placeholder="Search" class="input-text js-input-focus" maxlength="128" role="combobox" aria-haspopup="false" aria-autocomplete="both" autocomplete="off" aria-expanded="false"/><div id="search_autocomplete" class="search-autocomplete"></div><div class="label animated-text--masked"><div class="wrap"><label class="inner" for="search" data-role="minisearch-label">Search</label></div></div></div></div><div class="actions"><button type="submit" title="Go" class="action search" aria-label="Search" ><span class="search-icon-wrapper"><svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="a2-icon-search"><use xlink:href="#a2-search-icon"></use></svg></span> <span>Go</span></button></div></form></div></div><div class="header__right flex-row modal__right" data-move-mobile="header.main.right" data-move-sticky="header.main.right">  <div class="block block-search header__item header__item-search block-search--type-panel"><div  class="block block-content"></div> <div class="block block-content block-content-slideout" data-move-mobile="search.slideout" data-move-sticky="search.slideout" style="display:none" data-role="OXmodal" data-mage-init='{"OXmodal":{ "defaultModalClass": "ox-dialog", "triggerTarget":".js-action-search-slideout", "closeButtonTrigger": ".ox-overlay-close-btn", "overlayClass":"ox-slideout-shadow", "timeout": "1000", "closeOnEscape": true, "closeOnMouseLeave": false, "hoverOpen": false, "type": "slideout", "positionSlideout":"top", "htmlClass":"ox-fixed" }}'></div> <a class="button action-search-slideout js-action-search-slideout"><span class="search-icon-wrapper"><svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="a2-icon-search&#x20;&#x20;a2-icon--search" width="16" height="16" viewBox="0 0 16 16"><use xlink:href="#a2-search-icon"></use></svg></span></a></div>  <div class="header__item header__item-account hide-on-tablet hide-on-mobile " data-move-desktop="header.myaccount"><a class="button js-item-myaccount-action" href="https://edumalls.com/sa_en/customer/account/"><svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="a2-icon-account&#x20;&#x20;a2-icon--account2" width="18" height="18" viewBox="0 0 18 18"><use xlink:href="#a2-account-icon"></use></svg> <span class="label visually-hidden">My Account</span></a>   <div class="header__item-dropdown-content block-account" data-role="OXmodal" data-mage-init='{"OXmodal":{ "triggerTarget":".js-item-myaccount-action", "overlayClass":"ox-slideout-shadow", "timeout": "200", "defaultModalClass":"ox-dialog ox-links-drop", "closeOnEscape": true, "closeButtonTrigger": "#btn-myaccount-close", "closeOnMouseLeave": false, "hoverOpen": false, "type": "", "htmlClass":"ox-fixed" }}'><button type="button" id="btn-myaccount-close" class="ox-overlay-close-btn" aria-label="Close Modal" data-action="close"><span></span></button> <div class="block-content ox-move-item ox-move-item-store.links"> <ul class="header__toplinks header links ox-move-item ox-move-item-store.links" data-bind="scope: 'customer'"><li class="greet welcome"><!-- ko if: customer().fullname --><span class="logged-in" data-bind="text: new String('Welcome, %1!').replace('%1', customer().fullname)"></span> <!-- /ko --></li> <li><span class="delimiter"></span></li> <li> <a href="https://edumalls.com/sa_en/customer/account/">My Account</a></li> <!-- insert my school corner link if exists --> <li id="dropdown-myschoolcorner-link" style="display: none;"></li> <script type="text/x-magento-init">
-{
-    "*": {
-        "Classera_MySchoolCorner/js/school-corner-link": {}
-    }
-}</script> <li class="orders-link"><a href="https://edumalls.com/sa_en/sales/order/history/">My Orders</a></li>   <li class="checkout-link"><a href="https://edumalls.com/sa_en/checkout/">Checkout</a></li> <li><span class="delimiter"></span></li> <!-- ko if: customer().fullname --><li> <button id="log-out-account-link" class="button primary">Log Out</button></li> <!-- /ko --><!-- ko ifnot: customer().fullname --><li> <a id="create-new-account-link" href="https://edumalls.com/sa_en/customer/account/create/" style="display:none">Create an account</a></li> <li> <button id="log-in-account-link" class="button primary" style="display:none">Log In</button></li> <!-- /ko --></ul> <script type="text/x-magento-init">
-	{ "*": { "Magento_Ui/js/core/app": { "components": {"customer":{"component":"Magento_Customer\/js\/view\/customer"}} } } }</script></div></div> </div>  <div data-block="quotecart" class="amquote-cart-wrapper minicart-wrapper"><a class="amquote-showcart action" href="https://edumalls.com/sa_en/quote/cart/" data-bind="scope: 'quotecart_content'" title="My Quote"><svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.0871 40.711H15.4844C14.774 40.711 14.1035 40.4461 13.5957 39.9628L6.47905 33.2058C5.95792 32.7125 5.65918 32.0206 5.65918 31.3121V6.30021C5.65918 4.84353 6.87405 3.65833 8.36774 3.65833H36.7678C38.2615 3.65833 39.4764 4.84353 39.4764 6.30021V23.6744C39.4764 24.4988 38.8092 25.1642 37.9827 25.1642C37.1562 25.1642 36.489 24.4988 36.489 23.6744V6.6379H8.64657V31.1499L15.5806 37.7314H25.0905C25.917 37.7314 26.5842 38.3969 26.5842 39.2212C26.5842 40.0455 25.917 40.711 25.0905 40.711H25.0871Z" /><path d="M32.2107 46.6945C30.9925 46.6945 30 45.6417 30 44.3472C30 43.0528 30.9925 42 32.2107 42C33.4289 42 34.4213 43.0528 34.4213 44.3472C34.4213 45.6417 33.4289 46.6945 32.2107 46.6945Z" /><path d="M40.0974 46.6945C38.8792 46.6945 37.8867 45.6417 37.8867 44.3472C37.8867 43.0528 38.8792 42 40.0974 42C41.3156 42 42.3081 43.0528 42.3081 44.3472C42.3081 45.6417 41.3156 46.6945 40.0974 46.6945Z" /><path d="M39.6874 40.9997C39.6874 40.9997 39.6591 40.9997 39.6414 40.9997H32.2418C31.4527 41.011 30.7166 40.6909 30.1327 40.096C29.609 39.5575 29.2515 38.8194 29.1277 38.0136L27.8537 29.9024C27.8466 29.8647 27.8396 29.8271 27.836 29.7894L27.3017 26.3891H25.5924C24.7113 26.3891 24 25.6322 24 24.6945C24 23.7569 24.7113 23 25.5924 23H28.6499C29.4285 23 30.0938 23.5987 30.2212 24.4159L30.7626 27.869H42.4087C42.8758 27.869 43.3182 28.0874 43.619 28.4639C43.9198 28.8405 44.0542 29.3413 43.9799 29.8309L42.7555 38.0023C42.6281 38.8194 42.2707 39.5575 41.747 40.0922C41.1772 40.6759 40.4482 40.9959 39.6838 40.9959L39.6874 40.9997ZM32.3161 37.6106H39.5671C39.5848 37.5768 39.6025 37.5278 39.6131 37.46L40.5402 31.2618H31.2934L32.2666 37.4563C32.2772 37.524 32.2949 37.5768 32.3126 37.6106H32.3161Z" /><path d="M32.7779 13H22.2221C21.5459 13 21 12.33 21 11.5C21 10.67 21.5459 10 22.2221 10H32.7779C33.4541 10 34 10.67 34 11.5C34 12.33 33.4541 13 32.7779 13Z" /><path d="M32.5054 19H23.4946C22.6676 19 22 18.33 22 17.5C22 16.67 22.6676 16 23.4946 16H32.5054C33.3324 16 34 16.67 34 17.5C34 18.33 33.3324 19 32.5054 19Z" /><path d="M15.7333 9.72045V10.6646C16.3035 10.7291 16.7902 10.858 17.197 11.0476C17.6037 11.241 17.9611 11.5292 18.2615 11.9197C18.501 12.2155 18.6873 12.5226 18.8165 12.8374C18.9458 13.1521 19.0104 13.4403 19.0104 13.7019C19.0104 13.9939 18.9116 14.2442 18.7177 14.4565C18.5238 14.6688 18.2881 14.775 18.0105 14.775C17.4897 14.775 17.1513 14.4679 16.9955 13.8498C16.8206 13.1218 16.3986 12.6402 15.7257 12.4013V16.0339C16.3872 16.2311 16.9118 16.4131 17.3034 16.5762C17.695 16.7392 18.0448 16.9743 18.3527 17.2852C18.6835 17.6037 18.9382 17.9867 19.1169 18.4342C19.2956 18.8778 19.383 19.367 19.383 19.8978C19.383 20.5614 19.2423 21.1833 18.9572 21.7634C18.6721 22.3436 18.2539 22.8176 17.6988 23.1816C17.1437 23.5494 16.4898 23.7655 15.7257 23.8376V26.0141C15.7257 26.3592 15.6952 26.6094 15.6344 26.7649C15.5736 26.9204 15.4405 27 15.2314 27C15.0413 27 14.9045 26.9355 14.8284 26.8066C14.7524 26.6777 14.7144 26.4805 14.7144 26.2113V23.8527C14.0909 23.7769 13.5472 23.6177 13.0834 23.3712C12.6158 23.1247 12.228 22.8214 11.9162 22.4573C11.6045 22.0933 11.3764 21.7141 11.2243 21.3236C11.076 20.9292 11 20.5462 11 20.1671C11 19.8865 11.0988 19.6362 11.3003 19.4125C11.5018 19.1888 11.749 19.075 12.0455 19.075C12.285 19.075 12.4865 19.1357 12.6538 19.257C12.8173 19.3783 12.9313 19.5528 12.996 19.7727C13.1404 20.2505 13.2659 20.6145 13.3723 20.8685C13.4788 21.1226 13.6385 21.3539 13.8552 21.5625C14.0719 21.771 14.357 21.9341 14.7144 22.044V17.9829C13.9996 17.7668 13.4065 17.5279 12.9275 17.2625C12.4485 16.997 12.0607 16.6217 11.7604 16.1325C11.4638 15.6434 11.3117 15.0139 11.3117 14.2442C11.3117 13.2431 11.6045 12.4203 12.1862 11.7794C12.7678 11.1386 13.6118 10.767 14.7144 10.6608V9.73562C14.7144 9.24647 14.8816 9 15.2162 9C15.5508 9 15.7257 9.23889 15.7257 9.71666L15.7333 9.72045ZM14.7182 15.7116V12.3672C14.2696 12.5113 13.9236 12.7047 13.6727 12.9435C13.4218 13.1824 13.2963 13.5427 13.2963 14.028C13.2963 14.5134 13.4141 14.8357 13.6461 15.0708C13.8818 15.3059 14.2353 15.522 14.7144 15.7116H14.7182ZM15.7333 18.3052V22.1312C16.2693 22.0137 16.6875 21.7786 16.9802 21.4222C17.273 21.0657 17.4175 20.6524 17.4175 20.1822C17.4175 19.6741 17.2768 19.2835 16.9917 19.0067C16.7065 18.7299 16.2883 18.4948 15.7333 18.3052Z" /><path d="M18.5347 39.2179H15.2154V31.9212C15.2154 31.9212 15.1889 31.9212 15.1723 31.9212H6.37939V28.6106H15.1723C17.0278 28.6106 18.5347 29.968 18.5347 31.6398V39.2212V39.2179Z" /></svg> <span class="text">My Quote</span> <span class="counter qty empty" data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading"><span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span></span></a> <div class="block block-quotecart block-minicart empty" data-role="EDmodalQuotecart" data-mage-init='{"EDmodalQuotecart":{ "triggerTarget":".amquote-showcart", "overlayClass":"ox-slideout-shadow", "timeout": "2000", "closeButtonTrigger":"#btn-quotecart-close", "closeOnEscape": true, "closeOnMouseLeave": false, "hoverOpen": false, "type": "slideout", "positionSlideout": "right", "htmlClass":"ox-fixed" }}'><div id="quotecart-content-wrapper" data-bind="scope: 'quotecart_content'"><div class="message success"><span class="text">Product added to Quote</span></div><!-- ko template: getTemplate() --><!-- /ko --></div> </div><script>
-            window.amasty_quote_cart = {"checkoutUrl":"https:\/\/edumalls.com\/sa_en\/quote\/cart\/","updateItemQtyUrl":"https:\/\/edumalls.com\/sa_en\/amasty_quote\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/edumalls.com\/sa_en\/amasty_quote\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image","baseUrl":"https:\/\/edumalls.com\/sa_en\/","minicartMaxItemsVisible":5,"websiteId":"3","maxItemsToDisplay":100};</script><script type="text/x-magento-init">
-            {
-                "[data-block='quotecart']": {
-                    "Magento_Ui/js/core/app": {"components":{"quotecart_content":{"component":"Amasty_RequestQuote\/js\/view\/quotecart","config":{"template":"Amasty_RequestQuote\/quotecart\/content","itemRenderer":{"default":"defaultRenderer","simple":"defaultRenderer","virtual":"defaultRenderer"}},"children":{"item.renderer":{"component":"Magento_Checkout\/js\/view\/cart-item-renderer","config":{"displayArea":"defaultRenderer","template":"Magento_Checkout\/minicart\/item\/default"},"children":{"checkout.cart.item.price.sidebar":{"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/item\/price","displayArea":"priceSidebar"}},"item.image":{"component":"Magento_Catalog\/js\/view\/image","config":{"template":"Magento_Catalog\/product\/image","displayArea":"itemImage"}}}},"extra_info":{"component":"uiComponent","config":{"displayArea":"extraInfo"}},"promotion":{"component":"uiComponent","config":{"displayArea":"promotion"}}}}},"types":[]}                }
-            }</script></div> <div data-block="minicart" class="minicart-wrapper  "><a class="action showcart" href="https://edumalls.com/sa_en/checkout/cart/" data-bind="scope: 'minicart_content'"><svg xmlns="http://www.w3.org/2000/svg" class="a2-icon-cart&#x20;&#x20;a2-icon--cart" 
-            width="20" height="17" 
-            viewBox="0 0 20 17" 
-            style="width:20px; height:17px;"><rect stroke="none" y="3" width="16" height="2"/><rect stroke="none" x="3" y="10" width="12" height="2"/><polygon stroke="none" points="3 12 1 5 3 4.6 5 11.6 3 12"/><polygon stroke="none" points="15 12 18.1 0.5 16.1 0 13 11.6 15 12"/><rect stroke="none" x="16.1" width="3.8" height="2"/><circle stroke="none" cx="13" cy="15" r="2"/><circle cx="5" cy="15" r="2"/></svg> <span class="text visually-hidden">Bag</span> <span class="counter qty"><span class="counter-number"><!-- ko text: getCartParam('summary_count') -->0<!-- /ko --></span></span></a>  <div class="block block-minicart empty" data-role="OXmodalMinicart" data-mage-init='{"OXmodalMinicart":{ "triggerTarget":".showcart", "overlayClass":"ox-slideout-shadow", "timeout": "500", "closeButtonTrigger":"#btn-minicart-close", "closeOnEscape": true, "closeOnMouseLeave": false, "hoverOpen": false, "type": "slideout", "positionSlideout": "right", "htmlClass":"ox-fixed" }}'><div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'"> <div class="message success"><span class="text">Product added to cart</span></div> <!-- ko template: getTemplate() --><!-- /ko --></div></div> <script>window.checkout = {"shoppingCartUrl":"https:\/\/edumalls.com\/sa_en\/checkout\/cart\/","checkoutUrl":"https:\/\/edumalls.com\/sa_en\/checkout\/","updateItemQtyUrl":"https:\/\/edumalls.com\/sa_en\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/edumalls.com\/sa_en\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/edumalls.com\/sa_en\/","minicartMaxItemsVisible":5,"websiteId":"3","maxItemsToDisplay":100,"storeId":"10","storeGroupId":"5","customerLoginUrl":"https:\/\/edumalls.com\/sa_en\/customer\/account\/login\/referer\/aHR0cHM6Ly9lZHVtYWxscy5jb20vc2FfZW4vdGVzdGltb25pYWwvaW5kZXgvcG9zdC8%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/edumalls.com\/sa_en\/captcha\/refresh\/","isRequired":false,"timestamp":1739675187}}}</script> <script type="text/x-magento-init">
-    {
-        "[data-block='minicart']": {
-            "Magento_Ui/js/core/app": {"components":{"minicart_content":{"children":{"subtotal.container":{"children":{"subtotal":{"children":{"subtotal.totals":{"config":{"display_cart_subtotal_incl_tax":1,"display_cart_subtotal_excl_tax":0,"template":"Magento_Tax\/checkout\/minicart\/subtotal\/totals"},"children":{"subtotal.totals.msrp":{"component":"Magento_Msrp\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"displayArea":"minicart-subtotal-hidden","template":"Magento_Msrp\/checkout\/minicart\/subtotal\/totals"}}},"component":"Magento_Tax\/js\/view\/checkout\/minicart\/subtotal\/totals"}},"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/subtotal"}}},"component":"uiComponent","config":{"displayArea":"subtotalContainer"}},"item.renderer":{"component":"Magento_Checkout\/js\/view\/cart-item-renderer","config":{"displayArea":"defaultRenderer","template":"Magento_Checkout\/minicart\/item\/default"},"children":{"item.image":{"component":"Magento_Catalog\/js\/view\/image","config":{"template":"Magento_Catalog\/product\/image","displayArea":"itemImage"}},"checkout.cart.item.price.sidebar":{"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/item\/price","displayArea":"priceSidebar"}}}},"amasty.discount.container":{"component":"uiComponent","config":{"displayArea":"subtotalContainer"},"children":{"discount":{"component":"Magento_Checkout\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"template":"Amasty_MiniCartDiscountInfo\/minicart\/discount","imports":{"displaySubtotal":"minicart_content.subtotal.container.subtotal.subtotal.totals:displaySubtotal"}},"children":{"discount.totals":{"component":"Magento_Checkout\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"template":"Amasty_MiniCartDiscountInfo\/minicart\/discount\/totals"}}}}}},"extra_info":{"component":"uiComponent","config":{"displayArea":"extraInfo"}},"promotion":{"component":"uiComponent","config":{"displayArea":"promotion"}}},"config":{"itemRenderer":{"default":"defaultRenderer","simple":"defaultRenderer","virtual":"defaultRenderer"},"template":"Magento_Checkout\/minicart\/content"},"component":"Magento_Checkout\/js\/view\/minicart"}},"types":[]}        }
-    }</script></div></div></div></div></div></div><div class="header-nav-wide"> <nav class="ox-megamenu ox-move-item ox-move-item-store.menu ox-mm-sub-icons ps-enabled  ox-move-sticky ox-move-sticky-header.main.left" data-action="navigation" data-ox-mm-anim-type="fade" data-mage-init='{"OxMegaMenu":{ "header":".row", "direction":"horizontal", "mediaBreakpoint":"1025", "positionHorizontal":"left",  "autoOpen": "0", "autoOpenLast": "", "doNotClose": "" }}'><ul class="ox-megamenu-navigation"><li  class="level0  category-item first level-top ox-dropdown--simple" data-ox-mm-a-h="item-left"><div class="ox-mm-a-wrap -img-pos-above"><a  href="/sa_en/smarter-schools" data-url="custom"  class="level-top" ><span class="name">Smarter Schools</span><span class="ox-megamenu-label" style="">ED-Tech</span></a></div></li><li  class="level0  category-item level-top parent ox-dropdown--simple" data-ox-mm-a-h="item-left"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies" data-url="custom"  class="level-top" ><span class="name">School Supplies</span><i class="ox-menu-arrow hide-on-desktop"></i></a></div><div class="ox-megamenu__dropdown" ><ul class="ox-megamenu-list ox-dd-inner ox-mm-overflow"><li  class="level1  category-item first parent"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/office-school-supplies/art-tools/category.html" ><span class="name">Art &amp; Crafts</span></a><i class="ox-menu-arrow"></i></div><div class="ox-submenu level1 submenu"><ul class="ox-submenu-inner ox-dd-inner ox-mm-overflow"><li  class="level2  category-item first"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/art-tools/colour-pencils/category.html" ><span class="name">Wooden Colors</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/art-tools/water-colors/category.html" ><span class="name">Acrylic Colors</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/art-tools/school-supplies-art-tools-water-colors-category-html/category.html" ><span class="name">Water Colors</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/art-tools/oil-colors/category.html" ><span class="name">Oil Colors</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/art-tools/gouache-colors/category.html" ><span class="name">Wax &amp; Flowmaster Colors</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/art-tools/brushes/category.html" ><span class="name">Poster Paint</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/art-tools/easel-canvas/category.html" ><span class="name">Canvas</span></a></div></li><li  class="level2  category-item last"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/office-school-supplies/art-tools/crafts-tools/category.html" ><span class="name">Crafts tools</span></a></div></li></ul></div></li><li  class="level1  category-item parent"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/category.html" ><span class="name">Stationary</span></a><i class="ox-menu-arrow"></i></div><div class="ox-submenu level1 submenu"><ul class="ox-submenu-inner ox-dd-inner ox-mm-overflow"><li  class="level2  category-item first"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/pen/category.html" ><span class="name">Pen</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/school-supplies-stationary-pencil-category-html/category.html" ><span class="name">Pencil</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/eraser/category.html" ><span class="name">Erasers &amp; Correction Tools</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/rulers/category.html" ><span class="name">Rulers</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/notebooks/category.html" ><span class="name">Notebooks</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/name-tags/category.html" ><span class="name">Name Tags &amp; Stickers</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/folders/category.html" ><span class="name">Files &amp; Folders</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/sticky-notes-tape-flags/category.html" ><span class="name">Sticky notes</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/stapler/category.html" ><span class="name">Staplers &amp; Punches</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/markers/category.html" ><span class="name">Markers</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/sharpener/category.html" ><span class="name">Sharpener</span></a></div></li><li  class="level2  category-item last"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/stationary/school-supplies-stationary-glue-category-html/category.html" ><span class="name">Glue &amp; Adhesive Tools</span></a></div></li></ul></div></li><li  class="level1  category-item parent"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/office-school-supplies/computing/category.html" ><span class="name">Electronics</span></a><i class="ox-menu-arrow"></i></div><div class="ox-submenu level1 submenu"><ul class="ox-submenu-inner ox-dd-inner ox-mm-overflow"><li  class="level2  category-item first"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/school-supplies/computing/touch-screens/category.html" ><span class="name">Interactive Flat Panels</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/office-school-supplies/computing/printers/category.html" ><span class="name">Printers and Scanners</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/computing/network-security/category.html" ><span class="name">Network &amp; Server Security</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/office-school-supplies/computing/laptops/category.html" ><span class="name">Laptops</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/computing/tablets/category.html" ><span class="name">Tablets</span></a></div></li><li  class="level2  category-item last"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/computing/accessories/category.html" ><span class="name">Accessories</span></a></div></li></ul></div></li><li  class="level1  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/office-school-supplies/papers/category.html" ><span class="name">Papers</span></a></div></li><li  class="level1  category-item"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/school-supplies/inks-toners/category.html" ><span class="name">Inks &amp; Toners</span></a></div></li><li  class="level1  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/shredder/category.html" ><span class="name">Shredders</span></a></div></li><li  class="level1  category-item parent"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/graduation-products/category.html" ><span class="name">Graduation Products</span></a><i class="ox-menu-arrow"></i></div><div class="ox-submenu level1 submenu"><ul class="ox-submenu-inner ox-dd-inner ox-mm-overflow"><li  class="level2  category-item first"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/graduation-products/graduation-gowns/category.html" ><span class="name">Gowns</span></a></div></li><li  class="level2  category-item last"><div class="ox-mm-a-wrap -img-pos-"><a  href="https://edumalls.com/sa_en/school-supplies/graduation-products/trophies/category.html" ><span class="name">Trophies</span></a></div></li></ul></div></li><li  class="level1  category-item last"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-supplies/gifts/category.html" ><span class="name">Gifts</span></a></div></li></ul></div></li><li  class="level0  category-item level-top parent ox-dropdown--simple" data-ox-mm-a-h="item-left"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-corner/category.html"  class="level-top" ><span class="name">Schools Corner</span><i class="ox-menu-arrow hide-on-desktop"></i></a></div><div class="ox-megamenu__dropdown" data-ox-mm-w="default"><ul class="ox-megamenu-list ox-dd-inner ox-mm-overflow"><li  class="level1  category-item first"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-corner/uniform/category.html" ><span class="name">Uniform</span></a></div></li><li  class="level1  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-corner/supply-list/category.html" ><span class="name">Supplies</span></a></div></li><li  class="level1  category-item last"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/school-corner/books/category.html" ><span class="name">Books</span></a></div></li></ul></div></li><li  class="level0  category-item level-top parent ox-dropdown--simple" data-ox-mm-a-h="item-left"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/e-learning-courses/category.html"  class="level-top" ><span class="name">E-learning Courses </span><i class="ox-menu-arrow hide-on-desktop"></i></a></div><div class="ox-megamenu__dropdown" data-ox-mm-w="default"><ul class="ox-megamenu-list ox-dd-inner ox-mm-overflow"><li  class="level1  category-item first last parent"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/e-learning-courses/edtech-for-individuals/category.html" ><span class="name">Edtech For Individuals</span></a><i class="ox-menu-arrow"></i></div><div class="ox-submenu level1 submenu"><ul class="ox-submenu-inner ox-dd-inner ox-mm-overflow"><li  class="level2  category-item first"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/e-learning-courses/edtech-for-individuals/private-tutoring/category.html" ><span class="name">Private Tutoring</span></a></div></li><li  class="level2  category-item"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/e-learning-courses/edtech-for-individuals/ai-tools/category.html" ><span class="name">AI Tools</span></a></div></li><li  class="level2  category-item last"><div class="ox-mm-a-wrap -img-pos-above"><a  href="https://edumalls.com/sa_en/e-learning-courses/edtech-for-individuals/language-learning/category.html" ><span class="name">Language Learning</span></a></div></li></ul></div></li></ul></div></li></ul></nav></div></div></div>  <div class="ox-sections no-display ox-nav-sections" data-mage-init='{"js/mobile-menu":{}}'> <div class="ox-section-items ox-nav-sections-items" data-mage-init='{"tabs":{"openedState":"active"}}'>  <div class="ox-section-item-title ox-nav-sections-item-title" data-role="collapsible"><a class="ox-nav-sections-item-switch" data-toggle="switch" href="#store.menu">Menu</a></div><div class="ox-section-item-content ox-nav-sections-item-content" id="store.menu" data-role="content" data-move-mobile="store.menu"> </div>  <div class="ox-section-item-title ox-nav-sections-item-title" data-role="collapsible"><a class="ox-nav-sections-item-switch" data-toggle="switch" href="#store.links">Account</a></div><div class="ox-section-item-content ox-nav-sections-item-content" id="store.links" data-role="content" data-move-mobile="store.links"> </div>  <div class="ox-section-item-title ox-nav-sections-item-title" data-role="collapsible"><a class="ox-nav-sections-item-switch" data-toggle="switch" href="#store.settings">Settings</a></div><div class="ox-section-item-content ox-nav-sections-item-content" id="store.settings" data-role="content" data-move-mobile="store.settings"> </div></div></div> <main id="maincontent" class="page-main">  <a id="contentarea" tabindex="-1"></a>  <div class="page-title-wrapper"><h1 class="page-title"  ><span class="base" data-ui-id="page-title-wrapper" >Submit Your Testimonial</span></h1></div><div class="page messages"> <div data-placeholder="messages"></div> <div data-bind="scope: 'messages'"><!-- ko if: cookieMessagesObservable() && cookieMessagesObservable().length > 0 --><div aria-atomic="true" role="alert" class="messages" data-bind="foreach: { data: cookieMessagesObservable(), as: 'message' }, visible: updateHeight()"><div data-bind="attr: { class: 'message-' + message.type + ' ' + message.type + ' message', 'data-ui-id': 'message-' + message.type }"><div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div><div data-bind="visible: $parent.closeMessage()" style="display: none" data-action="close" class="ox-overlay-close-btn" aria-label="Close Message"><span></span></div></div></div><!-- /ko --><div aria-atomic="true" role="alert" class="messages" data-bind="foreach: { data: messages().messages, as: 'message' }, visible: updateHeight(), afterRender: purgeMessages"><div data-bind="attr: { class: 'message-' + message.type + ' ' + message.type + ' message', 'data-ui-id': 'message-' + message.type }"><div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div><div data-bind="visible: $parent.closeMessage()" style="display: none" data-action="close" class="ox-overlay-close-btn" aria-label="Close Message" ><span></span></div></div></div></div><script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Ui/js/core/app": {
-                "components": {
-                        "messages": {
-                            "component": "Magento_Theme/js/view/messages"
-                        }
-                    }
-                }
-            }
-    }</script></div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="9ecuuSn2HzhngNFp" /> <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}"> <script>window.authenticationPopup = {"autocomplete":"off","customerRegisterUrl":"https:\/\/edumalls.com\/sa_en\/customer\/account\/create\/","customerForgotPasswordUrl":"https:\/\/edumalls.com\/sa_en\/customer\/account\/forgotpassword\/","baseUrl":"https:\/\/edumalls.com\/sa_en\/"}</script> <!-- ko template: getTemplate() --><!-- /ko --><script type="text/x-magento-init">
-        {
-            "#authenticationPopup": {
-                "Magento_Ui/js/core/app": {"components":{"authenticationPopup":{"component":"Magento_Customer\/js\/view\/authentication-popup","children":{"messages":{"component":"Magento_Ui\/js\/view\/messages","displayArea":"messages"},"captcha":{"component":"Magento_Captcha\/js\/view\/checkout\/loginCaptcha","displayArea":"additional-login-form-fields","formId":"user_login","configSource":"checkout"},"amazon-button":{"component":"Amazon_Login\/js\/view\/login-button-wrapper","sortOrder":"0","displayArea":"additional-login-form-fields","config":{"tooltip":"Securely login to our website using your existing Amazon details.","componentDisabled":true}}}}}}            },
-            "*": {
-                "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Fedumalls.com\u002Fstatic\u002Ffrontend\u002FEdumalls\u002Ftheme\u002Fen_US\u002Fimages\u002Floader\u002D1.gif"
-            }
-        }</script></div> <script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Customer/js/section-config": {
-                "sections": {"stores\/store\/switch":["*"],"stores\/store\/switchrequest":["*"],"directory\/currency\/switch":["*"],"*":["messages"],"customer\/account\/logout":["*","recently_viewed_product","recently_compared_product","persistent"],"customer\/account\/loginpost":["*"],"customer\/account\/createpost":["*"],"customer\/account\/editpost":["*"],"customer\/ajax\/login":["checkout-data","cart","captcha"],"catalog\/product_compare\/add":["compare-products","wp_ga4"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","directory-data","wp_ga4"],"checkout\/cart\/delete":["cart","wp_ga4"],"checkout\/cart\/updatepost":["cart","wp_ga4"],"checkout\/cart\/updateitemoptions":["cart","wp_ga4"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items","amasty-checkout-data"],"checkout\/sidebar\/removeitem":["cart","wp_ga4"],"checkout\/sidebar\/updateitemqty":["cart","wp_ga4"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","last-ordered-items","captcha","instant-purchase","amasty-checkout-data","wp_ga4"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart","captcha","amasty-checkout-data","wp_ga4"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data","instant-purchase"],"customer\/address\/*":["instant-purchase"],"customer\/account\/*":["instant-purchase"],"vault\/cards\/deleteaction":["instant-purchase"],"multishipping\/checkout\/overviewpost":["cart"],"paypal\/express\/placeorder":["cart","checkout-data","amasty-checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data","amasty-checkout-data"],"paypal\/express\/onauthorization":["cart","checkout-data"],"persistent\/index\/unsetcookie":["persistent"],"review\/product\/post":["review"],"wishlist\/index\/add":["wishlist","wp_ga4"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart","wp_ga4"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart","wp_ga4"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"faq\/index\/save":["faq"],"ammostviewed\/cart\/add":["cart","messages"],"amasty_quote\/cart\/add":["quotecart"],"amasty_quote\/cart\/addgroup":["quotecart"],"amasty_quote\/cart\/configure":["quotecart"],"amasty_quote\/cart\/delete":["quotecart"],"amasty_quote\/cart\/submit":["quotecart"],"amasty_quote\/cart\/updateitemoptions":["quotecart"],"amasty_quote\/cart\/updatepost":["quotecart"],"amasty_quote\/sidebar\/updateitemqty":["quotecart"],"amasty_quote\/sidebar\/removeitem":["quotecart"],"amasty_quote\/move\/inquote":["quotecart","cart"],"amasty_quote\/quote\/remove":["cart"],"checkout\/cart\/configure":["wp_ga4"],"rest\/*\/v1\/guest-carts\/*\/shipping-information":["wp_ga4"],"rest\/*\/v1\/carts\/*\/shipping-information":["wp_ga4"]},
-                "clientSideSections": ["checkout-data","cart-data","faq_product","amasty-checkout-data","chatData"],
-                "baseUrls": ["https:\/\/edumalls.com\/sa_en\/"],
-                "sectionNames": ["messages","customer","compare-products","last-ordered-items","cart","directory-data","captcha","instant-purchase","loggedAsCustomer","persistent","review","wishlist","faq","quotecart","chatData","wp_ga4","recently_viewed_product","recently_compared_product","product_data_storage","paypal-billing-agreement"]            }
-        }
-    }</script> <script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Customer/js/customer-data": {
-                "sectionLoadUrl": "https\u003A\u002F\u002Fedumalls.com\u002Fsa_en\u002Fcustomer\u002Fsection\u002Fload\u002F",
-                "expirableSectionLifetime": 60,
-                "expirableSectionNames": ["cart","persistent"],
-                "cookieLifeTime": "86400",
-                "updateSessionUrl": "https\u003A\u002F\u002Fedumalls.com\u002Fsa_en\u002Fcustomer\u002Faccount\u002FupdateSession\u002F"
-            }
-        }
-    }</script> <script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Customer/js/invalidation-processor": {
-                "invalidationRules": {
-                    "website-rule": {
-                        "Magento_Customer/js/invalidation-rules/website-rule": {
-                            "scopeConfig": {
-                                "websiteId": "3"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }</script> <script type="text/x-magento-init">
-    {
-        "body": {
-            "pageCache": {"url":"https:\/\/edumalls.com\/sa_en\/page_cache\/block\/render\/","handles":["default","testimonial_index_post","olegnax_athlete2_header_search_args","nwdthemes_revslider_default"],"originalRequest":{"route":"testimonial","controller":"index","action":"post","uri":"\/sa_en\/testimonial\/index\/post\/"},"versionCookieName":"private_content_version"}        }
-    }</script>  <div class="alo-testimonial-submit"><form action="https://edumalls.com/sa_en/testimonial/index/post/" method="post" id="form-validate" enctype="multipart/form-data" class="form" data-mage-init='{"validation":{}}'><fieldset class="fieldset"><input name="store_id" id="store_id" type="hidden" value="10" /><input name="status" id="status" type="hidden" value="3" /><div class="field field-name required"><label for="name" class="label"><span>Your Name</span></label> <div class="input-box"><input name="name" id="name" class="input-text required-entry" type="text" value="Ahmedf levelpp" /></div></div><div class="field field-email required"><label for="email" class="label">Your Email</label> <div class="input-box"><input name="email" id="email" class="input-text required-entry validate-email" type="text" value="hisham9941+cera17@gmail.com" /></div></div><div class="field field-website required"><label for="website" class="label">Your Website</label> <div class="input-box"><input name="website" id="website" type="text" class="input-text required-entry" /></div></div><div class="field field-company required"><label for="company" class="label">Your Company</label> <div class="input-box"><input name="company" id="company" type="text" class="input-text required-entry" /></div></div><div class="field field-job required"><label for="job" class="label">Your job</label> <div class="input-box"><input type="text" name="job" id="job" class="input-text required-entry"></div></div><div class="field field-avatar required"><label for="image" class="label">Your Avatar</label> <div class="input-box"><input name="image" id="image" type="file" value="" class="required-entry" /></div></div><div class="field field-testimonial required"><label for="testimonial" class="label">Your Testimonial</label> <div class="std-input-box"><textarea name="text" id="testimonial" class="required-entry" rows="4" cols="50"></textarea></div></div><div class="field field-rating"><div class="std-input-box"><fieldset class="field required review-field-ratings"><div class="control"><div class="nested" id="product-review-table"><div class="field choice review-field-rating required"><label class="label" id="Value_rating_label">Your Rating</label> <div class="control review-control-vote"><input type="radio" name="rating_summary" id="Value_1" value="1" class="radio" data-validate="{'validate-one-required-by-name':true}" aria-labelledby="Value_rating_label Value_1_label" aria-required="true"><label class="rating-1" for="Value_1" title="1 star" id="Value_1_label"><span>1 star</span></label> <input type="radio" name="rating_summary" id="Value_2" value="2" class="radio" data-validate="{'validate-one-required-by-name':true}" aria-labelledby="Value_rating_label Value_2_label" aria-required="true"><label class="rating-2" for="Value_2" title="2 stars" id="Value_2_label"><span>2 stars</span></label> <input type="radio" name="rating_summary" id="Value_3" value="3" class="radio" data-validate="{'validate-one-required-by-name':true}" aria-labelledby="Value_rating_label Value_3_label" aria-required="true"><label class="rating-3" for="Value_3" title="3 stars" id="Value_3_label"><span>3 stars</span></label> <input type="radio" name="rating_summary" id="Value_4" value="4" class="radio" data-validate="{'validate-one-required-by-name':true}" aria-labelledby="Value_rating_label Value_4_label" aria-required="true"><label class="rating-4" for="Value_4" title="4 stars" id="Value_4_label"><span>4 stars</span></label> <input type="radio" name="rating_summary" id="Value_5" value="5" class="radio" data-validate="{'validate-one-required-by-name':true}" aria-labelledby="Value_rating_label Value_5_label" aria-required="true"><label class="rating-5" for="Value_5" title="5 stars" id="Value_5_label"><span>5 stars</span></label></div></div></div><div id="rating-option-error-message-container"></div></div></fieldset></div></div><div class="actions-toolbar"><div class="primary"><button type="submit" title="Submit" class="action submit primary"><span>Submit</span></button></div></div></fieldset></form></div><script>
-    require([
-        "jquery",
-        "mage/mage"
-    ], function($){
-        var dataForm = $('#form-validate');
-        dataForm.mage('validation', {
-            errorPlacement: function(error, element) {
-                if (element.attr('data-validate') && element.attr('data-validate').indexOf('validate-one-required-by-name') >= 0) {
-                    error.appendTo('#rating-option-error-message-container');
-                } else {
-                    element.after(error);
-                }
-            },
-        });
-    });</script></div></div></main><div class="above_footer_block"> <div class="above-footer-content"></div></div><footer class="page-footer"><div class="footer content"> <div class="block_newsletter_wrapper"> <div class="block newsletter newsletter-style--small "><div class="block_newsletter_info"> <div class="title">Get the latest <br> deals and more.</div> </div><div class="content"><form class="form subscribe" novalidate action="https://edumalls.com/sa_en/newsletter/subscriber/new/" method="post" data-mage-init='{"validation": {"errorClass": "mage-error"}}' id="newsletter-validate-detail"><div class="field newsletter"><div class="control"><label for="newsletter"><span class="label">Get the latest &lt;br&gt; deals and more.</span></label> <input name="email" type="email" id="newsletter" placeholder="Enter your email address" data-validate="{required:true, 'validate-email':true}" /></div></div><div class="actions"><button class="action subscribe primary" title="Subscribe" type="submit" aria-label="Subscribe" ><span>Subscribe</span></button></div></form></div></div> </div>   <div class="footer-block-content"> <div class="magezon-builder magezon-builder-preload"><div class="ts6th9m mgz-element mgz-element-row contained mgz-container"><div class="mgz-element-inner ts6th9m-s"><div class="inner-content "><div class="qp1jlmm mgz-element mgz-element-column mgz-col-md-3"><div class="mgz-element-inner qp1jlmm-s"><div class="shudj73 mgz-element mgz-child mgz-element-single_image mgz-image-hovers"><div class="mgz-element-inner shudj73-s"><div class="mgz-single-image-wrapper"><div class="mgz-single-image-inner "><img class="mgz-hover-main" src="https://cdn.edumalls.com/wysiwyg/v3/edumalls-light.png" alt="" width="200px" title="" /></div></div></div></div><div class="udirgql mgz-element mgz-child mgz-element-text"><div class="mgz-element-inner udirgql-s"><div class="support-hot"><strong class="item">Contact Support</strong></div><div class="email-contact">E-mail: <a href="/cdn-cgi/l/email-protection#52012722223d2026123736273f333e3e217c313d3f"><span class="__cf_email__" data-cfemail="491a3c3939263b3d092c2d3c242825253a672a2624">[email&#160;protected]</span></a></div></div></div><div class="pp07seh mgz-element mgz-child mgz-element-text"><div class="mgz-element-inner pp07seh-s"><div id="ox_socialicons_2" class="athlete2-social-icons"><a href="https://www.facebook.com/Edumalls.KSA" class="athlete2-social-icon athlete2-icon-facebook" target="_blank" rel="noopener"><span>facebook</span></a> <a href="https://www.instagram.com/edumalls.ksa/" class="athlete2-social-icon athlete2-icon-instagram" target="_blank" rel="noopener"><span>instagram</span></a> <a href="https://twitter.com/EduMallsME" class="athlete2-social-icon athlete2-icon-twitter" target="_blank" rel="noopener"><span>twitter</span></a></div></div></div></div></div><div class="m5vjf8m mgz-element mgz-element-column mgz-col-md-3"><div class="mgz-element-inner m5vjf8m-s"><div class="q1jby0p mgz-element mgz-child mgz-element-text"><div class="mgz-element-inner q1jby0p-s"><h3><strong>Shop with Us</strong></h3><p><a href="https://edumalls.com/sa_en/checkout/">Checkout</a></p><p><a href="https://edumalls.com/sa_en/customer/account/">My Account</a></p><p><a href="https://edumalls.com/sa_en/sales/order/history/">My Orders</a></p><p><a href="https://edumalls.com/sa_en/quote/account/index/">My Quotes</a></p><p><a href="https://edumalls.com/sa_en/productkeys/customer/">My License Key</a></p></div></div></div></div><div class="dcyjwg9 mgz-element mgz-element-column mgz-col-md-3"><div class="mgz-element-inner dcyjwg9-s"><div class="gbcee7h mgz-element mgz-child mgz-element-text"><div class="mgz-element-inner gbcee7h-s"><h3><strong>For Sellers</strong></h3><p><a href="https://edumalls.com/sa_en/marketplace/account/dashboard/">Seller Dashboard</a></p><p><a href="https://edumalls.com/sa_en/create-store/">Become A Seller</a></p><p><a href="https://edumalls.com/sa_en/school-register/">School Corner Registartion</a></p><p><a href="https://edumalls.com/sa_en/request-b2b-products/">Request A Quote</a></p></div></div></div></div><div class="q71phhl mgz-element mgz-element-column mgz-col-md-3"><div class="mgz-element-inner q71phhl-s"><div class="aghde9v mgz-element mgz-child mgz-element-text"><div class="mgz-element-inner aghde9v-s"><h3><strong>Important Links</strong></h3><p><a href="https://edumalls.com/sa_en/knowledge-base/">Help Center</a></p><p><a href="https://edumalls.com/sa_en/contact-support/">Contact Support</a></p><p><a href="https://edumalls.com/sa_en/terms-and-conditions/">Terms &amp; Conditions</a></p><p><a href="https://edumalls.com/sa_en/privacy-policy-cookie-restriction-mode/">Privacy Policy</a></p><p><a href="https://edumalls.com/sa_en/return-refund-policy/">Return &amp; Refund Policy</a></p></div></div></div></div></div></div></div></div> </div>  </div> <div class="copyright-footer"><div class="container"><div class="row"><div class="col-12 col-md-6"><small class="copyright"><span>EduMalls © 2024, All Rights Reserved, Powered By Classera®</span></small></div><div class="col-12 col-md-6 copyright-right"> <div class="magezon-builder magezon-builder-preload"><div class="w4t0cq9 mgz-element mgz-element-row full_width_row"><div class="mgz-element-inner w4t0cq9-s"><div class="inner-content mgz-container"><div class="tkjo85l mgz-element mgz-element-column mgz-col-xs-12"><div class="mgz-element-inner tkjo85l-s"><div class="aqmfm86 mgz-element mgz-child mgz-element-text"><div class="mgz-element-inner aqmfm86-s"><p><img src="https://cdn.edumalls.com/wysiwyg/v3/payments-KSA-white.png" alt="" style="float: right;" /></p></div></div></div></div></div></div></div></div></div></div></div></div> </footer>   <svg style="display: none" xmlns="http://www.w3.org/2000/svg"><symbol id="a2-cart-icon" viewBox="0 0 20 17"><rect stroke="none" y="3" width="16" height="2"/><rect stroke="none" x="3" y="10" width="12" height="2"/><polygon stroke="none" points="3 12 1 5 3 4.6 5 11.6 3 12"/><polygon stroke="none" points="15 12 18.1 0.5 16.1 0 13 11.6 15 12"/><rect stroke="none" x="16.1" width="3.8" height="2"/><circle stroke="none" cx="13" cy="15" r="2"/><circle cx="5" cy="15" r="2"/></symbol></svg>   <svg style="display: none" xmlns="http://www.w3.org/2000/svg"><symbol id="a2-account-icon" viewBox="0 0 18 18"><path stroke="none" d="M13.7,14H9.8a7,7,0,0,0-7,7.1h2a5,5,0,0,1,5-5.1h3.9a5.1,5.1,0,0,1,5.1,5.1h2A7.1,7.1,0,0,0,13.7,14Z" transform="translate(-2.8 -3)"/><path d="M11.8,5a3.1,3.1,0,0,1,3,3,3,3,0,0,1-3,3,2.9,2.9,0,0,1-3-3,3,3,0,0,1,3-3m0-2a5,5,0,0,0-5,5,5,5,0,0,0,5,5,5,5,0,0,0,5-5,5.1,5.1,0,0,0-5-5Z" transform="translate(-2.8 -3)"/></symbol></svg>   <svg style="display: none" xmlns="http://www.w3.org/2000/svg"><symbol id="a2-search-icon" viewBox="0 0 16 16"><rect stroke="none" x="12.8" y="10.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -4.9749 13.4541)" width="2" height="4.4"/><path stroke="none" d="M8,0C4.2,0,1,3.1,1,7s3.1,7,7,7s7-3.1,7-7S11.9,0,8,0z M8,12c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S10.8,12,8,12z"/></symbol></svg>   <svg style="display: none" xmlns="http://www.w3.org/2000/svg"><symbol id="a2-compare-icon" viewBox="0 0 15 16"><polygon stroke="none" points="2 2 8 2 8 0 0 0 0 12 3 12 3 10 2 10 2 2"></polygon><rect stroke="none" x="8" y="2" width="2" height="1"></rect><polygon stroke="none" points="13 6 13 14 6 14 6 6 13 6 13 4 4 4 4 16 15 16 15 6 13 6"></polygon></symbol></svg>   <svg style="display: none" xmlns="http://www.w3.org/2000/svg"><symbol id="a2-wishlist-icon" viewBox="0 0 18 16"><path stroke="none" d="M17.3,2.4a5.3,5.3,0,0,0-4-1.5A5.2,5.2,0,0,0,10,2.7,5.2,5.2,0,0,0,6.7.9a5.3,5.3,0,0,0-4,1.5A5.1,5.1,0,0,0,1,6.5,6.3,6.3,0,0,0,2.2,9.7L8.3,16c.6.5,1,.9,1.7.9s1.1-.4,1.7-.9l6.1-6.3A6.3,6.3,0,0,0,19,6.5,5.1,5.1,0,0,0,17.3,2.4ZM16.1,8.7,10,14.9,3.9,8.7a3.7,3.7,0,0,1-1-2.2A3.9,3.9,0,0,1,4,3.7a3.3,3.3,0,0,1,2.7-.9C7.9,2.8,10,5.1,10,5.1s2.1-2.3,3.3-2.3a3.3,3.3,0,0,1,2.7.9,3.9,3.9,0,0,1,1.1,2.8A3.7,3.7,0,0,1,16.1,8.7Z" transform="translate(-1 -0.9)"/></symbol></svg>  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-magento-init">
-        {
-            "*": {
-                "Magento_Ui/js/core/app": {
-                    "components": {
-                        "storage-manager": {
-                            "component": "Magento_Catalog/js/storage-manager",
-                            "appendTo": "",
-                            "storagesConfiguration" : {"recently_viewed_product":{"requestConfig":{"syncUrl":"https:\/\/edumalls.com\/sa_en\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":"1"},"recently_compared_product":{"requestConfig":{"syncUrl":"https:\/\/edumalls.com\/sa_en\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":"1"},"product_data_storage":{"updateRequestConfig":{"url":"https:\/\/edumalls.com\/sa_en\/rest\/sa_en\/V1\/products-render-info"},"requestConfig":{"syncUrl":"https:\/\/edumalls.com\/sa_en\/catalog\/product\/frontend_action_synchronize\/"},"allowToSendRequest":"1"}}                        }
-                    }
-                }
-            }
-        }</script>   <script>
-    window.classeraConfig = {"name_validation":{"name_length":3},"phone_validation":{"country_key":"+966","phone_length":10,"enabled":true}};</script> <script>(()=>{function OxLazyVideo(){let e=document.querySelectorAll(".ox-video-lazy");if("IntersectionObserver"in window){let n=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(t(e.target),n.unobserve(e.target))})});e.forEach(e=>{n.observe(e)})}}function t(e){[...e.children].forEach(e=>{"SOURCE"===e.tagName&&(e.src=e.dataset.src)}),e.load(),e.classList.remove("ox-video-lazy"),document.dispatchEvent(new Event("oxVideoLoaded"))}window.OxLazyVideo=function(){return new OxLazyVideo}})(),document.addEventListener("DOMContentLoaded",function(){OxLazyVideo()},!1);
-require(['jquery'], function ($) {$(document.body).on('contentUpdated contentUpdated.oxlazyvideo', OxLazyVideo)})</script>   <script>document.querySelectorAll("link[data-onloadcss]").forEach(oxOnloadLink => {oxOnloadLink.sheet ? (() => {try {oxOnloadLink.sheet.cssRules.length > 0 && (oxOnloadLink.media = "all");} catch (error) {oxOnloadLink.media = "all"}})() : oxOnloadLink.addEventListener("load", () => (oxOnloadLink.media = "all"));});</script> <script>require(['magezonBuilder']);</script><script>require(['Magezon_PageBuilder/js/common']);</script><div id="ox_quickview_wrapper" style="display:none"><div class="ox_quickview-preloader" data-role="loader"></div><div class="ox-overlay-close-btn"><span></span></div></div><script>require(['jquery','OxQuickviewInit'],function($){
-    $(function(){
-        $('.ox-quickview-button').OxQuickviewInit({})
-    })
-});</script> <!--Start of Tawk.to Script--><script type="text/javascript">
-var Tawk_API={};
-
-     Tawk_API.visitor = {
-        name : 'Ahmedf\u0020levelpp',
-        email : 'hisham9941\u002Bcera17\u0040gmail.com'
+    // Baseline setup
+    // --------------
+  
+    // Establish the root object, `window` in the browser, or `exports` on the server.
+    var root = this;
+  
+    // Save the previous value of the `_` variable.
+    var previousUnderscore = root._;
+  
+    // Save bytes in the minified (but not gzipped) version:
+    var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
+  
+    // Create quick reference variables for speed access to core prototypes.
+    var
+      push             = ArrayProto.push,
+      slice            = ArrayProto.slice,
+      toString         = ObjProto.toString,
+      hasOwnProperty   = ObjProto.hasOwnProperty;
+  
+    // All **ECMAScript 5** native function implementations that we hope to use
+    // are declared here.
+    var
+      nativeIsArray      = Array.isArray,
+      nativeKeys         = Object.keys,
+      nativeBind         = FuncProto.bind,
+      nativeCreate       = Object.create;
+  
+    // Naked function reference for surrogate-prototype-swapping.
+    var Ctor = function(){};
+  
+    // Create a safe reference to the Underscore object for use below.
+    var _ = function(obj) {
+      if (obj instanceof _) return obj;
+      if (!(this instanceof _)) return new _(obj);
+      this._wrapped = obj;
     };
- var Tawk_LoadStart=new Date();
-(function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/601a8ec5a9a34e36b9736067/1etjrrdi0';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-})();</script><!--End of Tawk.to Script--> <div data-move-mobile="filtersslideout" data-role="OXmodal" data-mage-init='{"OXmodal":{ "triggerTarget":".filters-action", "overlayClass":"ox-slideout-shadow", "timeout": "500", "closeOnEscape": true, "positionSlideout": "left", "hoverOpen": true, "type": "slideout", "htmlClass":"ox-fixed" }}'><!-- filters --></div><script>require(["jquery"],function($){"use strict";$(function(){let ns=".OXA2Video",s_hover=".product-item";$("body").on("mouseenter"+ns,s_hover,async function(){let _wrapper=$(this).find(".ox-product-hover-image-container");let video=_wrapper.find("video").get(0);if(video){try{await video.play();}catch(err){console.error(err);}}}).on("mouseleave"+ns,s_hover,function(){let _wrapper=$(this).find(".ox-product-hover-image-container");let video=_wrapper.find("video").get(0);if(video&&video.currentTime>0&&!video.paused&&!video.ended&&video.readyState>2){video.pause();}});});});</script><script type="text/x-magento-init">{"*":{"js/ox-animated-banners":{}}}</script><script>requirejs( [ 'jquery' ],
-    function ( $ ) {
-        "use strict";
-        var substyle = $( 'body' ).find( 'style' );
-        if ( substyle.length ) {
-            var newheadstyle = $( '<style>' ).appendTo( 'head' );
-            substyle.each( function () {
-                var _this = $( this );
-                newheadstyle.html( newheadstyle.html() + _this.html() );
-                _this.remove();
-            } );
-        }
-    } );</script><script type="text/x-magento-init">
-    {
-        "*": {
-            "rs6loader": {
-                "scripts": []            }
-        }
+  
+    // Export the Underscore object for **Node.js**, with
+    // backwards-compatibility for the old `require()` API. If we're in
+    // the browser, add `_` as a global object.
+    if (typeof exports !== 'undefined') {
+      if (typeof module !== 'undefined' && module.exports) {
+        exports = module.exports = _;
+      }
+      exports._ = _;
+    } else {
+      root._ = _;
     }
-</script>
-
-        <script>
-            window.RS_MODULES = window.RS_MODULES || {};
-            window.RS_MODULES.modules = window.RS_MODULES.modules || {};
-            window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
-            window.RS_MODULES.defered = true;
-            window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
-            window.RS_MODULES.type = 'compiled';
-        </script>
-        <!-- REVOLUTION CUSTOM CSS -->
-<style type="text/css">
-#rs-demo-id {}
-</style>
-   <div class="amsl-popup-overlay" data-am-js="am-login-overlay" style="display: none"><div id="social-login-popup" class="amsl-popup-block -social-right" data-mage-init='{"tabs":{"openedState":"active"}}' tabindex="-1" data-am-js="am-login-popup"><span class="amsl-close"></span> <div class="amsl-content-wrapper" data-am-js="am-content-wrapper"></div><div class="amsl-tabs-wrapper" data-am-js="am-tabs-wrapper"><ul class="amsl-tablist"><li data-role="collapsible" class="amsl-title" data-am-js="am-popup-original"><a href="#amsl-login-content" class="amsl-link" data-toggle="switch" tabindex="-1">Login</a></li> <li data-role="collapsible" class="amsl-title" data-am-js="am-popup-original"><a href="#amsl-register-content" class="amsl-link" data-toggle="switch" tabindex="-1">Register</a></li></ul><div id="amsl-login-content" class="amsl-content amsl-login-content" data-role="content"><p class="amsl-error -default" data-am-js="am-default-error"></p><div class="amsl-form"> <div class="block block-customer-login"><div class="block-title"><strong id="block-customer-login-heading" role="heading" aria-level="2">Sign in</strong></div><div class="block-content" aria-labelledby="block-customer-login-heading"><form class="form form-login" action="https://edumalls.com/sa_en/customer/account/loginPost/" method="post" id="login-form" data-mage-init='{"validation":{}}'><input name="form_key" type="hidden" value="9ecuuSn2HzhngNFp" /> <fieldset class="fieldset login" data-hasrequired="* Required Fields"><div class="field note">If you have an account, sign in with your email address.</div><div class="field email required"><label class="label" for="email"><span>Email</span></label> <div class="control"><input name="login[username]" value=""  autocomplete="off" id="email" type="email" class="input-text" title="Email" data-mage-init='{"mage/trim-input":{}}' data-validate="{required:true, 'validate-email':true}"></div></div><div class="field password required"><label for="pass" class="label"><span>Password</span></label> <div class="control"><input name="login[password]" type="password"  autocomplete="off" class="input-text" id="pass" title="Password" data-validate="{required:true}"></div></div><div class="field choice" data-bind="scope: 'showPassword'"><!-- ko template: getTemplate() --><!-- /ko --></div> <div class="actions-toolbar"><div class="primary"><button type="submit" class="action login primary" name="send" id="send2"><span>Sign In</span></button></div><div class="secondary"><a class="action remind" href="https://edumalls.com/sa_en/customer/account/forgotpassword/"><span>Forgot Your Password?</span></a></div></div></fieldset></form></div><script type="text/x-magento-init">
-        {
-            "*": {
-                "Magento_Customer/js/block-submit-on-send": {
-                    "formId": "login-form"
-                },
-                "Magento_Ui/js/core/app": {
-                    "components": {
-                        "showPassword": {
-                            "component": "Magento_Customer/js/show-password",
-                            "passwordSelector": "#pass"
-                        }
-                    }
-                }
-            }
-        }</script></div></div></div><div id="amsl-register-content" class="amsl-content amsl-register-content" data-role="content"><p class="amsl-error -default" data-am-js="am-default-error"></p><div class="amsl-form">     <form class="form create account form-create-account" action="https://edumalls.com/sa_en/customer/account/createpost/" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off"><input name="form_key" type="hidden" value="9ecuuSn2HzhngNFp" /> <fieldset class="fieldset create info"><legend class="legend"><span>Personal Information</span></legend><br> <input type="hidden" name="success_url" value=""><input type="hidden" name="error_url" value="">   <div class="field field-name-firstname required"><label class="label" for="firstname"><span>First Name</span></label> <div class="control"><input type="text" id="firstname" name="firstname" value="" title="First&#x20;Name" class="input-text required-entry"  data-validate="{required:true}"></div></div> <div class="field field-name-lastname required"><label class="label" for="lastname"><span>Last Name</span></label> <div class="control"><input type="text" id="lastname" name="lastname" value="" title="Last&#x20;Name" class="input-text required-entry"  data-validate="{required:true}"></div></div>   <div class="field choice newsletter"><input type="checkbox" name="is_subscribed" title="Sign&#x20;Up&#x20;for&#x20;Newsletter" value="1" id="is_subscribed"  class="checkbox"><label for="is_subscribed" class="label"><span>Sign Up for Newsletter</span></label></div>          <script type="text/x-magento-init">
-    {
-        ".form-create-account, .form-edit-account": {
-            "Magento_LoginAsCustomerAssistance/js/opt-in": {
-                "allowAccess": "2",
-                "denyAccess": "1"
-            }
+  
+    // Current version.
+    _.VERSION = '1.8.2';
+  
+    // Internal function that returns an efficient (for current engines) version
+    // of the passed-in callback, to be repeatedly applied in other Underscore
+    // functions.
+    var optimizeCb = function(func, context, argCount) {
+      if (context === void 0) return func;
+      switch (argCount == null ? 3 : argCount) {
+        case 1: return function(value) {
+          return func.call(context, value);
+        };
+        case 2: return function(value, other) {
+          return func.call(context, value, other);
+        };
+        case 3: return function(value, index, collection) {
+          return func.call(context, value, index, collection);
+        };
+        case 4: return function(accumulator, value, index, collection) {
+          return func.call(context, accumulator, value, index, collection);
+        };
+      }
+      return function() {
+        return func.apply(context, arguments);
+      };
+    };
+  
+    // A mostly-internal function to generate callbacks that can be applied
+    // to each element in a collection, returning the desired result — either
+    // identity, an arbitrary callback, a property matcher, or a property accessor.
+    var cb = function(value, context, argCount) {
+      if (value == null) return _.identity;
+      if (_.isFunction(value)) return optimizeCb(value, context, argCount);
+      if (_.isObject(value)) return _.matcher(value);
+      return _.property(value);
+    };
+    _.iteratee = function(value, context) {
+      return cb(value, context, Infinity);
+    };
+  
+    // An internal function for creating assigner functions.
+    var createAssigner = function(keysFunc, undefinedOnly) {
+      return function(obj) {
+        var length = arguments.length;
+        if (length < 2 || obj == null) return obj;
+        for (var index = 1; index < length; index++) {
+          var source = arguments[index],
+              keys = keysFunc(source),
+              l = keys.length;
+          for (var i = 0; i < l; i++) {
+            var key = keys[i];
+            if (!undefinedOnly || obj[key] === void 0) obj[key] = source[key];
+          }
         }
-    }</script><div class="field choice"><input type="checkbox" name="assistance_allowed_checkbox" title="Allow&#x20;remote&#x20;shopping&#x20;assistance" value="1" id="assistance_allowed_checkbox"  class="checkbox"><label for="assistance_allowed_checkbox" class="label"><span>Allow&#x20;remote&#x20;shopping&#x20;assistance</span></label> <input type="hidden" name="assistance_allowed" value=""/><div class="field-tooltip toggle"><span id="tooltip-label" class="label"><span>Tooltip</span></span> <span id="tooltip" class="field-tooltip-action action-help" tabindex="0" data-toggle="dropdown" data-bind="mageInit: {'dropdown':{'activeClass': '_active', 'parent': '.field-tooltip.toggle'}}" aria-labelledby="tooltip-label" aria-haspopup="true" aria-expanded="false" role="button"></span> <div class="field-tooltip-content" data-target="dropdown" aria-hidden="true">This&#x20;allows&#x20;merchants&#x20;to&#x20;&quot;see&#x20;what&#x20;you&#x20;see&quot;&#x20;and&#x20;take&#x20;actions&#x20;on&#x20;your&#x20;behalf&#x20;in&#x20;order&#x20;to&#x20;provide&#x20;better&#x20;assistance.</div></div></div></fieldset> <fieldset class="fieldset create account" data-hasrequired="&#x2A;&#x20;Required&#x20;Fields"><legend class="legend"><span>Sign-in Information</span></legend><br> <div class="field required"><label for="am-email-address" class="label"><span>Email</span></label> <div class="control"><input type="email" name="email" autocomplete="email" id="am-email-address" value="" title="Email" class="input-text" data-mage-init='{"mage/trim-input":{}}' data-validate="{required:true, 'validate-email':true}"></div></div><div class="field password required"><label for="password" class="label"><span>Password</span></label> <div class="control"><input type="password" name="password" id="password" title="Password" class="input-text" data-password-min-length="8" data-password-min-character-sets="3" data-validate="{required:true, 'validate-customer-password':true}" autocomplete="off"><div id="password-strength-meter-container" data-role="password-strength-meter" aria-live="polite"><div id="password-strength-meter" class="password-strength-meter">Password Strength: <span id="password-strength-meter-label" data-role="password-strength-meter-label">No Password</span></div></div></div></div><div class="field confirmation required"><label for="password-confirmation" class="label"><span>Confirm Password</span></label> <div class="control"><input type="password" name="password_confirmation" title="Confirm&#x20;Password" id="password-confirmation" class="input-text" data-validate="{required:true, equalTo:'#password'}" autocomplete="off"></div></div><div class="field choice" data-bind="scope: 'showPassword'"><!-- ko template: getTemplate() --><!-- /ko --></div></fieldset><fieldset class="fieldset additional_info"></fieldset><div class="actions-toolbar"><div class="primary"><button type="submit" class="action submit primary" title="Create&#x20;an&#x20;Account"><span>Create an Account</span></button></div><div class="secondary"><a class="action back" href="https://edumalls.com/sa_en/customer/account/login/referer/aHR0cHM6Ly9lZHVtYWxscy5jb20vc2FfZW4vdGVzdGltb25pYWwvaW5kZXgvcG9zdC8%2C/"><span>Back</span></a></div></div></form> <script>require([
-    'jquery',
-    'mage/mage'
-], function($){
-
-    var dataForm = $('#form-validate');
-    var ignore = null;
-
-    dataForm.mage('validation', {        ignore: ignore ? ':hidden:not(' + ignore + ')' : ':hidden'    }).find('input:text').attr('autocomplete', 'off');
-});</script>  <script type="text/x-magento-init">
-    {
-        ".field.password": {
-            "passwordStrengthIndicator": {
-                "formSelector": "form.form-create-account"
-            }
-        },
-        "*": {
-            "Magento_Customer/js/block-submit-on-send": {
-                "formId": "form-validate"
-            },
-            "Magento_Ui/js/core/app": {
-                "components": {
-                    "showPassword": {
-                        "component": "Magento_Customer/js/show-password",
-                        "passwordSelector": "#password,#password-confirmation"
-                    }
-                }
-            }
+        return obj;
+      };
+    };
+  
+    // An internal function for creating a new object that inherits from another.
+    var baseCreate = function(prototype) {
+      if (!_.isObject(prototype)) return {};
+      if (nativeCreate) return nativeCreate(prototype);
+      Ctor.prototype = prototype;
+      var result = new Ctor;
+      Ctor.prototype = null;
+      return result;
+    };
+  
+    // Helper for collection methods to determine whether a collection
+    // should be iterated as an array or as an object
+    // Related: http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength
+    var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
+    var isArrayLike = function(collection) {
+      var length = collection && collection.length;
+      return typeof length == 'number' && length >= 0 && length <= MAX_ARRAY_INDEX;
+    };
+  
+    // Collection Functions
+    // --------------------
+  
+    // The cornerstone, an `each` implementation, aka `forEach`.
+    // Handles raw objects in addition to array-likes. Treats all
+    // sparse array-likes as if they were dense.
+    _.each = _.forEach = function(obj, iteratee, context) {
+      iteratee = optimizeCb(iteratee, context);
+      var i, length;
+      if (isArrayLike(obj)) {
+        for (i = 0, length = obj.length; i < length; i++) {
+          iteratee(obj[i], i, obj);
         }
-    }</script></div></div></div><div class="amsl-tabs-wrapper -forgot" data-am-js="am-tabs-wrapper-forgot"><ul class="amsl-tablist"><li class="amsl-title active"><a href="#amsl-forgot-content" class="amsl-link">Forgot Your Password?</a></li></ul><div id="amsl-forgot-content" class="amsl-content amsl-forgot-content"><p class="amsl-error -default" data-am-js="am-default-error"></p><div class="amsl-form"> <form class="form password forget" action="https://edumalls.com/sa_en/testimonial/index/forgotpasswordpost/" method="post" id="form-validate" data-mage-init='{"validation":{}}'><fieldset class="fieldset" data-hasrequired="&#x2A;&#x20;Required&#x20;Fields"><div class="field note">Please enter your email address below to receive a password reset link.</div><div class="field email required"><label for="email_address" class="label"><span>Email</span></label> <div class="control"><input type="email" name="email" alt="email" id="email_address" class="input-text" value="" data-mage-init='{"mage/trim-input":{}}' data-validate="{required:true, 'validate-email':true}"></div></div></fieldset><div class="actions-toolbar"><div class="primary"><button type="submit" class="action submit primary"><span>Reset My Password</span></button></div><div class="secondary"><a class="action back" href="https://edumalls.com/sa_en/customer/account/login/referer/aHR0cHM6Ly9lZHVtYWxscy5jb20vc2FfZW4vdGVzdGltb25pYWwvaW5kZXgvcG9zdC8%2C/"><span>Go back</span></a></div></div></form><script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Customer/js/block-submit-on-send": {
-                "formId": "form-validate"
-            }
+      } else {
+        var keys = _.keys(obj);
+        for (i = 0, length = keys.length; i < length; i++) {
+          iteratee(obj[keys[i]], keys[i], obj);
         }
-    }</script></div></div></div></div><script type="text/x-magento-init">
-        {
-            "[data-am-js='am-login-popup']" : {
-                "Amasty_SocialLogin/js/am-popup": {"logout_url":"https:\/\/edumalls.com\/sa_en\/amsociallogin\/logout\/index\/","header_update":"https:\/\/edumalls.com\/sa_en\/amsociallogin\/header\/update\/","reset_pass_url":"https:\/\/edumalls.com\/sa_en\/customer\/account\/forgotpasswordpost\/"}            }
-        }</script></div> <style> /* Full-width input fields */ #popup-classera-login input { height: 50px; color: #ffffff; padding-left: 20px; padding-right: 20px; margin-bottom: 20px; border-radius: 25px; border-color: #ffffff; background: transparent; } #popup-classera-login input::placeholder { color: #ffffff; } #popup-classera-login input:active, #popup-classera-login input:focus, #popup-classera-login input:hover { border: 1px solid #51DDF7; } #popup-classera-login label { display: none; } /* Set a style for all modal buttons */ #popup-classera-login button { cursor: pointer; width: 100%; height: 58px; max-height: 58px; margin: 8px 0; padding: 20px 20px; font-size: 17px; font-weight: 800; border-radius: 29px; color: #ffffff !important; background-color: #51DDF7 !important; box-shadow: 0 0 5px 5px rgba(0, 0, 0, .1); transition: all ease 0.7s; } #popup-classera-login button:hover { opacity: 1; box-shadow: none; background: #01A7E5 !important; } #popup-classera-login button::after { height: 58px; max-height: 58px; border-radius: 29px; background: #01A7E5 !important; } /* Extra styles for the cancel button */ #popup-classera-login .cancelbtn { padding: 0; width: 35px; height: 35px; background: #51DDF7 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgogICAgdmlld0JveD0iMCwwLDI1NiwyNTYiIHdpZHRoPSIzNXB4IiBoZWlnaHQ9IjM1cHgiPgogICAgPGcgZmlsbD0iI2ZmZmZmZiIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiCiAgICAgICAgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIgogICAgICAgIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIKICAgICAgICBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6IG5vcm1hbCI+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJzY2FsZSg1LjEyLDUuMTIpIj4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgIGQ9Ik03LjcxODc1LDYuMjgxMjVsLTEuNDM3NSwxLjQzNzVsMTcuMjgxMjUsMTcuMjgxMjVsLTE3LjI4MTI1LDE3LjI4MTI1bDEuNDM3NSwxLjQzNzVsMTcuMjgxMjUsLTE3LjI4MTI1bDE3LjI4MTI1LDE3LjI4MTI1bDEuNDM3NSwtMS40Mzc1bC0xNy4yODEyNSwtMTcuMjgxMjVsMTcuMjgxMjUsLTE3LjI4MTI1bC0xLjQzNzUsLTEuNDM3NWwtMTcuMjgxMjUsMTcuMjgxMjV6Ij48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=) !important; background-size: 15px; background-repeat: no-repeat; background-position: center; box-shadow: none; position: absolute; top: 5px; right: 15px; border-radius: 50%; } #popup-classera-login .cancelbtn::after { padding: 0; width: 35px; height: 35px; background: #01A7E5 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgogICAgdmlld0JveD0iMCwwLDI1NiwyNTYiIHdpZHRoPSIzNXB4IiBoZWlnaHQ9IjM1cHgiPgogICAgPGcgZmlsbD0iI2ZmZmZmZiIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiCiAgICAgICAgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIgogICAgICAgIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIKICAgICAgICBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6IG5vcm1hbCI+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJzY2FsZSg1LjEyLDUuMTIpIj4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgIGQ9Ik03LjcxODc1LDYuMjgxMjVsLTEuNDM3NSwxLjQzNzVsMTcuMjgxMjUsMTcuMjgxMjVsLTE3LjI4MTI1LDE3LjI4MTI1bDEuNDM3NSwxLjQzNzVsMTcuMjgxMjUsLTE3LjI4MTI1bDE3LjI4MTI1LDE3LjI4MTI1bDEuNDM3NSwtMS40Mzc1bC0xNy4yODEyNSwtMTcuMjgxMjVsMTcuMjgxMjUsLTE3LjI4MTI1bC0xLjQzNzUsLTEuNDM3NWwtMTcuMjgxMjUsMTcuMjgxMjV6Ij48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=) !important; background-size: 15px; background-repeat: no-repeat; background-position: center; } #popup-classera-login .container { padding: 16px; } /* The Modal (background) */ #popup-classera-login.modal { display: none; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 100000; /* Sit on top */ left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: rgb(0, 0, 0); /* Fallback color */ background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */ padding-top: 60px; } /* Modal Content/Box */ #popup-classera-login .modal-content { background: linear-gradient(to right, #0189db, #51dcf6); margin: 5% auto 15% auto; border: none; width: 500px; padding: 50px; color: #fff; border-radius: 20px; font-size: 16px; font-weight: 400; position: relative; top: 20px; right: 20px; } @media only screen and (max-width: 750px) { #popup-classera-login .modal-content { width: 376px !important; left: 0px !important; } } /* The Close Button (x) */ #popup-classera-login .close { position: absolute; right: 25px; top: 0; color: #000; font-size: 35px; font-weight: bold; } #popup-classera-login .close:hover, #popup-classera-login .close:focus { color: red; cursor: pointer; } /* Add Zoom Animation */ #popup-classera-login .animate { -webkit-animation: animatezoom 0.6s; animation: animatezoom 0.6s } @-webkit-keyframes animatezoom { from { -webkit-transform: scale(0) } to { -webkit-transform: scale(1) } } @keyframes animatezoom { from { transform: scale(0) } to { transform: scale(1) } } /* Change styles for span and cancel button on extra small screens */ @media screen and (max-width: 300px) { #popup-classera-login .cancelbtn { width: 100%; } } #popup-classera-login .classera-logo { text-align: center; } #popup-classera-login .classera-logo img { height: 60px; }</style><div id="popup-classera-login" style="display:none;" class="modal"><form id="popup-classera-login-form" class="modal-content animate" action="https://edumalls.com/sa_en/sociallogin/classera/login/" method="post"><!-- <form class="modal-content animate"> --><div class="classera-logo"><img src="https://cdn.edumalls.com/wysiwyg/classera_logo_white.png" alt="Classera Logo"></div><div class="container"><label for="username"><b>Login Name</b></label> <input type="text" placeholder="Login Name" name="username" required><label for="password"><b>Password</b></label> <input type="password" placeholder="Password" name="password" required><!-- <input type="hidden" name="isAjax" value ="1"> --><button type="submit">Login</button></div><button type="button" onclick="document.getElementById('popup-classera-login').style.display='none'" class="cancelbtn"></button></form><form id="popup-classera-login-form-email" class="modal-content animate" style="display:none;" action="https://edumalls.com/sa_en/sociallogin/classera/login/" method="post"><div class="classera-logo"><img src="https://cdn.edumalls.com/wysiwyg/classera_logo_white.png" alt="Classera Logo"></div><div class="container"><label for="email"><b>Email</b></label> <input type="email" placeholder="Enter email" name="email" required><button type="submit">Login</button></div><button type="button" onclick="document.getElementById('popup-classera-login').style.display='none'" class="cancelbtn"></button></form></div><script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-
-    require([
-        "jquery",
-        "Amasty_SocialLogin/js/am-reload-header",
-        "mage/mage",
-        "prototype",
-
-    ], function($, amReloadHeader) {
-        var classeraLoginForm = $('#popup-classera-login-form');
-        var classeraLoginWithEmailForm = $('#popup-classera-login-form-email');
-        var classeraLoginDiv = $('#popup-classera-login');
-
-        classeraLoginForm.submit(function(e) {
-            e.preventDefault();
-            var ajaxForm = classeraLoginForm.serialize() + "&isAjax=1";
-            
-
-            $.ajax({
-                type: "POST",
-                url: "https://edumalls.com/sa_en/sociallogin/classera/login/",
-                data: ajaxForm,
-                dataType: 'JSON',
-                success: function(data) {
-                    
-                    
-                    
-                    
-                    if (data.request_email) {
-                        
-                        classeraLoginForm.hide();
-                        classeraLoginWithEmailForm.show();
-                    } else if (data.required_verification) {
-                        $('.amsl-popup-block .amsl-close').click();
-                        classeraLoginDiv.hide();
-                    } else if (data.redirect_data.url) {
-                        $('body').trigger('processStart');
-                        classeraLoginDiv.hide();
-                        $('.amsl-popup-block .amsl-close').click();
-                        $('.authorization-link').hide();
-                        amReloadHeader.customRedirect(data.redirect_data);
-                    }
-                },
-                error: function(data) {
-                    classeraLoginDiv.css("display", "none");
-                    
-                    
-                },
-            });
+      }
+      return obj;
+    };
+  
+    // Return the results of applying the iteratee to each element.
+    _.map = _.collect = function(obj, iteratee, context) {
+      iteratee = cb(iteratee, context);
+      var keys = !isArrayLike(obj) && _.keys(obj),
+          length = (keys || obj).length,
+          results = Array(length);
+      for (var index = 0; index < length; index++) {
+        var currentKey = keys ? keys[index] : index;
+        results[index] = iteratee(obj[currentKey], currentKey, obj);
+      }
+      return results;
+    };
+  
+    // Create a reducing function iterating left or right.
+    function createReduce(dir) {
+      // Optimized iterator function as using arguments.length
+      // in the main function will deoptimize the, see #1991.
+      function iterator(obj, iteratee, memo, keys, index, length) {
+        for (; index >= 0 && index < length; index += dir) {
+          var currentKey = keys ? keys[index] : index;
+          memo = iteratee(memo, obj[currentKey], currentKey, obj);
+        }
+        return memo;
+      }
+  
+      return function(obj, iteratee, memo, context) {
+        iteratee = optimizeCb(iteratee, context, 4);
+        var keys = !isArrayLike(obj) && _.keys(obj),
+            length = (keys || obj).length,
+            index = dir > 0 ? 0 : length - 1;
+        // Determine the initial value if none is provided.
+        if (arguments.length < 3) {
+          memo = obj[keys ? keys[index] : index];
+          index += dir;
+        }
+        return iterator(obj, iteratee, memo, keys, index, length);
+      };
+    }
+  
+    // **Reduce** builds up a single result from a list of values, aka `inject`,
+    // or `foldl`.
+    _.reduce = _.foldl = _.inject = createReduce(1);
+  
+    // The right-associative version of reduce, also known as `foldr`.
+    _.reduceRight = _.foldr = createReduce(-1);
+  
+    // Return the first value which passes a truth test. Aliased as `detect`.
+    _.find = _.detect = function(obj, predicate, context) {
+      var key;
+      if (isArrayLike(obj)) {
+        key = _.findIndex(obj, predicate, context);
+      } else {
+        key = _.findKey(obj, predicate, context);
+      }
+      if (key !== void 0 && key !== -1) return obj[key];
+    };
+  
+    // Return all the elements that pass a truth test.
+    // Aliased as `select`.
+    _.filter = _.select = function(obj, predicate, context) {
+      var results = [];
+      predicate = cb(predicate, context);
+      _.each(obj, function(value, index, list) {
+        if (predicate(value, index, list)) results.push(value);
+      });
+      return results;
+    };
+  
+    // Return all the elements for which a truth test fails.
+    _.reject = function(obj, predicate, context) {
+      return _.filter(obj, _.negate(cb(predicate)), context);
+    };
+  
+    // Determine whether all of the elements match a truth test.
+    // Aliased as `all`.
+    _.every = _.all = function(obj, predicate, context) {
+      predicate = cb(predicate, context);
+      var keys = !isArrayLike(obj) && _.keys(obj),
+          length = (keys || obj).length;
+      for (var index = 0; index < length; index++) {
+        var currentKey = keys ? keys[index] : index;
+        if (!predicate(obj[currentKey], currentKey, obj)) return false;
+      }
+      return true;
+    };
+  
+    // Determine if at least one element in the object matches a truth test.
+    // Aliased as `any`.
+    _.some = _.any = function(obj, predicate, context) {
+      predicate = cb(predicate, context);
+      var keys = !isArrayLike(obj) && _.keys(obj),
+          length = (keys || obj).length;
+      for (var index = 0; index < length; index++) {
+        var currentKey = keys ? keys[index] : index;
+        if (predicate(obj[currentKey], currentKey, obj)) return true;
+      }
+      return false;
+    };
+  
+    // Determine if the array or object contains a given value (using `===`).
+    // Aliased as `includes` and `include`.
+    _.contains = _.includes = _.include = function(obj, target, fromIndex) {
+      if (!isArrayLike(obj)) obj = _.values(obj);
+      return _.indexOf(obj, target, typeof fromIndex == 'number' && fromIndex) >= 0;
+    };
+  
+    // Invoke a method (with arguments) on every item in a collection.
+    _.invoke = function(obj, method) {
+      var args = slice.call(arguments, 2);
+      var isFunc = _.isFunction(method);
+      return _.map(obj, function(value) {
+        var func = isFunc ? method : value[method];
+        return func == null ? func : func.apply(value, args);
+      });
+    };
+  
+    // Convenience version of a common use case of `map`: fetching a property.
+    _.pluck = function(obj, key) {
+      return _.map(obj, _.property(key));
+    };
+  
+    // Convenience version of a common use case of `filter`: selecting only objects
+    // containing specific `key:value` pairs.
+    _.where = function(obj, attrs) {
+      return _.filter(obj, _.matcher(attrs));
+    };
+  
+    // Convenience version of a common use case of `find`: getting the first object
+    // containing specific `key:value` pairs.
+    _.findWhere = function(obj, attrs) {
+      return _.find(obj, _.matcher(attrs));
+    };
+  
+    // Return the maximum element (or element-based computation).
+    _.max = function(obj, iteratee, context) {
+      var result = -Infinity, lastComputed = -Infinity,
+          value, computed;
+      if (iteratee == null && obj != null) {
+        obj = isArrayLike(obj) ? obj : _.values(obj);
+        for (var i = 0, length = obj.length; i < length; i++) {
+          value = obj[i];
+          if (value > result) {
+            result = value;
+          }
+        }
+      } else {
+        iteratee = cb(iteratee, context);
+        _.each(obj, function(value, index, list) {
+          computed = iteratee(value, index, list);
+          if (computed > lastComputed || computed === -Infinity && result === -Infinity) {
+            result = value;
+            lastComputed = computed;
+          }
         });
-
-        classeraLoginWithEmailForm.submit(function(e) {
-            e.preventDefault();
-            var ajaxForm = classeraLoginForm.serialize() + '&' + classeraLoginWithEmailForm.serialize() + "&isAjax=1" + "&newEmail=1";
-            
-
-            $.ajax({
-                type: "POST",
-                url: "https://edumalls.com/sa_en/sociallogin/classera/login/",
-                data: ajaxForm,
-                dataType: 'JSON',
-                success: function(data) {
-                    
-                    
-                    classeraLoginForm.show();
-                    classeraLoginWithEmailForm.hide();
-                    classeraLoginDiv.hide();
-                    $('.amsl-popup-block .amsl-close').click();
-                    
-                    
-                    
-                },
-                error: function(data) {
-                    classeraLoginDiv.css("display", "none");
-                    
-                    
-                },
-            });
+      }
+      return result;
+    };
+  
+    // Return the minimum element (or element-based computation).
+    _.min = function(obj, iteratee, context) {
+      var result = Infinity, lastComputed = Infinity,
+          value, computed;
+      if (iteratee == null && obj != null) {
+        obj = isArrayLike(obj) ? obj : _.values(obj);
+        for (var i = 0, length = obj.length; i < length; i++) {
+          value = obj[i];
+          if (value < result) {
+            result = value;
+          }
+        }
+      } else {
+        iteratee = cb(iteratee, context);
+        _.each(obj, function(value, index, list) {
+          computed = iteratee(value, index, list);
+          if (computed < lastComputed || computed === Infinity && result === Infinity) {
+            result = value;
+            lastComputed = computed;
+          }
         });
-
-    })</script></div>   <script>
-        require(['jquery','weltpixel_ga4_persistentLayer','weltpixel_ga4_gtm', 'Magento_Customer/js/customer-data'],
-            function ($, wpGa4PersDl ,wpGa4gtm, customerData) {
-                $( document ).ajaxComplete(function( event, xhr, settings ) {
-                    if (settings.url.search('/customer\/section\/load/') > 0) {
-                        var response = xhr.responseJSON;
-                        if (response.wp_ga4) {
-                            var dataLayerData = $.parseJSON(response.wp_ga4.datalayer);
-                            for (index in dataLayerData) {
-                                window.dataLayer.push({ecommerce: null});
-                                window.dataLayer.push(dataLayerData[index]);
-                            }
-                        }
-                    }
-                });
-                var wpPersDlOptions = {'storageExpiryTime' : 30 };
-                var wpGtmOptions = {
-                    'enabled' : 0,
-                    'persDataLayer' : wpGa4PersDl
-                };
-                wpGa4PersDl.init(wpPersDlOptions);
-                wpGa4gtm.trackPromotion(wpGtmOptions);
-            });</script><div id="ox_bnav" class="ox_bnav"> <style type="text/css"> .ox_bnav{ position: sticky; left:0; bottom:0; width: 100%; z-index: 800; display:flex; overflow: auto;}.ox-bnav__item{ display: flex; max-width: 100%; flex: 1; position: relative;}.ox-bnav__item .action{ /* text wrap */ display: flex; flex-direction: column; text-align: center; justify-content: center; padding: 10px 5px; line-height: 0; gap: 4px; width: 100%; min-height: 46px; min-width:46px; cursor: pointer; color:var(--a2-bnav-color); background-color: var(--a2-bnav-bg); transition: none;}.ox-bnav__item .label{ font-size: var(--a2-bnav-fs, 12px); line-height: 1; font-family: var(--a2-bnav-ff); font-weight: var(--a2-bnav-fw, var(--a2-btn-fw, 700)); text-transform: var(--a2-bnav-tt, var(--a2-btn-tt)); letter-spacing: var(--a2-bnav-ls, var(--a2-btn-ls));}.ox-bnav__item .icon{ margin: auto;}.ox-bnav__item .icon svg{ margin:auto; fill:currentColor;}.nolink.action > *{ opacity: 0.6;}.minicart-btn__icon--hide .ox-bnav__item .action.showcart .a2-icon-cart{ display: inline-block; }</style> <div class="ox-bnav__item ox-bnav__home"><a href="https://edumalls.com/sa_en/" class="action "><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="a2-icon-home&#x20;&#x20;a2-icon--grid" 
-            width="18" height="18" 
-            viewBox="0 0 18 18" 
-            style="width:18px; height:18px;"><path stroke="none" d="M9,15v4H5V15H9m2-2H3v8h8V13Z" transform="translate(-3 -3)"/><path d="M19,15v4H15V15h4m2-2H13v8h8V13Z" transform="translate(-3 -3)"/><path stroke="none" d="M9,5V9H5V5H9m2-2H3v8h8V3Z" transform="translate(-3 -3)"/><path stroke="none" d="M19,5V9H15V5h4m2-2H13v8h8V3Z" transform="translate(-3 -3)"/></svg></span> <span class="label ">Home</span></a></div> <div class="ox-bnav__item ox-bnav__search"><div class="js-action-search-slideout action"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="a2-icon-search&#x20;&#x20;a2-icon--search2" 
-            width="17" height="17" 
-            viewBox="0 0 17 17" 
-            style="width:17px; height:17px;"><rect stroke="none" x="13.4" y="11.8" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -5.9735 14.4323)" width="2" height="5.3"/><path stroke="none" d="M8,2c3.3,0,6,2.7,6,6s-2.7,6-6,6s-6-2.7-6-6S4.7,2,8,2 M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8s8-3.6,8-8S12.4,0,8,0z"/></svg></span> <span class="label ">Search</span></div></div> <div id="ox-bnav__account" class="ox-bnav__item ox-bnav__account"> <a class="action " href="https://edumalls.com/sa_en/customer/account/"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="a2-icon-account&#x20;&#x20;a2-icon--account2" 
-            width="18" height="18" 
-            viewBox="0 0 18 18" 
-            style="width:18px; height:18px;"><path stroke="none" d="M13.7,14H9.8a7,7,0,0,0-7,7.1h2a5,5,0,0,1,5-5.1h3.9a5.1,5.1,0,0,1,5.1,5.1h2A7.1,7.1,0,0,0,13.7,14Z" transform="translate(-2.8 -3)"/><path d="M11.8,5a3.1,3.1,0,0,1,3,3,3,3,0,0,1-3,3,2.9,2.9,0,0,1-3-3,3,3,0,0,1,3-3m0-2a5,5,0,0,0-5,5,5,5,0,0,0,5,5,5,5,0,0,0,5-5,5.1,5.1,0,0,0-5-5Z" transform="translate(-2.8 -3)"/></svg></span> <span class="label ">Account</span></a></div>  <script>require([
-    'jquery'
-], function ($) {
-	let flag;
-	const init = () => {
-		if(flag) {return}
-		const accountItem = $('.ox-section-items a[href="#store.links"]').parent();
-		if(accountItem.length){
-			$("#ox-bnav__account").on('click', function(e) {
-				e.preventDefault();
-				$('.slide-out-menu--mobile').click();
-				accountItem.click()
-			});
-			flag = true;
-		}
-	}
-	init();
-	$('body').on('contentUpdated', init);
-});</script> <div class="ox-bnav__item ox-bnav__cart"><a class="action showcart" href="https://edumalls.com/sa_en/checkout/cart/" data-bind="scope: 'minicart_content'"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="a2-icon-cart&#x20;&#x20;a2-icon--cart" 
-            width="20" height="17" 
-            viewBox="0 0 20 17" 
-            style="width:20px; height:17px;"><rect stroke="none" y="3" width="16" height="2"/><rect stroke="none" x="3" y="10" width="12" height="2"/><polygon stroke="none" points="3 12 1 5 3 4.6 5 11.6 3 12"/><polygon stroke="none" points="15 12 18.1 0.5 16.1 0 13 11.6 15 12"/><rect stroke="none" x="16.1" width="3.8" height="2"/><circle stroke="none" cx="13" cy="15" r="2"/><circle cx="5" cy="15" r="2"/></svg> <span class="counter qty header__item-badge"><span class="counter-number"><!-- ko text: getCartParam('summary_count').toLocaleString(window.LOCALE) -->0<!-- /ko --></span></span></span> <span class="label ">Cart</span></a></div><script>require(["jquery"], function ($) {
-	"use strict";
-	$(function () {
-		const ox_bnav = document.getElementById("ox_bnav");
-		if(ox_bnav){
-			updateBnavHeight();
-			$(window).on('resize', updateBnavHeight);
-			function updateBnavHeight(){
-				let height = parseInt(ox_bnav.getBoundingClientRect().height);
-				document.documentElement.style.setProperty('--ox-bnav-height', height + 'px');
-			}
-		}
-	});
-});</script></div><div class="ox-modals__holder"></div><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-0f449824576a6bb0745","applicationID":"1095175721","transactionName":"NQcHNxRVCkIEAEQLXgxNJAASXQtfShdVEUULDwoND1UIHgwNVAdJTRIKEBI=","queueTime":0,"applicationTime":492,"atts":"GUAEQVxPGUw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body></html>
+      }
+      return result;
+    };
+  
+    // Shuffle a collection, using the modern version of the
+    // [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
+    _.shuffle = function(obj) {
+      var set = isArrayLike(obj) ? obj : _.values(obj);
+      var length = set.length;
+      var shuffled = Array(length);
+      for (var index = 0, rand; index < length; index++) {
+        rand = _.random(0, index);
+        if (rand !== index) shuffled[index] = shuffled[rand];
+        shuffled[rand] = set[index];
+      }
+      return shuffled;
+    };
+  
+    // Sample **n** random values from a collection.
+    // If **n** is not specified, returns a single random element.
+    // The internal `guard` argument allows it to work with `map`.
+    _.sample = function(obj, n, guard) {
+      if (n == null || guard) {
+        if (!isArrayLike(obj)) obj = _.values(obj);
+        return obj[_.random(obj.length - 1)];
+      }
+      return _.shuffle(obj).slice(0, Math.max(0, n));
+    };
+  
+    // Sort the object's values by a criterion produced by an iteratee.
+    _.sortBy = function(obj, iteratee, context) {
+      iteratee = cb(iteratee, context);
+      return _.pluck(_.map(obj, function(value, index, list) {
+        return {
+          value: value,
+          index: index,
+          criteria: iteratee(value, index, list)
+        };
+      }).sort(function(left, right) {
+        var a = left.criteria;
+        var b = right.criteria;
+        if (a !== b) {
+          if (a > b || a === void 0) return 1;
+          if (a < b || b === void 0) return -1;
+        }
+        return left.index - right.index;
+      }), 'value');
+    };
+  
+    // An internal function used for aggregate "group by" operations.
+    var group = function(behavior) {
+      return function(obj, iteratee, context) {
+        var result = {};
+        iteratee = cb(iteratee, context);
+        _.each(obj, function(value, index) {
+          var key = iteratee(value, index, obj);
+          behavior(result, value, key);
+        });
+        return result;
+      };
+    };
+  
+    // Groups the object's values by a criterion. Pass either a string attribute
+    // to group by, or a function that returns the criterion.
+    _.groupBy = group(function(result, value, key) {
+      if (_.has(result, key)) result[key].push(value); else result[key] = [value];
+    });
+  
+    // Indexes the object's values by a criterion, similar to `groupBy`, but for
+    // when you know that your index values will be unique.
+    _.indexBy = group(function(result, value, key) {
+      result[key] = value;
+    });
+  
+    // Counts instances of an object that group by a certain criterion. Pass
+    // either a string attribute to count by, or a function that returns the
+    // criterion.
+    _.countBy = group(function(result, value, key) {
+      if (_.has(result, key)) result[key]++; else result[key] = 1;
+    });
+  
+    // Safely create a real, live array from anything iterable.
+    _.toArray = function(obj) {
+      if (!obj) return [];
+      if (_.isArray(obj)) return slice.call(obj);
+      if (isArrayLike(obj)) return _.map(obj, _.identity);
+      return _.values(obj);
+    };
+  
+    // Return the number of elements in an object.
+    _.size = function(obj) {
+      if (obj == null) return 0;
+      return isArrayLike(obj) ? obj.length : _.keys(obj).length;
+    };
+  
+    // Split a collection into two arrays: one whose elements all satisfy the given
+    // predicate, and one whose elements all do not satisfy the predicate.
+    _.partition = function(obj, predicate, context) {
+      predicate = cb(predicate, context);
+      var pass = [], fail = [];
+      _.each(obj, function(value, key, obj) {
+        (predicate(value, key, obj) ? pass : fail).push(value);
+      });
+      return [pass, fail];
+    };
+  
+    // Array Functions
+    // ---------------
+  
+    // Get the first element of an array. Passing **n** will return the first N
+    // values in the array. Aliased as `head` and `take`. The **guard** check
+    // allows it to work with `_.map`.
+    _.first = _.head = _.take = function(array, n, guard) {
+      if (array == null) return void 0;
+      if (n == null || guard) return array[0];
+      return _.initial(array, array.length - n);
+    };
+  
+    // Returns everything but the last entry of the array. Especially useful on
+    // the arguments object. Passing **n** will return all the values in
+    // the array, excluding the last N.
+    _.initial = function(array, n, guard) {
+      return slice.call(array, 0, Math.max(0, array.length - (n == null || guard ? 1 : n)));
+    };
+  
+    // Get the last element of an array. Passing **n** will return the last N
+    // values in the array.
+    _.last = function(array, n, guard) {
+      if (array == null) return void 0;
+      if (n == null || guard) return array[array.length - 1];
+      return _.rest(array, Math.max(0, array.length - n));
+    };
+  
+    // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
+    // Especially useful on the arguments object. Passing an **n** will return
+    // the rest N values in the array.
+    _.rest = _.tail = _.drop = function(array, n, guard) {
+      return slice.call(array, n == null || guard ? 1 : n);
+    };
+  
+    // Trim out all falsy values from an array.
+    _.compact = function(array) {
+      return _.filter(array, _.identity);
+    };
+  
+    // Internal implementation of a recursive `flatten` function.
+    var flatten = function(input, shallow, strict, startIndex) {
+      var output = [], idx = 0;
+      for (var i = startIndex || 0, length = input && input.length; i < length; i++) {
+        var value = input[i];
+        if (isArrayLike(value) && (_.isArray(value) || _.isArguments(value))) {
+          //flatten current level of array or arguments object
+          if (!shallow) value = flatten(value, shallow, strict);
+          var j = 0, len = value.length;
+          output.length += len;
+          while (j < len) {
+            output[idx++] = value[j++];
+          }
+        } else if (!strict) {
+          output[idx++] = value;
+        }
+      }
+      return output;
+    };
+  
+    // Flatten out an array, either recursively (by default), or just one level.
+    _.flatten = function(array, shallow) {
+      return flatten(array, shallow, false);
+    };
+  
+    // Return a version of the array that does not contain the specified value(s).
+    _.without = function(array) {
+      return _.difference(array, slice.call(arguments, 1));
+    };
+  
+    // Produce a duplicate-free version of the array. If the array has already
+    // been sorted, you have the option of using a faster algorithm.
+    // Aliased as `unique`.
+    _.uniq = _.unique = function(array, isSorted, iteratee, context) {
+      if (array == null) return [];
+      if (!_.isBoolean(isSorted)) {
+        context = iteratee;
+        iteratee = isSorted;
+        isSorted = false;
+      }
+      if (iteratee != null) iteratee = cb(iteratee, context);
+      var result = [];
+      var seen = [];
+      for (var i = 0, length = array.length; i < length; i++) {
+        var value = array[i],
+            computed = iteratee ? iteratee(value, i, array) : value;
+        if (isSorted) {
+          if (!i || seen !== computed) result.push(value);
+          seen = computed;
+        } else if (iteratee) {
+          if (!_.contains(seen, computed)) {
+            seen.push(computed);
+            result.push(value);
+          }
+        } else if (!_.contains(result, value)) {
+          result.push(value);
+        }
+      }
+      return result;
+    };
+  
+    // Produce an array that contains the union: each distinct element from all of
+    // the passed-in arrays.
+    _.union = function() {
+      return _.uniq(flatten(arguments, true, true));
+    };
+  
+    // Produce an array that contains every item shared between all the
+    // passed-in arrays.
+    _.intersection = function(array) {
+      if (array == null) return [];
+      var result = [];
+      var argsLength = arguments.length;
+      for (var i = 0, length = array.length; i < length; i++) {
+        var item = array[i];
+        if (_.contains(result, item)) continue;
+        for (var j = 1; j < argsLength; j++) {
+          if (!_.contains(arguments[j], item)) break;
+        }
+        if (j === argsLength) result.push(item);
+      }
+      return result;
+    };
+  
+    // Take the difference between one array and a number of other arrays.
+    // Only the elements present in just the first array will remain.
+    _.difference = function(array) {
+      var rest = flatten(arguments, true, true, 1);
+      return _.filter(array, function(value){
+        return !_.contains(rest, value);
+      });
+    };
+  
+    // Zip together multiple lists into a single array -- elements that share
+    // an index go together.
+    _.zip = function() {
+      return _.unzip(arguments);
+    };
+  
+    // Complement of _.zip. Unzip accepts an array of arrays and groups
+    // each array's elements on shared indices
+    _.unzip = function(array) {
+      var length = array && _.max(array, 'length').length || 0;
+      var result = Array(length);
+  
+      for (var index = 0; index < length; index++) {
+        result[index] = _.pluck(array, index);
+      }
+      return result;
+    };
+  
+    // Converts lists into objects. Pass either a single array of `[key, value]`
+    // pairs, or two parallel arrays of the same length -- one of keys, and one of
+    // the corresponding values.
+    _.object = function(list, values) {
+      var result = {};
+      for (var i = 0, length = list && list.length; i < length; i++) {
+        if (values) {
+          result[list[i]] = values[i];
+        } else {
+          result[list[i][0]] = list[i][1];
+        }
+      }
+      return result;
+    };
+  
+    // Return the position of the first occurrence of an item in an array,
+    // or -1 if the item is not included in the array.
+    // If the array is large and already in sort order, pass `true`
+    // for **isSorted** to use binary search.
+    _.indexOf = function(array, item, isSorted) {
+      var i = 0, length = array && array.length;
+      if (typeof isSorted == 'number') {
+        i = isSorted < 0 ? Math.max(0, length + isSorted) : isSorted;
+      } else if (isSorted && length) {
+        i = _.sortedIndex(array, item);
+        return array[i] === item ? i : -1;
+      }
+      if (item !== item) {
+        return _.findIndex(slice.call(array, i), _.isNaN);
+      }
+      for (; i < length; i++) if (array[i] === item) return i;
+      return -1;
+    };
+  
+    _.lastIndexOf = function(array, item, from) {
+      var idx = array ? array.length : 0;
+      if (typeof from == 'number') {
+        idx = from < 0 ? idx + from + 1 : Math.min(idx, from + 1);
+      }
+      if (item !== item) {
+        return _.findLastIndex(slice.call(array, 0, idx), _.isNaN);
+      }
+      while (--idx >= 0) if (array[idx] === item) return idx;
+      return -1;
+    };
+  
+    // Generator function to create the findIndex and findLastIndex functions
+    function createIndexFinder(dir) {
+      return function(array, predicate, context) {
+        predicate = cb(predicate, context);
+        var length = array != null && array.length;
+        var index = dir > 0 ? 0 : length - 1;
+        for (; index >= 0 && index < length; index += dir) {
+          if (predicate(array[index], index, array)) return index;
+        }
+        return -1;
+      };
+    }
+  
+    // Returns the first index on an array-like that passes a predicate test
+    _.findIndex = createIndexFinder(1);
+  
+    _.findLastIndex = createIndexFinder(-1);
+  
+    // Use a comparator function to figure out the smallest index at which
+    // an object should be inserted so as to maintain order. Uses binary search.
+    _.sortedIndex = function(array, obj, iteratee, context) {
+      iteratee = cb(iteratee, context, 1);
+      var value = iteratee(obj);
+      var low = 0, high = array.length;
+      while (low < high) {
+        var mid = Math.floor((low + high) / 2);
+        if (iteratee(array[mid]) < value) low = mid + 1; else high = mid;
+      }
+      return low;
+    };
+  
+    // Generate an integer Array containing an arithmetic progression. A port of
+    // the native Python `range()` function. See
+    // [the Python documentation](http://docs.python.org/library/functions.html#range).
+    _.range = function(start, stop, step) {
+      if (arguments.length <= 1) {
+        stop = start || 0;
+        start = 0;
+      }
+      step = step || 1;
+  
+      var length = Math.max(Math.ceil((stop - start) / step), 0);
+      var range = Array(length);
+  
+      for (var idx = 0; idx < length; idx++, start += step) {
+        range[idx] = start;
+      }
+  
+      return range;
+    };
+  
+    // Function (ahem) Functions
+    // ------------------
+  
+    // Determines whether to execute a function as a constructor
+    // or a normal function with the provided arguments
+    var executeBound = function(sourceFunc, boundFunc, context, callingContext, args) {
+      if (!(callingContext instanceof boundFunc)) return sourceFunc.apply(context, args);
+      var self = baseCreate(sourceFunc.prototype);
+      var result = sourceFunc.apply(self, args);
+      if (_.isObject(result)) return result;
+      return self;
+    };
+  
+    // Create a function bound to a given object (assigning `this`, and arguments,
+    // optionally). Delegates to **ECMAScript 5**'s native `Function.bind` if
+    // available.
+    _.bind = function(func, context) {
+      if (nativeBind && func.bind === nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
+      if (!_.isFunction(func)) throw new TypeError('Bind must be called on a function');
+      var args = slice.call(arguments, 2);
+      var bound = function() {
+        return executeBound(func, bound, context, this, args.concat(slice.call(arguments)));
+      };
+      return bound;
+    };
+  
+    // Partially apply a function by creating a version that has had some of its
+    // arguments pre-filled, without changing its dynamic `this` context. _ acts
+    // as a placeholder, allowing any combination of arguments to be pre-filled.
+    _.partial = function(func) {
+      var boundArgs = slice.call(arguments, 1);
+      var bound = function() {
+        var position = 0, length = boundArgs.length;
+        var args = Array(length);
+        for (var i = 0; i < length; i++) {
+          args[i] = boundArgs[i] === _ ? arguments[position++] : boundArgs[i];
+        }
+        while (position < arguments.length) args.push(arguments[position++]);
+        return executeBound(func, bound, this, this, args);
+      };
+      return bound;
+    };
+  
+    // Bind a number of an object's methods to that object. Remaining arguments
+    // are the method names to be bound. Useful for ensuring that all callbacks
+    // defined on an object belong to it.
+    _.bindAll = function(obj) {
+      var i, length = arguments.length, key;
+      if (length <= 1) throw new Error('bindAll must be passed function names');
+      for (i = 1; i < length; i++) {
+        key = arguments[i];
+        obj[key] = _.bind(obj[key], obj);
+      }
+      return obj;
+    };
+  
+    // Memoize an expensive function by storing its results.
+    _.memoize = function(func, hasher) {
+      var memoize = function(key) {
+        var cache = memoize.cache;
+        var address = '' + (hasher ? hasher.apply(this, arguments) : key);
+        if (!_.has(cache, address)) cache[address] = func.apply(this, arguments);
+        return cache[address];
+      };
+      memoize.cache = {};
+      return memoize;
+    };
+  
+    // Delays a function for the given number of milliseconds, and then calls
+    // it with the arguments supplied.
+    _.delay = function(func, wait) {
+      var args = slice.call(arguments, 2);
+      return setTimeout(function(){
+        return func.apply(null, args);
+      }, wait);
+    };
+  
+    // Defers a function, scheduling it to run after the current call stack has
+    // cleared.
+    _.defer = _.partial(_.delay, _, 1);
+  
+    // Returns a function, that, when invoked, will only be triggered at most once
+    // during a given window of time. Normally, the throttled function will run
+    // as much as it can, without ever going more than once per `wait` duration;
+    // but if you'd like to disable the execution on the leading edge, pass
+    // `{leading: false}`. To disable execution on the trailing edge, ditto.
+    _.throttle = function(func, wait, options) {
+      var context, args, result;
+      var timeout = null;
+      var previous = 0;
+      if (!options) options = {};
+      var later = function() {
+        previous = options.leading === false ? 0 : _.now();
+        timeout = null;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+      };
+      return function() {
+        var now = _.now();
+        if (!previous && options.leading === false) previous = now;
+        var remaining = wait - (now - previous);
+        context = this;
+        args = arguments;
+        if (remaining <= 0 || remaining > wait) {
+          if (timeout) {
+            clearTimeout(timeout);
+            timeout = null;
+          }
+          previous = now;
+          result = func.apply(context, args);
+          if (!timeout) context = args = null;
+        } else if (!timeout && options.trailing !== false) {
+          timeout = setTimeout(later, remaining);
+        }
+        return result;
+      };
+    };
+  
+    // Returns a function, that, as long as it continues to be invoked, will not
+    // be triggered. The function will be called after it stops being called for
+    // N milliseconds. If `immediate` is passed, trigger the function on the
+    // leading edge, instead of the trailing.
+    _.debounce = function(func, wait, immediate) {
+      var timeout, args, context, timestamp, result;
+  
+      var later = function() {
+        var last = _.now() - timestamp;
+  
+        if (last < wait && last >= 0) {
+          timeout = setTimeout(later, wait - last);
+        } else {
+          timeout = null;
+          if (!immediate) {
+            result = func.apply(context, args);
+            if (!timeout) context = args = null;
+          }
+        }
+      };
+  
+      return function() {
+        context = this;
+        args = arguments;
+        timestamp = _.now();
+        var callNow = immediate && !timeout;
+        if (!timeout) timeout = setTimeout(later, wait);
+        if (callNow) {
+          result = func.apply(context, args);
+          context = args = null;
+        }
+  
+        return result;
+      };
+    };
+  
+    // Returns the first function passed as an argument to the second,
+    // allowing you to adjust arguments, run code before and after, and
+    // conditionally execute the original function.
+    _.wrap = function(func, wrapper) {
+      return _.partial(wrapper, func);
+    };
+  
+    // Returns a negated version of the passed-in predicate.
+    _.negate = function(predicate) {
+      return function() {
+        return !predicate.apply(this, arguments);
+      };
+    };
+  
+    // Returns a function that is the composition of a list of functions, each
+    // consuming the return value of the function that follows.
+    _.compose = function() {
+      var args = arguments;
+      var start = args.length - 1;
+      return function() {
+        var i = start;
+        var result = args[start].apply(this, arguments);
+        while (i--) result = args[i].call(this, result);
+        return result;
+      };
+    };
+  
+    // Returns a function that will only be executed on and after the Nth call.
+    _.after = function(times, func) {
+      return function() {
+        if (--times < 1) {
+          return func.apply(this, arguments);
+        }
+      };
+    };
+  
+    // Returns a function that will only be executed up to (but not including) the Nth call.
+    _.before = function(times, func) {
+      var memo;
+      return function() {
+        if (--times > 0) {
+          memo = func.apply(this, arguments);
+        }
+        if (times <= 1) func = null;
+        return memo;
+      };
+    };
+  
+    // Returns a function that will be executed at most one time, no matter how
+    // often you call it. Useful for lazy initialization.
+    _.once = _.partial(_.before, 2);
+  
+    // Object Functions
+    // ----------------
+  
+    // Keys in IE < 9 that won't be iterated by `for key in ...` and thus missed.
+    var hasEnumBug = !{toString: null}.propertyIsEnumerable('toString');
+    var nonEnumerableProps = ['valueOf', 'isPrototypeOf', 'toString',
+                        'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
+  
+    function collectNonEnumProps(obj, keys) {
+      var nonEnumIdx = nonEnumerableProps.length;
+      var constructor = obj.constructor;
+      var proto = (_.isFunction(constructor) && constructor.prototype) || ObjProto;
+  
+      // Constructor is a special case.
+      var prop = 'constructor';
+      if (_.has(obj, prop) && !_.contains(keys, prop)) keys.push(prop);
+  
+      while (nonEnumIdx--) {
+        prop = nonEnumerableProps[nonEnumIdx];
+        if (prop in obj && obj[prop] !== proto[prop] && !_.contains(keys, prop)) {
+          keys.push(prop);
+        }
+      }
+    }
+  
+    // Retrieve the names of an object's own properties.
+    // Delegates to **ECMAScript 5**'s native `Object.keys`
+    _.keys = function(obj) {
+      if (!_.isObject(obj)) return [];
+      if (nativeKeys) return nativeKeys(obj);
+      var keys = [];
+      for (var key in obj) if (_.has(obj, key)) keys.push(key);
+      // Ahem, IE < 9.
+      if (hasEnumBug) collectNonEnumProps(obj, keys);
+      return keys;
+    };
+  
+    // Retrieve all the property names of an object.
+    _.allKeys = function(obj) {
+      if (!_.isObject(obj)) return [];
+      var keys = [];
+      for (var key in obj) keys.push(key);
+      // Ahem, IE < 9.
+      if (hasEnumBug) collectNonEnumProps(obj, keys);
+      return keys;
+    };
+  
+    // Retrieve the values of an object's properties.
+    _.values = function(obj) {
+      var keys = _.keys(obj);
+      var length = keys.length;
+      var values = Array(length);
+      for (var i = 0; i < length; i++) {
+        values[i] = obj[keys[i]];
+      }
+      return values;
+    };
+  
+    // Returns the results of applying the iteratee to each element of the object
+    // In contrast to _.map it returns an object
+    _.mapObject = function(obj, iteratee, context) {
+      iteratee = cb(iteratee, context);
+      var keys =  _.keys(obj),
+            length = keys.length,
+            results = {},
+            currentKey;
+        for (var index = 0; index < length; index++) {
+          currentKey = keys[index];
+          results[currentKey] = iteratee(obj[currentKey], currentKey, obj);
+        }
+        return results;
+    };
+  
+    // Convert an object into a list of `[key, value]` pairs.
+    _.pairs = function(obj) {
+      var keys = _.keys(obj);
+      var length = keys.length;
+      var pairs = Array(length);
+      for (var i = 0; i < length; i++) {
+        pairs[i] = [keys[i], obj[keys[i]]];
+      }
+      return pairs;
+    };
+  
+    // Invert the keys and values of an object. The values must be serializable.
+    _.invert = function(obj) {
+      var result = {};
+      var keys = _.keys(obj);
+      for (var i = 0, length = keys.length; i < length; i++) {
+        result[obj[keys[i]]] = keys[i];
+      }
+      return result;
+    };
+  
+    // Return a sorted list of the function names available on the object.
+    // Aliased as `methods`
+    _.functions = _.methods = function(obj) {
+      var names = [];
+      for (var key in obj) {
+        if (_.isFunction(obj[key])) names.push(key);
+      }
+      return names.sort();
+    };
+  
+    // Extend a given object with all the properties in passed-in object(s).
+    _.extend = createAssigner(_.allKeys);
+  
+    // Assigns a given object with all the own properties in the passed-in object(s)
+    // (https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+    _.extendOwn = _.assign = createAssigner(_.keys);
+  
+    // Returns the first key on an object that passes a predicate test
+    _.findKey = function(obj, predicate, context) {
+      predicate = cb(predicate, context);
+      var keys = _.keys(obj), key;
+      for (var i = 0, length = keys.length; i < length; i++) {
+        key = keys[i];
+        if (predicate(obj[key], key, obj)) return key;
+      }
+    };
+  
+    // Return a copy of the object only containing the whitelisted properties.
+    _.pick = function(object, oiteratee, context) {
+      var result = {}, obj = object, iteratee, keys;
+      if (obj == null) return result;
+      if (_.isFunction(oiteratee)) {
+        keys = _.allKeys(obj);
+        iteratee = optimizeCb(oiteratee, context);
+      } else {
+        keys = flatten(arguments, false, false, 1);
+        iteratee = function(value, key, obj) { return key in obj; };
+        obj = Object(obj);
+      }
+      for (var i = 0, length = keys.length; i < length; i++) {
+        var key = keys[i];
+        var value = obj[key];
+        if (iteratee(value, key, obj)) result[key] = value;
+      }
+      return result;
+    };
+  
+     // Return a copy of the object without the blacklisted properties.
+    _.omit = function(obj, iteratee, context) {
+      if (_.isFunction(iteratee)) {
+        iteratee = _.negate(iteratee);
+      } else {
+        var keys = _.map(flatten(arguments, false, false, 1), String);
+        iteratee = function(value, key) {
+          return !_.contains(keys, key);
+        };
+      }
+      return _.pick(obj, iteratee, context);
+    };
+  
+    // Fill in a given object with default properties.
+    _.defaults = createAssigner(_.allKeys, true);
+  
+    // Create a (shallow-cloned) duplicate of an object.
+    _.clone = function(obj) {
+      if (!_.isObject(obj)) return obj;
+      return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
+    };
+  
+    // Invokes interceptor with the obj, and then returns obj.
+    // The primary purpose of this method is to "tap into" a method chain, in
+    // order to perform operations on intermediate results within the chain.
+    _.tap = function(obj, interceptor) {
+      interceptor(obj);
+      return obj;
+    };
+  
+    // Returns whether an object has a given set of `key:value` pairs.
+    _.isMatch = function(object, attrs) {
+      var keys = _.keys(attrs), length = keys.length;
+      if (object == null) return !length;
+      var obj = Object(object);
+      for (var i = 0; i < length; i++) {
+        var key = keys[i];
+        if (attrs[key] !== obj[key] || !(key in obj)) return false;
+      }
+      return true;
+    };
+  
+  
+    // Internal recursive comparison function for `isEqual`.
+    var eq = function(a, b, aStack, bStack) {
+      // Identical objects are equal. `0 === -0`, but they aren't identical.
+      // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
+      if (a === b) return a !== 0 || 1 / a === 1 / b;
+      // A strict comparison is necessary because `null == undefined`.
+      if (a == null || b == null) return a === b;
+      // Unwrap any wrapped objects.
+      if (a instanceof _) a = a._wrapped;
+      if (b instanceof _) b = b._wrapped;
+      // Compare `[[Class]]` names.
+      var className = toString.call(a);
+      if (className !== toString.call(b)) return false;
+      switch (className) {
+        // Strings, numbers, regular expressions, dates, and booleans are compared by value.
+        case '[object RegExp]':
+        // RegExps are coerced to strings for comparison (Note: '' + /a/i === '/a/i')
+        case '[object String]':
+          // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
+          // equivalent to `new String("5")`.
+          return '' + a === '' + b;
+        case '[object Number]':
+          // `NaN`s are equivalent, but non-reflexive.
+          // Object(NaN) is equivalent to NaN
+          if (+a !== +a) return +b !== +b;
+          // An `egal` comparison is performed for other numeric values.
+          return +a === 0 ? 1 / +a === 1 / b : +a === +b;
+        case '[object Date]':
+        case '[object Boolean]':
+          // Coerce dates and booleans to numeric primitive values. Dates are compared by their
+          // millisecond representations. Note that invalid dates with millisecond representations
+          // of `NaN` are not equivalent.
+          return +a === +b;
+      }
+  
+      var areArrays = className === '[object Array]';
+      if (!areArrays) {
+        if (typeof a != 'object' || typeof b != 'object') return false;
+  
+        // Objects with different constructors are not equivalent, but `Object`s or `Array`s
+        // from different frames are.
+        var aCtor = a.constructor, bCtor = b.constructor;
+        if (aCtor !== bCtor && !(_.isFunction(aCtor) && aCtor instanceof aCtor &&
+                                 _.isFunction(bCtor) && bCtor instanceof bCtor)
+                            && ('constructor' in a && 'constructor' in b)) {
+          return false;
+        }
+      }
+      // Assume equality for cyclic structures. The algorithm for detecting cyclic
+      // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
+      
+      // Initializing stack of traversed objects.
+      // It's done here since we only need them for objects and arrays comparison.
+      aStack = aStack || [];
+      bStack = bStack || [];
+      var length = aStack.length;
+      while (length--) {
+        // Linear search. Performance is inversely proportional to the number of
+        // unique nested structures.
+        if (aStack[length] === a) return bStack[length] === b;
+      }
+  
+      // Add the first object to the stack of traversed objects.
+      aStack.push(a);
+      bStack.push(b);
+  
+      // Recursively compare objects and arrays.
+      if (areArrays) {
+        // Compare array lengths to determine if a deep comparison is necessary.
+        length = a.length;
+        if (length !== b.length) return false;
+        // Deep compare the contents, ignoring non-numeric properties.
+        while (length--) {
+          if (!eq(a[length], b[length], aStack, bStack)) return false;
+        }
+      } else {
+        // Deep compare objects.
+        var keys = _.keys(a), key;
+        length = keys.length;
+        // Ensure that both objects contain the same number of properties before comparing deep equality.
+        if (_.keys(b).length !== length) return false;
+        while (length--) {
+          // Deep compare each member
+          key = keys[length];
+          if (!(_.has(b, key) && eq(a[key], b[key], aStack, bStack))) return false;
+        }
+      }
+      // Remove the first object from the stack of traversed objects.
+      aStack.pop();
+      bStack.pop();
+      return true;
+    };
+  
+    // Perform a deep comparison to check if two objects are equal.
+    _.isEqual = function(a, b) {
+      return eq(a, b);
+    };
+  
+    // Is a given array, string, or object empty?
+    // An "empty" object has no enumerable own-properties.
+    _.isEmpty = function(obj) {
+      if (obj == null) return true;
+      if (isArrayLike(obj) && (_.isArray(obj) || _.isString(obj) || _.isArguments(obj))) return obj.length === 0;
+      return _.keys(obj).length === 0;
+    };
+  
+    // Is a given value a DOM element?
+    _.isElement = function(obj) {
+      return !!(obj && obj.nodeType === 1);
+    };
+  
+    // Is a given value an array?
+    // Delegates to ECMA5's native Array.isArray
+    _.isArray = nativeIsArray || function(obj) {
+      return toString.call(obj) === '[object Array]';
+    };
+  
+    // Is a given variable an object?
+    _.isObject = function(obj) {
+      var type = typeof obj;
+      return type === 'function' || type === 'object' && !!obj;
+    };
+  
+    // Add some isType methods: isArguments, isFunction, isString, isNumber, isDate, isRegExp, isError.
+    _.each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp', 'Error'], function(name) {
+      _['is' + name] = function(obj) {
+        return toString.call(obj) === '[object ' + name + ']';
+      };
+    });
+  
+    // Define a fallback version of the method in browsers (ahem, IE < 9), where
+    // there isn't any inspectable "Arguments" type.
+    if (!_.isArguments(arguments)) {
+      _.isArguments = function(obj) {
+        return _.has(obj, 'callee');
+      };
+    }
+  
+    // Optimize `isFunction` if appropriate. Work around some typeof bugs in old v8,
+    // IE 11 (#1621), and in Safari 8 (#1929).
+    if (typeof /./ != 'function' && typeof Int8Array != 'object') {
+      _.isFunction = function(obj) {
+        return typeof obj == 'function' || false;
+      };
+    }
+  
+    // Is a given object a finite number?
+    _.isFinite = function(obj) {
+      return isFinite(obj) && !isNaN(parseFloat(obj));
+    };
+  
+    // Is the given value `NaN`? (NaN is the only number which does not equal itself).
+    _.isNaN = function(obj) {
+      return _.isNumber(obj) && obj !== +obj;
+    };
+  
+    // Is a given value a boolean?
+    _.isBoolean = function(obj) {
+      return obj === true || obj === false || toString.call(obj) === '[object Boolean]';
+    };
+  
+    // Is a given value equal to null?
+    _.isNull = function(obj) {
+      return obj === null;
+    };
+  
+    // Is a given variable undefined?
+    _.isUndefined = function(obj) {
+      return obj === void 0;
+    };
+  
+    // Shortcut function for checking if an object has a given property directly
+    // on itself (in other words, not on a prototype).
+    _.has = function(obj, key) {
+      return obj != null && hasOwnProperty.call(obj, key);
+    };
+  
+    // Utility Functions
+    // -----------------
+  
+    // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
+    // previous owner. Returns a reference to the Underscore object.
+    _.noConflict = function() {
+      root._ = previousUnderscore;
+      return this;
+    };
+  
+    // Keep the identity function around for default iteratees.
+    _.identity = function(value) {
+      return value;
+    };
+  
+    // Predicate-generating functions. Often useful outside of Underscore.
+    _.constant = function(value) {
+      return function() {
+        return value;
+      };
+    };
+  
+    _.noop = function(){};
+  
+    _.property = function(key) {
+      return function(obj) {
+        return obj == null ? void 0 : obj[key];
+      };
+    };
+  
+    // Generates a function for a given object that returns a given property.
+    _.propertyOf = function(obj) {
+      return obj == null ? function(){} : function(key) {
+        return obj[key];
+      };
+    };
+  
+    // Returns a predicate for checking whether an object has a given set of 
+    // `key:value` pairs.
+    _.matcher = _.matches = function(attrs) {
+      attrs = _.extendOwn({}, attrs);
+      return function(obj) {
+        return _.isMatch(obj, attrs);
+      };
+    };
+  
+    // Run a function **n** times.
+    _.times = function(n, iteratee, context) {
+      var accum = Array(Math.max(0, n));
+      iteratee = optimizeCb(iteratee, context, 1);
+      for (var i = 0; i < n; i++) accum[i] = iteratee(i);
+      return accum;
+    };
+  
+    // Return a random integer between min and max (inclusive).
+    _.random = function(min, max) {
+      if (max == null) {
+        max = min;
+        min = 0;
+      }
+      return min + Math.floor(Math.random() * (max - min + 1));
+    };
+  
+    // A (possibly faster) way to get the current timestamp as an integer.
+    _.now = Date.now || function() {
+      return new Date().getTime();
+    };
+  
+     // List of HTML entities for escaping.
+    var escapeMap = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#x27;',
+      '`': '&#x60;',
+      "'": '&#039;',
+    };
+    var unescapeMap = _.invert(escapeMap);
+  
+    // Functions for escaping and unescaping strings to/from HTML interpolation.
+    var createEscaper = function(map) {
+      var escaper = function(match) {
+        return map[match];
+      };
+      // Regexes for identifying a key that needs to be escaped
+      var source = '(?:' + _.keys(map).join('|') + ')';
+      var testRegexp = RegExp(source);
+      var replaceRegexp = RegExp(source, 'g');
+      return function(string) {
+        string = string == null ? '' : '' + string;
+        return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;
+      };
+    };
+    _.escape = createEscaper(escapeMap);
+    _.unescape = createEscaper(unescapeMap);
+  
+    // If the value of the named `property` is a function then invoke it with the
+    // `object` as context; otherwise, return it.
+    _.result = function(object, property, fallback) {
+      var value = object == null ? void 0 : object[property];
+      if (value === void 0) {
+        value = fallback;
+      }
+      return _.isFunction(value) ? value.call(object) : value;
+    };
+  
+    // Generate a unique integer id (unique within the entire client session).
+    // Useful for temporary DOM ids.
+    var idCounter = 0;
+    _.uniqueId = function(prefix) {
+      var id = ++idCounter + '';
+      return prefix ? prefix + id : id;
+    };
+  
+    // By default, Underscore uses ERB-style template delimiters, change the
+    // following template settings to use alternative delimiters.
+    _.templateSettings = {
+      evaluate    : /<%([\s\S]+?)%>/g,
+      interpolate : /<%=([\s\S]+?)%>/g,
+      escape      : /<%-([\s\S]+?)%>/g
+    };
+  
+    // When customizing `templateSettings`, if you don't want to define an
+    // interpolation, evaluation or escaping regex, we need one that is
+    // guaranteed not to match.
+    var noMatch = /(.)^/;
+  
+    // Certain characters need to be escaped so that they can be put into a
+    // string literal.
+    var escapes = {
+      "'":      "'",
+      '\\':     '\\',
+      '\r':     'r',
+      '\n':     'n',
+      '\u2028': 'u2028',
+      '\u2029': 'u2029'
+    };
+  
+    var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
+  
+    var escapeChar = function(match) {
+      return '\\' + escapes[match];
+    };
+  
+    // JavaScript micro-templating, similar to John Resig's implementation.
+    // Underscore templating handles arbitrary delimiters, preserves whitespace,
+    // and correctly escapes quotes within interpolated code.
+    // NB: `oldSettings` only exists for backwards compatibility.
+    _.template = function(text, settings, oldSettings) {
+      if (!settings && oldSettings) settings = oldSettings;
+      settings = _.defaults({}, settings, _.templateSettings);
+  
+      // Combine delimiters into one regular expression via alternation.
+      var matcher = RegExp([
+        (settings.escape || noMatch).source,
+        (settings.interpolate || noMatch).source,
+        (settings.evaluate || noMatch).source
+      ].join('|') + '|$', 'g');
+  
+      // Compile the template source, escaping string literals appropriately.
+      var index = 0;
+      var source = "__p+='";
+      text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
+        source += text.slice(index, offset).replace(escaper, escapeChar);
+        index = offset + match.length;
+  
+        if (escape) {
+          source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";
+        } else if (interpolate) {
+          source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
+        } else if (evaluate) {
+          source += "';\n" + evaluate + "\n__p+='";
+        }
+  
+        // Adobe VMs need the match returned to produce the correct offest.
+        return match;
+      });
+      source += "';\n";
+  
+      // If a variable is not specified, place data values in local scope.
+      if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
+  
+      source = "var __t,__p='',__j=Array.prototype.join," +
+        "print=function(){__p+=__j.call(arguments,'');};\n" +
+        source + 'return __p;\n';
+  
+      try {
+        var render = new Function(settings.variable || 'obj', '_', source);
+      } catch (e) {
+        e.source = source;
+        throw e;
+      }
+  
+      var template = function(data) {
+        return render.call(this, data, _);
+      };
+  
+      // Provide the compiled source as a convenience for precompilation.
+      var argument = settings.variable || 'obj';
+      template.source = 'function(' + argument + '){\n' + source + '}';
+  
+      return template;
+    };
+  
+    // Add a "chain" function. Start chaining a wrapped Underscore object.
+    _.chain = function(obj) {
+      var instance = _(obj);
+      instance._chain = true;
+      return instance;
+    };
+  
+    // OOP
+    // ---------------
+    // If Underscore is called as a function, it returns a wrapped object that
+    // can be used OO-style. This wrapper holds altered versions of all the
+    // underscore functions. Wrapped objects may be chained.
+  
+    // Helper function to continue chaining intermediate results.
+    var result = function(instance, obj) {
+      return instance._chain ? _(obj).chain() : obj;
+    };
+  
+    // Add your own custom functions to the Underscore object.
+    _.mixin = function(obj) {
+      _.each(_.functions(obj), function(name) {
+        var func = _[name] = obj[name];
+        _.prototype[name] = function() {
+          var args = [this._wrapped];
+          push.apply(args, arguments);
+          return result(this, func.apply(_, args));
+        };
+      });
+    };
+  
+    // Add all of the Underscore functions to the wrapper object.
+    _.mixin(_);
+  
+    // Add all mutator Array functions to the wrapper.
+    _.each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
+      var method = ArrayProto[name];
+      _.prototype[name] = function() {
+        var obj = this._wrapped;
+        method.apply(obj, arguments);
+        if ((name === 'shift' || name === 'splice') && obj.length === 0) delete obj[0];
+        return result(this, obj);
+      };
+    });
+  
+    // Add all accessor Array functions to the wrapper.
+    _.each(['concat', 'join', 'slice'], function(name) {
+      var method = ArrayProto[name];
+      _.prototype[name] = function() {
+        return result(this, method.apply(this._wrapped, arguments));
+      };
+    });
+  
+    // Extracts the result from a wrapped and chained object.
+    _.prototype.value = function() {
+      return this._wrapped;
+    };
+  
+    // Provide unwrapping proxy for some methods used in engine operations
+    // such as arithmetic and JSON stringification.
+    _.prototype.valueOf = _.prototype.toJSON = _.prototype.value;
+    
+    _.prototype.toString = function() {
+      return '' + this._wrapped;
+    };
+  
+    // AMD registration happens at the end for compatibility with AMD loaders
+    // that may not enforce next-turn semantics on modules. Even though general
+    // practice for AMD registration is to be anonymous, underscore registers
+    // as a named module because, like jQuery, it is a base library that is
+    // popular enough to be bundled in a third party lib, but not be part of
+    // an AMD load request. Those cases could generate an error when an
+    // anonymous define() is called outside of a loader request.
+    if (typeof define === 'function' && define.amd) {
+      define('underscore', [], function() {
+        return _;
+      });
+    }
+  }.call(this));
